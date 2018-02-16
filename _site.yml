@@ -5,12 +5,12 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "Blog"
-      href: blog.html
+      href: Blog.html
     - text: "R & Rmarkdown"
       href: rmarkdown.html
     - text: "Github"
       href: github.html
     - text: "OHI Theory"
-      href: ohitheory.html
+      href: ohiTheory.html
     - text: "Who Are We?"
       href: fellows.html
