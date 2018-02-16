@@ -16,5 +16,4 @@ output:
   html_document:
     theme: yeti
     highlight: textmate
-    include:
     css: styles.css
