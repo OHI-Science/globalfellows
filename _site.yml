@@ -1,6 +1,5 @@
 name: "ohi-globalfellows-website"
 navbar:
-  title: "OHI Global Fellows"
   left:
     - text: "Home"
       href: index.html
@@ -16,7 +15,7 @@ navbar:
       href: fellows.html
 output:
   html_document:
-    theme: cosmo
+    theme: yeti
     highlight: textmate
     include:
       after_body: footer.html
