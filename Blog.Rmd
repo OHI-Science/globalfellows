@@ -1,0 +1,10 @@
+---
+title: "Blog"
+author: "Ellie Campbell, Iwen Su, Camila Vargas"
+date: "2/16/2018"
+output: html_document
+---
+#BLOG
+
+The OHI fellows will take turns updating the blog with posts about our experience learning how to calculate the Ocean Health Index, navigate data science, and interesting happenings in our day-to-day.
+
