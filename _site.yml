@@ -11,4 +11,4 @@ navbar:
     - text: "Github"
       href: github.html
     - text: "OHI Theory"
-      href: ohitheory.html
+      href: ohiTheory.html
