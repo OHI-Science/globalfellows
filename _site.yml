@@ -12,3 +12,5 @@ navbar:
       href: github.html
     - text: "OHI Theory"
       href: ohiTheory.html
+    - text: "Who Are We?"
+      href: fellows.html
