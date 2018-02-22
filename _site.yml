@@ -11,7 +11,7 @@ navbar:
     - text: "OHI Theory"
       href: ohiTheory.html
     - text: "Who Are We?"
-      href: fellows.html
+      href: fellows.html 
 output:
   html_document:
     theme: yeti
