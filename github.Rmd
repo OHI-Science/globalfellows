@@ -2,11 +2,32 @@
 title: "Github"
 author: "Iwen Su"
 date: "2/16/2018"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## This is our GitHub blog page.
+## Why github
+
+
+## Basic Git terminology in English
+
+
+## Setting up and configuring
+
+
+## Creating projects and repositories
+
+
+## Single user workflow
+
+
+## Collaborative workflow
+
+
+## Merge conflicts!
