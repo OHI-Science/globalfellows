@@ -14,3 +14,5 @@ output: html_document
 ***
 
 ### Ellie Campbell
+
+Ellie is a second year graduate student at Bren School of Environmental Science & Management, pursuing a specializing in Energy and Climate. Originally from Anchorage, Alaska, Ellie graduated from Colorado College in 2016 with a B.A. in mathematics. For her masters project, she is collaborating with four peers to synthesize an ecological monitoring framework for the Tejon Ranch Conservancy that integrates drones and other remote sensing technologies. She most recently worked with Conservation Science Partners on GLUED (Global Land Use/Cover Emergent Database), a platform to collect and share data on land use and land cover. She gained additional technical training in remote sensing methodology through an interdisciplinary research experience for undergraduates at the University of Northern Iowa. In her free time, she enjoys spending time outdoors skiing, running, and playing ultimate frisbee.
