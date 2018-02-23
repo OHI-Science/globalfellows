@@ -10,3 +10,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## This is our R and RMarkdown blog page
+
+[![](./images/513560.png)](whyRmarkdown.html)
