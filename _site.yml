@@ -2,8 +2,6 @@ name: "ohi-globalfellows-website"
 navbar:
   title: "OHI Global Fellows"
   left:
-    - text: "Welcome"
-      href: index.html
     - text: "Blog"
       href: Blog.html
     - text: "R & Rmarkdown"
@@ -14,9 +12,10 @@ navbar:
       href: ohiTheory.html
     - text: "Who Are We?"
       href: fellows.html 
+output_dir: "."
 output:
   html_document:
     theme: yeti
     highlight: textmate
     css: styles.css
-output_dir: "_site"
+
