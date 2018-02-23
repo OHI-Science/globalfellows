@@ -13,6 +13,9 @@ output: html_document
 
 Iwen grew up in San Diego and Taiwan, and received her B.A. in Biology, Marine Emphasis from Occidental College. After graduating, she set off to Madagascar for three months to conduct underwater surveys on coral reefs. She has also volunteered on various projects throughout San Diego, including coral identification at the Scripps Institution of Oceanography, event planning for WildCoast, and scientific diving with San Diego State graduate students. During this time, Iwen primarily worked along the coast collecting recreational fisheries data for the CA Department of Fish and Wildlife and on the water for a white seabass enhancement project at the Hubbs-Seaworld Research Institute. She is now pursuing a specialization in Coastal and Marine Resources Management at the Bren School. Over the last year and half, she's worked on various projects at NCEAS including the Arctic Data Center, the SeaSketch-TNC groundfish spatial plan, and now the Ocean Health Index. Her career interests include marine spatial planning for fisheries and aquaculture and seafood sustainability. Outside of school, Iwen enjoys diving artificial reefs, and drawing pictures of sea-creatures to hang on her walls. 
 
+<center><img src="images/iwen_pic.jpg" width="350px"></center>  
+
+
 ***
 
 ### Ellie Campbell
