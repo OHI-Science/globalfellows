@@ -2,6 +2,8 @@ name: "ohi-globalfellows-website"
 navbar:
   title: "OHI Global Fellows"
   left:
+    - text: "Welcome"
+      href: index.html
     - text: "Blog"
       href: Blog.html
     - text: "R & Rmarkdown"
