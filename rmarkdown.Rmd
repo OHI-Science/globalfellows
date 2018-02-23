@@ -11,4 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## This is our R and RMarkdown blog page
 
-[![](./images/513560.png)](z1_whyRmd.html)
+<br>
+
+
+[![](./images/whyRmd.png){width=250px}](z1_whyRmd.html) [![](./images/whyRStudio.png){width=250px}](z1_whyRstudio.html)

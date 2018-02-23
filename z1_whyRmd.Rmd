@@ -1,5 +1,5 @@
 ---
-title: "Why Rmarkdown?"
+title: "Why Rmarkdown"
 output: html_document
 ---
 
