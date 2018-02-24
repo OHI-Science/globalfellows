@@ -14,4 +14,5 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 
-[![](./images/whyRmd.png){width=250px}](z1_whyRmd.html) [![](./images/whyRStudio.png){width=250px}](z1_whyRstudio.html) [![](./images/latexEquations.png){width=250px}](z1_TexEquations.html)
+[![](./images/whyRmd.png){width=250px}](z1_whyRmd.html) [![](./images/whyRStudio.png){width=250px}](z1_whyRstudio.html) [![](./images/latexEquations.png){width=250px}](z1_TexEquations.html)  
+[![](./images/ggplotThemes.png){width=250px}](z1_ggplotThemes.html) 
