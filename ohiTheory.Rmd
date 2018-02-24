@@ -1,7 +1,5 @@
 ---
-title: "ohiTheory"
-author: "Iwen Su"
-date: "2/16/2018"
+title: "OHI Theory"
 output: html_document
 ---
 
@@ -9,6 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## This is our OHI theory blog.
+<br>
+<br>
+
 
 [![](./images/goal scores.png){width=250px}](z3_HowGoalScore.html)
