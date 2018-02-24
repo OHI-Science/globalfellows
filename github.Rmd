@@ -1,33 +1,10 @@
 ---
 title: "Github"
-author: "Iwen Su"
-date: "2/16/2018"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Why github
-
-
-## Basic Git terminology in English
-
-
-## Setting up and configuring
-
-
-## Creating projects and repositories
-
-
-## Single user workflow
-
-
-## Collaborative workflow
-
-
-## Merge conflicts!
+[![](./images/whyRmd.png){width=250px}](z2_whyGit.html) [![](./images/whyRStudio.png){width=250px}](z2_gitTerminology.html) [![](./images/latexEquations.png){width=250px}](z1_setItUp.html)

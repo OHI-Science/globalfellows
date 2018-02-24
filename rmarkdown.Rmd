@@ -1,7 +1,5 @@
 ---
 title: "R & RMarkdown"
-author: "Iwen Su"
-date: "2/16/2018"
 output: html_document
 ---
 
