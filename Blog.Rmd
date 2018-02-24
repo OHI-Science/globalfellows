@@ -3,6 +3,7 @@ output: html_document
 ---
 
 <br>
+<br>
 
 ## First Impressions
 *by Camila Vargas - February 23, 2018*
