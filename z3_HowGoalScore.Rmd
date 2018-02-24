@@ -1,0 +1,7 @@
+---
+title: "How to calculate a goal score"
+output: html_document
+---
+
+WORK ON PROGRESS.. Formulas and process, all in one place!
+
