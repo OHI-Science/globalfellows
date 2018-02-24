@@ -7,4 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+<br>
+<br>
+
 [![](./images/whyRmd.png){width=250px}](z2_whyGit.html) [![](./images/whyRStudio.png){width=250px}](z2_gitTerminology.html) [![](./images/latexEquations.png){width=250px}](z1_setItUp.html)

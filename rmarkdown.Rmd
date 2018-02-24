@@ -1,5 +1,5 @@
 ---
-title: "R & RMarkdown"
+title: "R & Rmarkdown"
 output: html_document
 ---
 
@@ -7,8 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## This is our R and RMarkdown blog page
 
+<br>
 <br>
 
 
