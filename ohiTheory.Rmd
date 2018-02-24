@@ -10,3 +10,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## This is our OHI theory blog.
+
+[![](./images/goal scores.png){width=250px}](z3_HowGoalScore.html)
