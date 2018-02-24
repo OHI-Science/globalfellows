@@ -1,0 +1,4 @@
+---
+title: "Color Palettes in R"
+output: html_document
+---
