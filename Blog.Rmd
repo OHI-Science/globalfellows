@@ -1,17 +1,13 @@
 ---
-title: "Blog"
-author: "Ellie Campbell, Iwen Su, Camila Vargas"
-date: "2/16/2018"
 output: html_document
 ---
-#BLOG
 
-The OHI fellows will take turns updating the blog with posts about our experience learning how to calculate the Ocean Health Index, navigate data science, and interesting happenings in our day-to-day.
-
-
+<br>
 
 ## First Impressions
 *by Camila Vargas - February 23, 2018*
+
+***
 
 New year, new challenges. We joined the OHI team in late January this year. I was excited to find out what our day-to-day "office" would look like. Before starting this job, I had a basic understanding of the OHI project, but to be honest, I had pretty limited experience with R (not a whole lot) and that was it. I'm a curious learner, but I would definitely not define myself as a computer programming person. Yet, here I was. 
 
