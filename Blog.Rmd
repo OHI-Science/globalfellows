@@ -10,21 +10,38 @@ The OHI fellows will take turns updating the blog with posts about our experienc
 
 
 
-##First Impresions
+## First Impressions
+*by Camila Vargas - February 23, 2018*
 
-New year, new challenges. We started working/learning with the OHI team late January. I was exited to know what the day-a-day in the "office" was going to look like. 
-Before starting this job, I had some basic understanding about the OHI, but just a little to be honest, I had some experience with R (not a whole lot) and basically that was it. I'm a curious learner, but I would definitely would not define my self as a computer/programming person. 
-And here I was. 
-Our first "homework" was to read the [OHI 2017 Methods](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html). We didn't need to read the whole thing super into details, but anyways, time has come to get the first glimpse to how the OHI is actually calculated.  
-As a first approach it was OK. I thought it was interesting to dig a little into the actual math within this index. But of course you don't get it all just by reading some of the method document. 
-One of the biggest challenges (and here my fellow fellows agreed as well), was to relate figure 1.2 that outlines the process with what is actually going on with the math, and with this I mean the formulas. Challenges inspire! So we started creating an expanded version of this figure (not yet finalized but soon to be display in the OHI theory tab!).
-When being introduced to the Theory, we were also learning about how everything is organized and where is the actual information and how to get to it. All I can say it's all about links and more links, too many links. 
-I'm not sure if my brain has too much of mind set of organizing things in folder or its just because everything is new, but it was overwhelming to lean that there is html links for everything. For example, from the OHI 2017 Methods, there are links to Git-hub and links to other website that explains in depth a certain topic. 
+New year, new challenges. We joined the OHI team in late January this year. I was excited to find out what our day-to-day "office" would look like. Before starting this job, I had a basic understanding of the OHI project, but to be honest, I had pretty limited experience with R (not a whole lot) and that was it. I'm a curious learner, but I would definitely not define myself as a computer programming person. Yet, here I was. 
+
+<br>
+
+Our first "homework" was to read through the [OHI 2017 Methods](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html). While, we didn't need to read the whole thing in detail, it was important for us to get a glimpse of how the OHI is actually calculated.  
+
+<br>
+
+At a first glance, it was OK. I thought it was interesting to dig into the actual math within this index. But of course you don't get the whole picture just by reading some of the method document. One of the biggest challenges (my fellow fellows agreed with me on this) was to relate the entire workflow outlined in Figure 1.1 with what is actually going on in the math -- and with this I mean the formulas. Challenges inspire! We started creating an expanded version of this figure to help us connect the dots faster (not yet finalized but will soon be displayed in the OHI theory tab!).
+
+<br>
+
+While we were introduced to the theory behind OHI, we also walked through how everything is organized, where the actual information is, and how to get to it. All I can say about this is that it's all about links and more links. Too many links. I'm not sure if my brain is stuck in the mindset of organizing things into respective folders or if it's just because everything is new, but it was overwhelming to learn that there are html links for everything. For example, from the OHI 2017 Methods, there are links to GitHub and links to other websites that explain certain topics in more detail. 
+
+<br>
+
 My initial reaction was: WHAT IS WHAT AND WHERE IS EVERYTHING?
-By the end of the day I realize it was just panic from being expose to something new. Just breath. I'm sure at some point we are going to figure out how the information is organized (because I'm pretty sure it is well organized. Also working on a graphic explanation of this link chaos).
 
-And links where not the only chaotic thing. We were also introduced to Git-hub and R Markdown. Amazing tools! But you have to break the ice in order to feel comfortable and actually know what you are doing. It seem overwhelming at the beginning, but only four sessions on working with all this new information has gone by and I already feel more comfortable. 
-Enjoying the challenge. Learning a whole lot. And looking forward to communicate to you all about our progress and experience!
+<br>
+
+By the end of the day, I realized it was just panic from exposure to something new. Just breath. I'm sure at some point we are going to figure out how the information is organized (because I'm pretty sure it is already well organized). Nevertheless, the OHI fellows are working on a visual explanation of this link chaos.
+
+<br>
+
+And links were not the only chaotic thing. We were also introduced to Github and R Markdown. Amazing tools! But you have to break the ice before you can feel comfortable and actually know what you are doing. It seemed overwhelming at the beginning, but after only four sessions of working with all this new information and I already feel more comfortable. 
+
+<br>
+
+I am enjoying the challenge. Learning a whole lot. And looking forward to communicating to you all about our progress and experience!
 
 
 
