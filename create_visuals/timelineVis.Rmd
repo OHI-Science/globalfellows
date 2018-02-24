@@ -1,0 +1,80 @@
+---
+title: "Timeline Visual"
+author: "Iwen Su"
+date: "2/23/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load packages
+
+```{r pkg, message = F}
+
+library(ggplot2)
+library(dplyr)
+library(ggalt)
+library(cowplot)
+library(tibble)
+library(lubridate)
+
+```
+
+Gathered code from this stack overflow [post](https://stackoverflow.com/questions/7492274/draw-a-chronological-timeline-with-ggplot2)
+
+```{r}
+
+
+# Create data to plot
+
+data <- tribble( ~date, ~event, ~displ,
+                ymd(20180126), "First day!", 0.5,
+                ymd(20180202), "Learned how to calculate goal scores", -0.4,
+                ymd(20180218), "Built our first website together", 0.3)
+
+
+# Function to shift x-axis to 0 adapted from link shown above
+
+shift_axis <- function(p, xmin, xmax, y=0){
+      g <- ggplotGrob(p)
+      dummy <- data.frame(y=y)
+      ax <- g[["grobs"]][g$layout$name == "axis-b"][[1]]
+      p + annotation_custom(grid::grobTree(ax, vp = grid::viewport(y=1, height=sum(ax$height))), 
+                            ymax=y, ymin=y) +
+        annotate("segment", y = 0, yend = 0, x = xmin, xend = xmax, 
+                 arrow = arrow(length = unit(0.1, "inches"))) +
+        theme(axis.text.x = element_blank(), 
+              axis.ticks.x=element_blank())
+
+    }
+
+
+# Conditionally set whether text will be above or below the point
+
+vjust <- ifelse(data$displ > 0, -1, 1.5)
+
+# Create timeline plot
+timeline <- data %>% 
+  ggplot(aes(x = date, y = displ)) +
+  geom_lollipop(point.size = 1) +
+  geom_text(aes(x = date, y = displ, label = event), data = data,
+            hjust = 0, vjust = vjust, size = 2.5) +
+  theme(axis.title = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.line = element_blank(),
+        axis.text.x = element_text(size = 8)) +
+  expand_limits(x = c(ymd(20180114), ymd(20180301)), y = 1.2) +
+  scale_x_date(breaks = scales::pretty_breaks(n = 9))
+
+#and run the function from above
+timeline <- shift_axis(timeline, ymd(20180114), ymd(20180301))
+
+timeline
+
+ggsave("/home/isu/github/globalfellows/images/timeline.jpg", timeline, width = 11, height = 11) 
+ 
+```
+
