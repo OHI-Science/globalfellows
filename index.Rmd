@@ -1,5 +1,6 @@
 ---
-author: "Ellie Campbell, Iwen Su, Camila Vargas"
+title: Ocean Health Index
+subtitle: open data science tools and resources
 output: html_document
 ---
 
