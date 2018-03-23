@@ -1,10 +1,12 @@
 ---
-title: "Home"
 author: "Ellie Campbell, Iwen Su, Camila Vargas"
-date: "2/16/2018"
 output: html_document
 ---
-#HOME
+
+<br>
+<br>
+
+## Learning about Open Data Science & the Ocean Health Index
 
 <center><img src="images/timeline.jpg" width="750px"></center>  
 
