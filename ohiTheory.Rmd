@@ -1,5 +1,5 @@
 ---
-title: "ohiTheory"
+title: "OHI Theory"
 output: html_document
 ---
 
@@ -10,4 +10,5 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 <br>
 
-## This is our OHI theory blog.
+
+[![](./images/goal scores.png){width=250px}](z3_HowGoalScore.html)
