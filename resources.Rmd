@@ -1,0 +1,17 @@
+---
+title: "Helpful Resources"
+output: html_document
+---
+
+<br>
+<br>
+
+[OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html): description
+
+[OHI Fellows Website Git Repo](https://github.com/OHI-Science/globalfellows): description
+
+[R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/): description
+
+[R for Data Science (R4DS)](http://r4ds.had.co.nz/): description
+
+[OHI Data Science Training](http://ohi-science.org/data-science-training/index.html): description
