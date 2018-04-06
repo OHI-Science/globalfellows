@@ -1,6 +1,9 @@
 ---
 author: "Ellie Campbell, Iwen Su, Camila Vargas"
-output: html_document
+output: 
+  html_document:
+    includes:
+      in_header: '/images/deep-sea-fishes.jpg'
 ---
 <br>
 <br>
