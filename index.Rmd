@@ -10,8 +10,7 @@ htmltools::img(src = "images/fishes-banner.png",
 ```
 
 ---
-<br>
-<br>
+
 <br>
 <br>
 <br>
