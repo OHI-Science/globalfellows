@@ -1,0 +1,10 @@
+---
+title: "Quick Facts: Artisanal Opportunities Goal"
+author: "Camila Vargas"
+date: "3/23/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

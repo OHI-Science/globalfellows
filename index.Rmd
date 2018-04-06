@@ -5,7 +5,7 @@ subtitle: open data science tools and resources
 output: 
   html_document:
     includes:
-      in_header: '/images/deep-sea-fishes.jpg'
+      in_header: 'images/deep-sea-fishes.jpg'
 ---
 <br>
 <br>
