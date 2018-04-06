@@ -13,7 +13,26 @@ output: html_document
 
 This site documents our experience in learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. The timeline measures our progress and records milemarkers on our OHI adventure. We began learning the necesary tools on January 2018, and will finish calculating the global OHI scores for this calender year sometime late September. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here.
 
-<center><img src="images/timeline.jpg" width="750px"></center>  
+
+```{r echo=FALSE}
+
+library(timevis)
+
+data <- data.frame(
+  id      = 1:6,
+  content = c("First day!", "Built our first website",
+              "Completed ggplot training", "First blog post",
+              "Completed tidyverse training", "Learned how to gapfill"),
+  start   = c("2018-01-26", "2018-02-16",
+              "2018-02-23", "2018-02-23",
+              "2018-03-06", "2018-03-23"),
+  end     = c(NA, NA, NA, NA, NA, NA)
+)
+
+timevis(data)
+
+```
+
 
 <br>
 <br>
