@@ -3,21 +3,29 @@ author: "Ellie Campbell, Iwen Su, Camila Vargas"
 title: "Ocean Health Index: Open Data Science Tools"
 output: html_document
 ---
+
+```{r, echo=FALSE}
+htmltools::img(src = "images/fishes-banner.png", 
+               style = 'position:absolute; top:0; padding:0px; width:920px; display:inline-block; margin-right:auto')
+```
+
+---
+
+<br>
+<br>
 <br>
 <br>
 
 ## Learning about Open Data Science & the Ocean Health Index
 
+
+
 <br>
 <br>
 
 This site documents our experience in learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. The timeline measures our progress and records milemarkers on our OHI adventure. We began learning the necesary tools on January 2018, and will finish calculating the global OHI scores for this calender year sometime late September. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here.
-
-
 <br>
 <br>
-
-
 
 ```{r echo=FALSE}
 
@@ -37,9 +45,5 @@ data <- data.frame(
 timevis(data)
 
 ```
-
-
 <br>
 
-
-<center><img src="images/deep-sea-fishes.jpg" width="1000px"></center>  
