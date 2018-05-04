@@ -5,6 +5,57 @@ output: html_document
 <br>
 <br>
 
+
+
+## GitHubbing through Life
+*by Iwen Su - April 6, 2018*
+
+***
+
+My first experience with GitHub was fairly painless, except that I hadn’t differentiated it from just another server where you could store your files and folders. “Pull, push, and commit” was written on the whiteboard so we could remember the order of operations to update files. For the most part, I didn’t run into any errors. However, many of the capabilities that GitHub wielded were unknown to me. I didn’t know that you could essentially rearrange folders and files on your local computer and update the version online with the new configuration. 
+
+<br>
+
+It wasn’t until I watched Julie Lowndes’s video on [being a marine data scientist](http://seawater.stanford.edu/Lowndes.mp4), which did a section on using GitHub, that I got a glimpse into why you would use it, the array of things you can do with it, and what all these new terms such as “branches” and “committing” meant. In the talk, Julie quotes a [2016 Nature article](https://www.nature.com/news/democratic-databases-science-on-github-1.20719) that describes GitHub functionality:
+
+> “For scientist coders, [Git] works like a laboratory notebook for scientific computing ...it keeps a lasting record of events” 
+
+Wait, what is “Git”? Is it just shorthand for “GitHub”? Actually, Git is the version control system  that is responsible for keeping the lasting record of events. GitHub is a space, like a library, that can hold numerous laboratory notebooks, or data science projects. Andrew McWilliams does a good job at explaining the technical and functional differences between the two in a [blog post](https://jahya.net/blog/git-vs-github/).
+
+<br>
+
+For my master’s group project, we decided to use GitHub as our versioning library for our data analysis. The nature of the project required more than one person to work on the same document or code simultaneously. Immediately we ran into issues collaborating on the same document. These are also known as “merge conflicts” in the Git world. None of us had gotten proper training or guidance about what to expect when a merge conflict arises. Sometimes we wouldn’t notice until several days later that, to our surprise, the excel file we had been working in now had two copies of the data table, one on top of the other, accompanied with strange symbols and headers, such as:
+
+```
+<<<<<<< HEAD
+```
+or 
+```
+=======
+```
+
+<br>
+
+Through the OHI training, I learned that this was a separator partitioning my version of the data table from my peers’ updates to the data table. We experienced several headaches from rewriting each other’s work before we realized that Git was trying to tell us something in error messages like: 
+
+```
+CONFLICT : Merge conflict in urchindata.csv 
+Automatic merge failed; fix conflicts and then commit the result
+```
+
+Often times the error messages are intimidating, because there is coding lingo thrown into it. However, the messages usually give us a good hint as to what is causing the error. Nevertheless, there are many barriers to entry to learning GitHub and learning to want to use GitHub. One of those is the jargony vocabulary of key terms only used in the Git and GitHub world: commit, branches, merge conflicts, pull, push, master branch, repository, and projects. Check out our cheatsheet on Git terminology [here](z2_gitTerminology.html).
+
+
+***
+
+
+
+
+
+
+
+
+
 ## First Impressions
 *by Camila Vargas - February 23, 2018*
 
