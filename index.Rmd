@@ -27,23 +27,31 @@ This site documents our experience in learning about the Ocean Health Index (OHI
 <br>
 <br>
 
-```{r echo=FALSE}
+<center>
+```{r fig.align="center", echo=FALSE}
 
 library(timevis)
 
 data <- data.frame(
-  id      = 1:6,
+  id      = 1:7,
   content = c("First day!", "Built our first website",
               "Completed ggplot training", "First blog post",
-              "Completed tidyverse training", "Learned how to gapfill"),
+              "Completed tidyverse training", "Learned how to gapfill",
+              "Completing MAR Data Prep"),
   start   = c("2018-01-26", "2018-02-16",
               "2018-02-23", "2018-02-23",
-              "2018-03-06", "2018-03-23"),
-  end     = c(NA, NA, NA, NA, NA, NA)
+              "2018-03-06", "2018-03-23",
+              "2018-04-18"),
+  end     = c(NA, NA, 
+              NA, NA, 
+              NA, NA,
+              "2018-05-18")
 )
 
 timevis(data)
 
 ```
+</center>
+
 <br>
 
