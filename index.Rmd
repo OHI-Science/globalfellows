@@ -28,7 +28,7 @@ This site documents our experience in learning about the Ocean Health Index (OHI
 <br>
 
 <center>
-```{r fig.align="center", echo=FALSE}
+```{r echo=FALSE}
 
 library(timevis)
 
