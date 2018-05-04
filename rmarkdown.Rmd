@@ -12,5 +12,4 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 
-[![](./images/whyRmd.png){width=250px}](z1_whyRmd.html) [![](./images/whyRStudio.png){width=250px}](z1_whyRstudio.html) [![](./images/latexEquations.png){width=250px}](z1_TexEquations.html)  
-[![](./images/ggplotThemes.png){width=250px}](z1_ggplotThemes.html) [![](./images/ggplotAES.png){width=250px}](z1_ggplotAES.html) [![](./images/colorPalettes.png){width=250px}](z1_colorPalettes.html) 
+[![](./images/whyRmd2.png){width=250px}](z1_whyRmd.html) [![](./images/colorPalettes2.png){width=250px}](z1_colorPalettes.html) [![](./images/Stringr.png){width=250px}](z1_stringRtips.html)
