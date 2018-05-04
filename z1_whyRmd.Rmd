@@ -1,8 +1,19 @@
 ---
-title: "Why Rmarkdown"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 <br>
 
-## linked to from main Rmd page
+## Why Rmarkdown
+***
+
+<br>
+<br>
+
+## Oops, this page is still being updated. 
+
+## Check back soon!

@@ -1,5 +1,4 @@
 ---
-title: "R & Rmarkdown"
 output: html_document
 ---
 
@@ -7,10 +6,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 <br>
 <br>
 
-
-[![](./images/whyRmd.png){width=250px}](z1_whyRmd.html) [![](./images/whyRStudio.png){width=250px}](z1_whyRstudio.html) [![](./images/latexEquations.png){width=250px}](z1_TexEquations.html)  
-[![](./images/ggplotThemes.png){width=250px}](z1_ggplotThemes.html) [![](./images/ggplotAES.png){width=250px}](z1_ggplotAES.html) [![](./images/colorPalettes.png){width=250px}](z1_colorPalettes.html) 
+[![](./images/whyRmd4.png){width=250px}](z1_whyRmd.html) [![](./images/colorPalettes4.png){width=250px}](z1_colorPalettes.html) [![](./images/Stringr4.png){width=250px}](z1_stringRtips.html)
