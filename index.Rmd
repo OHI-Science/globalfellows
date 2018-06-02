@@ -1,24 +1,21 @@
 ---
-author: "Ellie Campbell, Iwen Su, Camila Vargas"
-title: "Ocean Health Index: Open Data Science Tools"
 output: html_document
 ---
 
-```{r, echo=FALSE}
-htmltools::img(src = "images/fishes-banner.png", 
-               style = 'position:absolute; top:0; padding:0px; width:920px; display:inline-block; margin-right:auto')
-```
-
 ---
 
-<br>
-<br>
-<br>
-<br>
-
 ## **Learning about Open Data Science & the Ocean Health Index**
+<!--html_preserve-->
+<div id="homeContent">
+    <img class="imageOne" src="images/fishes-banner.png"/>
+</div>
+<!--/html_preserve-->
 
+<br>
+<br>
 
+### What is Open Data Science?
+Open data science is a movement towards sharing data and standardizing certain analytical processes so that certain basic research can be replicated and improved upon.
 
 <br>
 <br>
