@@ -15,7 +15,7 @@ output: html_document
 <br>
 
 ### What is Open Data Science?
-Open data science is a movement towards sharing data and standardizing methods of analysis to allow for reproducibility.
+Open data science is a movement towards sharing data and standardizing methods of analysis to allow for reproducibility and transparency. By fostering collective knowledge amongst data scientists, we can bring new insights and solutions to the table at a quicker rate. Transparency coupled with user-friendly platforms allow the public or relevant stakeholders to interact with data that may be affecting their daily lives. At the Ocean Health Index, we prepare publically available data so that marine science practicioners and managers can tailor our methods to inform decision-making at the regional level.
 
 <br>
 <br>
