@@ -8,12 +8,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-## Why GitHub?
+## Why Should a Non-Coder Use GitHub?
 ***
 
 <br>
-<br>
 
-## Oops, this page is still being updated. 
+I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R and slowly moving into the GitHub realm. Here are five reasons I jumped on the GitHub train:
 
-## Check back soon!
+* **I can save multiple versions of the document I am working on at different points in time** (e.g. last week's copy, yesterday's copy, this morning's copy, this evening's copy) and retrieve any of them whenever I want to. There is no fear of accidentally deleting any of those versions as well. While you have to manually 
+* 
+
