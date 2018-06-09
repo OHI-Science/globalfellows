@@ -13,8 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R and slowly moving into the GitHub realm. Here are five reasons I jumped on the GitHub train:
+I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R (read more about R) and am slowly moving into the GitHub realm. Here are five reasons I jumped on the GitHub train:
 
 * **I can save multiple versions of the document I am working on at different points in time** (e.g. last week's copy, yesterday's copy, this morning's copy, this evening's copy) and retrieve any of them whenever I want to. There is no fear of accidentally deleting any of those versions as well. While you have to manually 
-* 
+* **I can easily share data with collaborators**
+* **If I accidentally overwrite a team member's work, I can go back revert my changes very easily**
 
