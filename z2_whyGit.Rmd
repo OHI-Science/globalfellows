@@ -18,7 +18,7 @@ _Photo by Oscar Nord on Unsplash_
 
 I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R ([read more about R](http://ohi-science.org/globalfellows/z1_whyRmd.html)) and am slowly moving into the GitHub realm. Here are a few reasons I jumped on the GitHub train:
 
-1. I can record and save my complicated, multistep quantitative calculations of my raw data as easy as saving a poem in a word document without having to format as an equation every time
+1. I can record and save my complicated, multistep quantitative calculations of my raw data as easy as saving a poem in a word document without having to format as an equation every time.
 
 ![](images/math.jpg)
 _Photo by Roman Mager on Unsplash_

@@ -10,3 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 [![](./images/whyGithub.jpg){width=250px}](z2_whyGit.html) [![](./images/GitLingo.png){width=250px}](z2_gitTerminology.html) [![](./images/gitSetup.png){width=250px}](z2_setItUp.html)
+
+
+**Helpful Resources**
+

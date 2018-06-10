@@ -11,9 +11,7 @@ navbar:
     - text: "OHI Theory"
       href: ohiTheory.html
     - text: "Who Are We?"
-      href: fellows.html 
-    - text: "Resources"
-      href: resources.html 
+      href: fellows.html
 output_dir: "."
 output:
   html_document:
