@@ -11,11 +11,43 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Why Should a Non-Coder Use GitHub?
 ***
 
+![](images/code.jpg)
+_Photo by Oscar Nord on Unsplash_
+
 <br>
 
-I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R (read more about R) and am slowly moving into the GitHub realm. Here are five reasons I jumped on the GitHub train:
+I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R ([read more about R](http://ohi-science.org/globalfellows/z1_whyRmd.html)) and am slowly moving into the GitHub realm. Here are a few reasons I jumped on the GitHub train:
 
-* **I can save multiple versions of the document I am working on at different points in time** (e.g. last week's copy, yesterday's copy, this morning's copy, this evening's copy) and retrieve any of them whenever I want to. There is no fear of accidentally deleting any of those versions as well. While you have to manually 
-* **I can easily share data with collaborators**
-* **If I accidentally overwrite a team member's work, I can go back revert my changes very easily**
+1. I can record and save my complicated, multistep quantitative calculations of my raw data as easy as saving a poem in a word document without having to format as an equation every time
+
+![](images/math.jpg)
+_Photo by Roman Mager on Unsplash_
+
+2. I can save multiple versions of the document I am working on at different points in time (e.g. last week's copy, yesterday's copy, this morning's copy, this evening's copy) and retrieve any of them whenever I want to. There is no fear of accidentally deleting any of those versions as well or accidentally throwing them out in the trash. Oops!
+
+![](images/versioning.jpg)
+_Photo by Steve Johnson on Unsplash_
+
+
+3. I can easily share and work on data (CSV or Excel files) with collaborators. If I accidentally overwrite a team member's work that was actually better than my revision, I can go back revert my changes very easily. No need to stress! Let's just revert!
+
+![](images/distress.jpg)
+_Photo by Ayo Ogunseinde on Unsplash_
+
+
+4. GitHub serves as a cloud version of my computer files. Say I forget my personal laptop, but have access to the internet. I can sign into GitHub and download my WeddingPictures.jpg, BestNovellaEver.docx, Codingforlyfe.Rmd, and SomeDocumentwithImportantText.txt all from a web browser.
+
+![](images/cloud.jpg)
+_Photo by Samuel Zeller on Unsplash_
+
+5. Finally, I can create and customize my own website without having to know HTML or CSS. So:
+
+![](images/badass.jpg)
+_Photo by Kevin Grieve on Unsplash_
+
+<br> 
+
+Thanks all for reading,
+
+Iwen Su
 
