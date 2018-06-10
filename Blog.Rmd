@@ -14,6 +14,14 @@ output: html_document
 
 My first experience with GitHub was fairly painless, except that I hadn’t differentiated it from just another server where you could store your files and folders. “Pull, push, and commit” was written on the whiteboard so we could remember the order of operations to update files. For the most part, I didn’t run into any errors. However, many of the capabilities that GitHub wielded were unknown to me. I didn’t know that you could essentially rearrange folders and files on your local computer and update the version online with the new configuration. 
 
+_pull_
+![pull](images/pull.jpg) 
+_push_ 
+![push](images/push.jpg) 
+_commit_
+![commit](images/commit.jpg)
+_Photo by Darinka Kievskaya, Aziz Acharki, & Marcus Lewis on Unsplash_
+
 <br>
 
 It wasn’t until I watched Julie Lowndes’s video on [being a marine data scientist](http://seawater.stanford.edu/Lowndes.mp4), which did a section on using GitHub, that I got a glimpse into why you would use it, the array of things you can do with it, and what all these new terms such as “branches” and “committing” meant. In the talk, Julie quotes a [2016 Nature article](https://www.nature.com/news/democratic-databases-science-on-github-1.20719) that describes GitHub functionality:
