@@ -1,0 +1,12 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+<br>
+
+[![](./images/whyGithub.jpg){width=250px}](z2_whyGit.html) [![](./images/whyRmd4.png){width=250px}](z1_whyRmd.html)  [![](./images/resources.png){width=250px}](resources.html)
