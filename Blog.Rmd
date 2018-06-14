@@ -7,7 +7,7 @@ output: html_document
 
 ***
 
-### Grappling with Graphics/Making Sense of Aesthetics Mappings (?)
+## Grappling with Graphics
 *by Ellie Campbell - April 30, 2018*
 
 ***
