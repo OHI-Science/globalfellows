@@ -10,11 +10,3 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 [![](./images/whyRmd4.png){width=250px}](z1_whyRmd.html) [![](./images/colorPalettes4.png){width=250px}](z1_colorPalettes.html) [![](./images/Stringr4.png){width=250px}](z1_stringRtips.html)
-
-**Helpful Resources**
-
-[R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-
-[R for Data Science (R4DS)](http://r4ds.had.co.nz/)
-
-[OHI Data Science Training](http://ohi-science.org/data-science-training/index.html)
