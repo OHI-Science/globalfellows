@@ -5,9 +5,12 @@ output: html_document
 ---
 
 ## **Learning about Open Data Science & the Ocean Health Index**
+
+<br>
+
 <!--html_preserve-->
 <div id="homeContent">
-    <img class="imageOne" src="images/fishes-banner.png"/>
+    <img class="imageOne" src="images/ohi_goals2.png"/>
 </div>
 <!--/html_preserve-->
 
@@ -45,6 +48,8 @@ Photo by John Schnobrich on Unsplash
 ### Our Progress
 The timeline measures our progress and records milemarkers on our OHI adventure. We began learning the necesary tools on January 2018, and will finish calculating the global OHI scores for this calender year sometime late September.
 
+<br>
+
 <center>
 ```{r echo=FALSE}
 
@@ -73,3 +78,4 @@ timevis(data)
 
 ```
 </center>
+![](images/fishes-banner.png)
