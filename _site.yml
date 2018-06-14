@@ -4,10 +4,8 @@ navbar:
   left:
     - text: "Blog"
       href: Blog.html
-    - text: "R & Rmarkdown"
-      href: rmarkdown.html
-    - text: "Github"
-      href: github.html
+    - text: "The Tools We Use"
+      href: tools_we_use.html
     - text: "OHI Theory"
       href: ohiTheory.html
     - text: "Who Are We?"
