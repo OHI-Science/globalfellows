@@ -29,11 +29,6 @@ Photo by Peter Fogden on Unsplash
 <br>
 <br>
 
-### Importance of OHI
-
-<br>
-<br>
-
 ### The OHI Global Fellows!
 This site documents our experience in learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here.
 
