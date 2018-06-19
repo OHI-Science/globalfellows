@@ -18,8 +18,6 @@ My first introduction to ggplot, and to R as a whole, was through the lab compon
 
 A few weeks ago, we went over the use of ggplot as part of our training in preparation for calculating the 2018 OHI. We began with a [structured tutorial](http://ohi-science.org/data-science-training/ggplot2.html) also, and dove deeper into the meaning and syntax of the arguments, walking step-by-step through some of the nitty-gritty details and more advanced capabilities. One thing in particular that became more clear to me, was the [functionality of aes()](z1_ggpotAES.html) or the “aesthetics,” which was something I’d found particularly confusing in my first encounters with ggplot. For example, it was not completely clear to me why you would put some arguments within aes() and some outside aes(), or define x and y in aes() in the first line versus individual geoms; e.g. these give the same plot:
 
-<br>
-
 ```{r, comment=FALSE, include=FALSE, cache=FALSE}
 library(reshape2) # will use the tips dataset from reshape2
 library(ggplot2)
@@ -44,7 +42,7 @@ p1 <- ggplot(data = tips, aes(x = total_bill, y = tip/total_bill, color = day)) 
   geom_point(size = 0.25) +
   guides(color = FALSE) +
   theme_bw() + 
-  labs(x = " ", y = "Tip / Total Bill") 
+  labs(x = " ", y = "Tip / Total Bill \n") 
 
 p2 <- ggplot(data = tips, aes(color = day)) +
   geom_point(aes(x = total_bill, y = tip/total_bill), size = 0.25) +
@@ -65,8 +63,6 @@ grid.arrange(p1, p2, p3, nrow = 1) # plot side-by-side in one row
 
 Other takeaways for me were (1) modularity of ggplot means it is good for more complicated graphics, but perhaps unnecessarily verbose for simple plots (2) [facetting](http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/) is a very helpful feature for looking at multifaceted data (3) there are many [theme options](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/) for making pretty plots, some of which can be found in the [ggthemes](https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html) package, and (4) ggplot is especially powerful for data visualization when combined with other packages in [tidyverse](https://www.tidyverse.org/)! For example, using some data from the gapminder dataset:
 
-<br>
-
 ```{r load dplyr, comment=FALSE, include=FALSE, cache=FALSE}
 library(dplyr)
 library(gapminder) # will use gapminder dataset
@@ -85,7 +81,7 @@ ggplot(data = gap) +
   geom_line(aes(x = year, y = gdpPercap), color = "coral") +
   facet_wrap(~ country) +
   theme_bw() + 
-  labs(x = "Year", y = "Cumulative Mean per Cap. GDP") 
+  labs(x = "Year", y = "Cumulative Mean per Cap. GDP \n") 
 
 ```
 
