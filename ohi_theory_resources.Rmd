@@ -1,0 +1,11 @@
+---
+title: "Resources on OHI Methods"
+output: html_document
+---
+
+<br>
+<br>
+
+[OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html)
+
+[OHI Fellows Website Git Repo](https://github.com/OHI-Science/globalfellows)
