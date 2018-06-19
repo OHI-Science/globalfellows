@@ -1,5 +1,4 @@
 ---
-title: "OHI Theory"
 output: html_document
 ---
 
