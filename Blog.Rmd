@@ -16,7 +16,7 @@ The plotting capabilities in base plot in R are good, but for more flexibility a
 
 My first introduction to ggplot, and to R as a whole, was through the lab component of a statistics course I took my first year at the Bren School. That first time around, ggplot was introduced in lecture with a few associated in-class exercises and then over the course of the semester I spent hours tinkering with and refining presentation -- palettes, graph types, fonts and features -- for various assignments, a process that involved lots of google searches and scrounging through [stack overflow](https://stackoverflow.com/questions/tagged/ggplot2?sort=frequent&pageSize=50) for fragments of code to get things like outlines, or legends, or offsets in bar graphs just precisely right.
 
-A few weeks ago, we went over the use of ggplot as part of our training in preparation for calculating the 2018 OHI. We began with a [structured tutorial](http://ohi-science.org/data-science-training/ggplot2.html) also, and dove deeper into the meaning and syntax of the arguments, walking step-by-step through some of the nitty-gritty details and more advanced capabilities. One thing in particular that became more clear to me, was the [functionality of aes()](z1_ggpotAES.html) or the “aesthetics,” which was something I’d found particularly confusing in my first encounters with ggplot. For example, it was not completely clear to me why you would put some arguments within aes() and some outside aes(), or define x and y in aes() in the first line versus individual geoms; e.g. these give the same plot:
+A few weeks ago, we went over the use of ggplot as part of our training in preparation for calculating the 2018 OHI. We began with a [structured tutorial](http://ohi-science.org/data-science-training/ggplot2.html) also, and dove deeper into the meaning and syntax of the arguments, walking step-by-step through some of the nitty-gritty details and more advanced capabilities. One thing in particular that became more clear to me, was the functionality of aes() or the “aesthetics,” which was something I’d found particularly confusing in my first encounters with ggplot. For example, it was not completely clear to me why you would put some arguments within aes() and some outside aes(), or define x and y in aes() in the first line versus individual geoms; e.g. these give the same plot:
 
 ```{r, comment=FALSE, include=FALSE, cache=FALSE}
 library(reshape2) # will use the tips dataset from reshape2
@@ -42,7 +42,7 @@ p1 <- ggplot(data = tips, aes(x = total_bill, y = tip/total_bill, color = day)) 
   geom_point(size = 0.25) +
   guides(color = FALSE) +
   theme_bw() + 
-  labs(x = " ", y = "Tip / Total Bill \n") 
+  labs(x = " ", y = "Tip / Total Bill") 
 
 p2 <- ggplot(data = tips, aes(color = day)) +
   geom_point(aes(x = total_bill, y = tip/total_bill), size = 0.25) +
