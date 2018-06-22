@@ -6,12 +6,12 @@ output: html_document
 <br>
 <br>
 
-[OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html)
+[OHI Data Science Training](http://ohi-science.org/data-science-training/index.html)  ---  an online book written by The Ocean Health Index Team as an introduction to data science with R, with a focus on the tools used for calculating the OHI.
 
-[OHI Fellows Website Git Repo](https://github.com/OHI-Science/globalfellows)
+[R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)  ---  a collection of 8x11 pages (double-sided) each crammed with all-you-need-to-know information about a given package
 
-[R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+[R for Data Science (R4DS)](http://r4ds.had.co.nz/)  ---  classic book for learning to do data science with R
 
-[R for Data Science (R4DS)](http://r4ds.had.co.nz/)
+[Stat545](http://stat545.com/topics.html)  ---  a well-organized and comprehensive website for a statistics course at UBC, which teaches R/RStudio as well as Git/GitHub
 
-[OHI Data Science Training](http://ohi-science.org/data-science-training/index.html)
+[Happy Git and GitHub for the useR](http://happygitwithr.com/)  ---  classic book for integrating Git + GitHub with your R workflows

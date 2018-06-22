@@ -1,5 +1,4 @@
 ---
-title: "OHI Theory"
 output: html_document
 ---
 
@@ -10,11 +9,4 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 <br>
 
-
-[![](./images/goal scores.png){width=250px}](z3_HowGoalScore.html)![](./images/quickfacts_ ao.png){width=250px}
-
-**Helpful Resources:**
-
-[OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html)
-
-[OHI Fellows Website Git Repo](https://github.com/OHI-Science/globalfellows)
+[![](./images/goal scores.png){width=250px}](z3_HowGoalScore.html)![](./images/quickfacts_ ao.png){width=250px} [![](./images/ohi_theory_resources.png){width=250px}](ohi_theory_resources.html)
