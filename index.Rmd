@@ -52,28 +52,18 @@ This site documents our experience in learning about the Ocean Health Index (OHI
 ```{r echo=FALSE}
 
 library(timevis)
+timeline <- read.csv("timeline.csv") # add tasks to csv as we go
 
 data <- data.frame(
-  id      = 1:9,
-  content = c("First day!", "Built our first website",
-              "Completed ggplot training", "First blog post",
-              "Completed tidyverse training", "Learned how to gapfill",
-              "Data preparation training", "OHI file organization",
-              "Complete MAR Data Prep"),
-  start   = c("2018-01-26", "2018-02-16",
-              "2018-02-23", "2018-02-23",
-              "2018-03-06", "2018-03-23",
-              "2018-03-23", "2018-04-06",
-              "2018-04-18"),
-  end     = c(NA, NA, 
-              NA, NA, 
-              NA, NA,
-              "2018-04-13", NA,
-              "2018-05-03")
+  id      = 1:nrow(timeline),
+  content = timeline$Task,
+  start   = timeline$Start,
+  end     = timeline$End
 )
 
 timevis(data)
 
 ```
 </center>
+
 ![](images/fishes-banner.png)
