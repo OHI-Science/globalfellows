@@ -6,6 +6,14 @@ output: html_document
 <br>
 <br>
 
-[OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html)
+[OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html) --- Comprehensive methodology reference document for global OHI assessments
 
-[OHI Fellows Website Git Repo](https://github.com/OHI-Science/globalfellows)
+[OHI Results](http://ohi-science.nceas.ucsb.edu/plos_change_in_global_ocean_health/) --- Global OHI results for years 2012 through 2016 in plot, map, and tabular forms
+
+[OHI Fellows Website Git Repo](https://github.com/OHI-Science/globalfellows) --- GitHub repo for this website!
+
+[OHI Science Website](http://ohi-science.org/) --- Main website for the project, with information about the science behind the OHI
+
+[Ocean Health Index Communications Website, Scores](http://www.oceanhealthindex.org/region-scores) --- Visualization of index scores, with information by country and goal, over time
+
+[OHI Layers](http://ohi-science.org/ohi-global/layers_table.html) --- Table summarizing all the data layers that go into the index, with links to more information on the meaning of the data and rationale for including, and on the data preparation procedure
