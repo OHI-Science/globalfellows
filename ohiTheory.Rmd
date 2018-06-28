@@ -9,4 +9,4 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 <br>
 
-[![](./images/goal scores.png){width=250px}](z3_HowGoalScore.html)![](./images/quickfacts_ ao.png){width=250px} [![](./images/ohi_theory_resources.png){width=250px}](ohi_theory_resources.html)
+[![](./images/ohi_calculate.png){width=250px}](z3_HowGoalScore.html) [![](./images/ohi_intro.png){width=250px}](z3_ohiIntro.html) [![](./images/ohi_theory_resources.png){width=250px}](ohi_theory_resources.html)
