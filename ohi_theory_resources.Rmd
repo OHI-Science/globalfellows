@@ -17,3 +17,5 @@ output: html_document
 [Ocean Health Index Communications Website, Scores](http://www.oceanhealthindex.org/region-scores) --- Visualization of index scores, with information by country and goal, over time
 
 [OHI Layers](http://ohi-science.org/ohi-global/layers_table.html) --- Table summarizing all the data layers that go into the index, with links to more information on the meaning of the data and rationale for including, and on the data preparation procedure
+
+[OHI Core](https://github.com/OHI-Science/ohicore) --- GitHub repo with ohicore package, containing functions used for calculating the global assessment scores
