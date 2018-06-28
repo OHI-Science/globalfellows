@@ -1,22 +1,23 @@
 ﻿Task,Start,End
-First day!,2018-01-26,NA
-Built our first website,2018-02-16,NA
-Learned to make awesome ggplots,2018-02-23,NA
-First blog post,2018-02-23,NA
-Completed tidyverse training,2018-03-06,NA
-Learned how to gapfill,2018-03-23,NA
-Data prep training,2018-03-23,2018-04-13
-OHI file organization,2018-04-18,NA
-Completing MAR data prep,2018-04-18,2018-05-03
-Exploring OHI Toolbox,2018-04-20,2018-04-27
-Pathogen data,2018-05-02,2018-06-11
-Learned to update OHI toolbox,2018-05-04,NA
-Prepare GCI data,2018-05-04,2018-05-17
-Added GCI resilience data to toolbox,2018-05-18,NA
-Added genetic escapes pressure data,2018-05-25,NA
-Learn about spatial data,2018-05-25,NA
-Completed Natural Products data prep,2018-06-08,NA
-Publicized website on OHI twitter!,2018-06-15,NA
-Started working on Iconic Species data prep,2018-06-22,NA
-Ramping up calculation of OHI v2018,2018-06-25,NA
-Fellows start working full-time,2018-06-25,NA
+First day!,1/26/18,NA
+Built our first website,2/16/18,NA
+"<a href = ""http://ohi-science.org/data-science-training/ggplot2.html"">Learned to make awesome ggplots</a>",2/23/18,NA
+First blog post,2/23/18,NA
+"Completed <a href=""http://ohi-science.org/data-science-training/dplyr.html"">dplyr</a> and <a href=""http://ohi-science.org/data-science-training/tidyr.html"">tidyr</a> training",3/6/18,NA
+Learned how to gapfill,3/23/18,NA
+Data prep training,3/23/18,4/13/18
+OHI file organization,4/18/18,NA
+"Completing <a href=""http://www.oceanhealthindex.org/methodology/goals/food-provision/mariculture"">MAR</a> data prep",4/18/18,5/3/18
+Exploring OHI Toolbox,4/20/18,4/27/18
+"<a href=""http://www.oceanhealthindex.org/methodology/components/pathogens"">Pathogen data</a>",5/2/18,6/11/18
+"Learned to update <a href=""http://ohi-science.org/toolbox-training/toolbox-ecosystem.html"">OHI Toolbox</a>",5/4/18,NA
+"Prepare <a href=""http://www.oceanhealthindex.org/methodology/components/global-competitiveness-index"">GCI</a> data",5/4/18,5/17/18
+Added GCI resilience data to toolbox,5/18/18,NA
+"Added <a href=""http://www.oceanhealthindex.org/methodology/components/genetic-escapes"">genetic escapes</a> pressure data",5/25/18,NA
+Learn about spatial data,5/25/18,NA
+"Completed <a href=""http://www.oceanhealthindex.org/methodology/goals/natural-products"">Natural Products</a> data prep",6/8/18,NA
+"Shared website on <a href=""https://twitter.com/OceanHealthIndx/status/1010210061405179904"">OHI twitter</a>!",6/15/18,NA
+"Started working on <a href=""http://www.oceanhealthindex.org/methodology/components/iconic-species-list"">Iconic Species</a> data prep",6/22/18,NA
+Ramping up calculation of OHI v2018,6/25/18,NA
+Fellows start working full-time,6/25/18,NA
+Added Mariculture data into toolbox,6/27/18,NA
