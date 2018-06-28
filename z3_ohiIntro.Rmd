@@ -1,0 +1,32 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 20)
+```
+
+<br>
+
+## What is the Ocean Health Index?
+***
+
+![](images/john-salvino-seaice-unsplash.jpg)
+_Photo by John Salvino on Unsplash_
+
+
+WORK ON PROGRESS... Short introduction to the OHI!
+
+![](images/nick-karvounis-fishboat-unsplash.jpg)
+_Photo by Nick Karvounis on Unsplash_
+
+
+![](images/scott-webb-anenomes-unsplash.jpg)
+_Photo by Scott Webb on Unsplash_
+
+
+![](images/grant-porter-seaweed-unsplash.jpg)
+_Photo by Grant Porter on Unsplash_
+
+![](images/romello-williams-mangrove-unsplash.jpg)
+_Photo by Romello Williams on Unsplash_
