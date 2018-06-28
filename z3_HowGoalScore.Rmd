@@ -1,7 +1,16 @@
 ---
-title: "How to calculate a goal score"
 output: html_document
 ---
 
-WORK ON PROGRESS.. Formulas and process, all in one place!
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 20)
+```
 
+<br>
+
+## How to Calculate a Goal Score
+***
+
+![](images/goals.png)
+
+WORK ON PROGRESS... Formulas and process, all in one place!
