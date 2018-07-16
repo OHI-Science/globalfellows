@@ -25,10 +25,15 @@ Each of the [ten goals](https://www.nature.com/articles/nature11397) have their 
 ***
 
 ```{r, echo = FALSE}
-views <- c("goals_calc/ao_calc.png", "goals_calc/hab_calc.png", "goals_calc/spp_calc.png", "goals_calc/cp_calc.png",
-           "goals_calc/cs_calc.png", "goals_calc/cw_calc.png", "goals_calc/fis_calc.png", "goals_calc/mar_calc.png",
-           "goals_calc/eco_calc.png", "goals_calc/liv_calc.png", "goals_calc/np_calc.png", "goals_calc/ico_calc.png",
-           "goals_calc/lsp_calc.png", "goals_calc/tr_calc.png")
+# views <- c("goals_calc/ao_calc.png", "goals_calc/hab_calc.png", "goals_calc/spp_calc.png", "goals_calc/cp_calc.png",
+#            "goals_calc/cs_calc.png", "goals_calc/cw_calc.png", "goals_calc/fis_calc.png", "goals_calc/mar_calc.png",
+#            "goals_calc/eco_calc.png", "goals_calc/liv_calc.png", "goals_calc/np_calc.png", "goals_calc/ico_calc.png",
+#            "goals_calc/lsp_calc.png", "goals_calc/tr_calc.png")
+
+views <- c("goals_calc/ao_crop.png", "goals_calc/hab_crop.png", "goals_calc/spp_crop.png", "goals_calc/cp_crop.png",
+           "goals_calc/cs_crop.png", "goals_calc/cw_crop.png", "goals_calc/fis_crop.png", "goals_calc/mar_crop.png",
+           "goals_calc/eco_crop.png", "goals_calc/liv_crop.png", "goals_calc/np_crop.png", "goals_calc/ico_crop.png",
+           "goals_calc/lsp_crop.png", "goals_calc/tr_crop.png")
 
 names(views) <- c("Artisanal Fishing Opportunity", "Biodiversity: Habitat", "Biodiversity: Species", 
                   "Coastal Protection", "Carbon Storage", "Clean Waters", "Food Provision: Fisheries", "Food Provision: Mariculture",
