@@ -1,0 +1,35 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Artisanal Fishing Opportunity
+
+<br>
+\[
+\begin{aligned}
+& x_{ao} \text{   is the status of the artisinal fishing goal}\\
+\\
+& x_{ao} = (1 - D_u) * S_{ao}\\
+& D_u = (1 - PPPpcGDP) * (1 - O_{ao})\\
+\\
+& D_u \text{  is the unmet demand}\\
+& S_{ao} \text{   sustainability weighting; 1 if no data or perfectly sustainable}\\
+& O_{ao} \text{   is the access to artisinal-scal fishing, defined by Mora et al. (2009)}\\
+& PPPpcGDP \text{   is ln-transformed rescaled purchasing power parity adjusted per capita GDP}
+\end{aligned}
+\]
+<br>

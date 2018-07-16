@@ -1,0 +1,37 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Coastal Protection
+
+<br>
+\[
+\begin{aligned}
+& x_{cp} \text{   is the status of the coastal protection goal}\\
+\\
+& x_{cp} = \left(\sum^N_{k=1} (h_k \times w_k \times A_k) \right) \left(\sum^N_{k=w} (w_k \times A_k) \right)^{-1} \\
+\\
+& h = \frac{C_c}{C_r}\\
+\\
+& h \text{   is a measure of the habitat's condition with respect to its reference condition}\\
+& C_c \text{  is the current health of shoreline-protecting habitat $k$ in a region (mangrove, saltmarsh, coastal sea ice, coral reefs, seagrass)}\\
+& C_r \text{  is the reference condition of habitat $k$}\\
+& w \text{  is the rank weight of the habitat's protective ability}\\
+& A \text{   is the area within a region for each $k$ habitat type}
+\end{aligned}
+\]
+<br>

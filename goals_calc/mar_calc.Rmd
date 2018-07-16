@@ -1,0 +1,38 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Food Provision: Mariculture
+
+<br>
+\[
+\begin{aligned}
+& x_{mar} \text{   is the status of the mariculture food provision sub-goal}\\
+\\
+& x_{mar} = \frac{Y_c}{Y_{c, \text{ } ref}}\\
+\\
+& Y_c = \left(\sum^N_{k=1} Y_k \times S_{k, r}\right)\left(\frac{1}{P_r}\right)\\
+\\
+& Y_c \text{   is the current sustainably-harvested yield within each country, per person within 25 miles of the region's coast}\\
+& Y_k \text{   is the 4-fyear moving average of tonnes of production for each $k$ mariculture species currently or at one time cultured within a country}\\
+& S_{k, r} \text{   is the sustainability score for each $k$ mariculture species and region}\\
+& P_r \text{   is the population within 25 miles of the region's coast}\\
+& Y_{c, \text{ } ref} \text{   is the $Y_c$ value that corresponds to the 95th quantile across all regions and years}\\
+& N \text{  is the number of harvested mariculture species $k$}
+\end{aligned}
+\]
+<br>

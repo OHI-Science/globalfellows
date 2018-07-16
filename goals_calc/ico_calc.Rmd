@@ -1,0 +1,34 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Sense of Place: Iconic Species
+
+<br>
+\[
+\begin{aligned}
+& x_{ico} \text{   is the status of the iconic species sub-goal}\\
+\\
+& x_{ico} = \left(\sum^{LC}_{i=EX} S_i \times w_i \right)  \left(\sum^{LC}_{i=EX} S_i \right)^{-1} \\
+\\
+& \sum^{LC}_{i=EX} S_i \times w_i \text{   is the total wieghted IUCN status score of iconic species in a region}\\
+\\
+& S_i \text{   is the number of assessed species}\\
+& w_i \text{   is the status of species in IUCN threat category $i$}
+\end{aligned}
+\]
+<br>

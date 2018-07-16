@@ -1,0 +1,35 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Livelihoods & Economies: Economies
+
+<br>
+\[
+\begin{aligned}
+& x_{eco} \text{   is the status of the economies sub-goal}\\
+\\
+& x_{eco} = \left(\sum^N_{k=1} e_{c,\text{ } k} \right) \left(\sum^N_{k=1} e_{r,\text{ } k} \right)^{-1} \\
+\\
+& e_{c,\text{ } k} \text{   is the total adjusted revenue generated directly and indirectly from sector $k$ at current $c$ time point}\\
+& e_{r,\text{ } k} \text{   is the total adjusted revenue generated directly and indirectly from sector $k$ at reference $r$ time point}\\
+\\
+& k \text{   sectors: tourism, commercial fishing, marine mammal watching, aquarium fishing, }\\
+& \text{  wave \& renewable energy, mariculture, transport. \& shipping, ports \& harbors, ship \& boat-building}
+\end{aligned}
+\]
+<br>

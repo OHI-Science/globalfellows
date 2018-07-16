@@ -1,0 +1,46 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+  - \usepackage{placeins}
+  - \usepackage{fancyhdr}
+  - \usepackage{setspace}
+  - \usepackage{chngcntr}
+  - \onehalfspacing
+  - \counterwithin{figure}{section}
+  - \counterwithin{table}{section}
+  - \usepackage{amsmath}
+---
+
+\pagenumbering{gobble}
+
+### Food Provision: Fisheries
+
+<br>
+\[
+\begin{aligned}
+& x_{fis} \text{   is the status of the wild-caught fisheries, fisheries food provision sub-goal}\\
+\\
+& x_{fis} = \prod^n_{i=1} SS_i^{\big(\frac{C_i}{\Sigma C_i} \big)} \\
+\\
+& \displaystyle{ SS = 
+  \begin{cases}
+    B/B_{MSY} , & \text{ if } B/B_{MSY} < 0.95 \\
+    1 , & \text{ if } 0.95 \leq B/B_{MSY} \leq 1.05 \\
+    max\{1 - \alpha(B/B_{MSY} - 1.05), \beta \} , & \text{ if } B/B_{MSY} > 1.05 \\
+  \end{cases}
+  } \\
+\\
+& SS \text{ are stock status scores}\\
+& B/B_{MSY} \text{   is maximum sustainable yield for a stock}\\
+& C_i\text{ }/\text{ }\Sigma C_i \text{  is the relative contribution of a stock $i$ to overall catch}\\
+& C \text{   is the average catch since the first non null record, for each taxon within each region}\\
+\\
+& i \text{   is an individual taxon}\\
+& n \text{   is the total number of taxa in the reported catch for each region throughout the time-series}\\
+& \alpha \text{ is set to be 0.5, status decline rate, to endure penalty for under-harvested stocks is half of that for over-harvested stocks}\\
+& \beta \text{ is the minimum score a stock can get, set to 0.25}
+\end{aligned}
+\]

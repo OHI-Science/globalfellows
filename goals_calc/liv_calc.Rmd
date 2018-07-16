@@ -1,0 +1,36 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+  - \usepackage{fancyhdr}
+  - \usepackage{setspace}
+  - \usepackage{chngcntr}
+  - \onehalfspacing
+  - \counterwithin{figure}{section}
+  - \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Livelihoods & Economies: Livelihoods
+
+<br>
+\[
+\begin{aligned}
+& x_{liv} \text{   is the status of the livelihoods sub-goal}\\
+\\
+& x_{liv} = \left(\frac{1}{2}\right) \left(\frac{\sum ^k_1 j_{c,k} }{\sum ^k_1 j_{r,k} } + \frac{\sum ^k_1 w_{m,k} }{\sum ^k_1 w_{r,k} } \right)\\
+\\
+& j_{c,\text{ } k} \text{   is the adjusted number of direct and indirect jobs in sector $k$ within a region at current $c$ time point}\\
+& j_{r,\text{ } k} \text{   is the adjusted number of direct and indirect jobs in sector $k$ within a region at reference $r$ time point}\\
+& w_{m,\text{ } k} \text{   is the average PPP$-$adjusted wages per job in the sector $k$ within a region at current $c$ time point}\\
+& w_{r,\text{ } k} \text{   is the average PPP$-$adjusted wages per job in the sector $k$ within a region at reference $r$ time point}\\
+& w_r \text{  the reference value for wages was the highest value observed across all regions}\\
+\\
+& k \text{   sectors include tourism, commercial fishing, marine mammal watching, aquarium fishing, }\\
+& \text{  wave \& renewable energy, mariculture, transport. \& shipping, ports \& harbors, ship \& boat-building}
+\end{aligned}
+\]

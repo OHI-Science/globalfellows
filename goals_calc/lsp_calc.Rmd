@@ -1,0 +1,36 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Sense of Place: Lasting Special Places
+
+
+<br>
+\[
+\begin{aligned}
+& x_{lsp} \text{   is the status of the lasting special places sub-goal}\\
+\\
+& x_{lsp} = \left(\frac{1}{2} \right)  \left(\frac{\%_{CMPA}}{\%_{Ref_{CMPA}}} + \frac{\%_{CP}}{\%_{Ref_{CP}}} \right) \\
+\\
+& \%_{CMPA} \text{   is the proportion of coastal marine protected area} \\
+\\
+& \%_{CP} \text{is the proportion of coastline protected} \\
+\\
+& \%_{Ref} \text{   is the reference point; 30 for both $CMPA$ and $CP$}
+\end{aligned}
+\]
+<br>

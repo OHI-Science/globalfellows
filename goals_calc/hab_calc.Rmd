@@ -1,0 +1,35 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Biodiversity: Habitats
+
+<br>
+\[
+\begin{aligned}
+& x_{hab} \text{   is the status of the habitat biodiversity sub-goal}\\
+\\
+& x_{hab} = \left(\frac{1}{N}\right) \sum ^N_{k=1} C_k\\
+\\
+& C_k = \frac{C_c}{C_r}\\
+\\
+& C_c \text{  is the current condition specific to each $k$ habitat present in the region}\\
+& C_r \text{  is the reference condition specific to each $k$ habitat present in the region}\\
+& N \text{  is the number of habitates in the region}
+\end{aligned}
+\]
+<br>

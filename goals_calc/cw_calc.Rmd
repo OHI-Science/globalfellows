@@ -1,0 +1,34 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Clean Waters
+
+<br>
+\[
+\begin{aligned}
+& x_{cw} \text{    the status of the clean waters goal, calculated only for the first 3 nm of ocean for a region's EEZ}\\
+\\
+& x_{cw} = \sqrt[4]{a * u * l * d}\\
+\\
+& a := 1 - \text{the number of people without access to sanitation, rescaled to the global maximum}\\
+& u := 1 - \text{nutrient input, rescaled at the raster level by the 99.99th quantile value}\\
+& l := 1 - \text{chemical input, rescaled at the raster level by the 99.99th quantile value}\\
+& d := 1 - \text{marine debris, rescaled at the raster level by the 99.99th quantile value}
+\end{aligned}
+\]
+<br>

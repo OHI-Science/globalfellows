@@ -1,0 +1,38 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+\pagenumbering{gobble}
+
+### Biodiversity: Species
+
+<br>
+
+\[
+\begin{aligned}
+& x_{spp} \text{   is the status of the species biodiversity sub-goal}\\
+\\
+& x_{spp} = max \left(\frac{\bar{R}_{spp} - 0.25}{0.75}, 0 \right)\\
+& \bar{R}_{spp} = \left(\sum^M_{c=1} \left( \sum^{N_c}_{i=1} w_i \right) \times A_c \right) \left(\sum^M_{c=1} A_c \times N_c \right)^{-1}\\
+\\
+& \bar{R}_{spp} \text{  region's area-weighted mean of species risk, with floor at 25\% representing catastrophic loss of biodiversity}\\
+\\
+& \sum^M_{c=1} A_c \times N_c \text{  is the species count-weighted area across all cells in the region}\\
+\\
+& N \text{  is the number of species ($N_c$ is number species in cell $c$)}\\
+& M \text{  is number of gridded cells the region's area contains}\\
+& c \text{  a 0.5 degree grid cell within a region}\\
+& w_i \text{  the risk status for each species $i$, assigned based on IUCN threat category}\\
+& A_c \text{  area of cell $c$}
+\end{aligned}
+\]

@@ -1,0 +1,40 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Natural Products
+
+<br>
+\[
+\begin{aligned}
+& x_{np} \text{   is the status of the natural products goal}\\
+\\
+& x_{np} = \left(\frac{1}{N}\right) \sum^N_{c=1} P_c \times w_c \\
+\\
+& P_c = H_c \times S_c\\
+& S_c = 1 - \text{average}(E_c + R_c)\\
+\\
+& S_c \text{    is the sustainability of the commodity $c$}\\
+& E_c \text{    is ln-transformed harvest intensity: tonnes harvested per km$^2$ of coral and/or rocky reef, relative to global max}\\
+& R_c \text{    risk term based on whether commodity has unsustainable harvest practice, per listings in CITES appendices II and III}\\
+& P_c \text{    is the status of natural product category $c$}\\
+& H_c \text{   is the harvest level for a category relative to its own (buffered) peak reference point}\\
+& w_c \text{   ratio of max USD value for product across all years, relative to sum of max values for all products harvested in the country}\\
+& N \text{   the number of product categories $c$ harvested}
+\end{aligned}
+\]
+<br>

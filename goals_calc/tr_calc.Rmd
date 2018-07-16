@@ -1,0 +1,35 @@
+---
+output: pdf_document
+classoption: landscape
+fontsize: 14pt
+geometry: margin=1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{fancyhdr}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+\pagenumbering{gobble}
+
+
+### Tourism & Recreation
+
+<br>
+\[
+\begin{aligned}
+& x_{tr} \text{   is the status of  tourism and recreation goal}\\
+\\
+& x_{tr} = \frac{T_r}{T_{90th}}\\
+\\
+& T_r = E \times S \times W \\
+\\
+& E \text{   is the proportion of employees directly involved in the travel and tourim industry}\\
+& S \text{   is the sustainability} (\text{ TTCI: Crotti \& Misrahi, } 2015)\\
+& W \text{   is a penalty based on travel warnings issued by the US State Department}
+\end{aligned}
+\]
+<br>
