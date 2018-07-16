@@ -208,6 +208,64 @@ $(document).ready(function () {
 
 <p><br> <br></p>
 <hr />
+<div id="behind-the-scenes-data_prep" class="section level2">
+<h2>Behind the scenes: Data_prep</h2>
+<p><em>by Camila Vargas - July 16, 2018</em></p>
+<hr />
+<p>March 6 2018. <a href="http://ohi-science.org/data-science-training/dplyr.html">Introduction to Open Data Science. Chapter 6: Data Wrangling - Dplyr</a></p>
+<p><br></p>
+<blockquote>
+<p>“Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in the mundane labor of collecting and preparing data, before it can be explored for useful information. -<a href="https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">NYTimes (2014)</a>”</p>
+</blockquote>
+<p><br></p>
+<p>Four months ago, our training in data wrangling started with this quote. Throughout these months, I’ve realized that though this quote is quite accurate – we do spend most of our time collecting and preparing data – I disagree in describing this labor as mundane.</p>
+<p>It is not easy, that’s for sure. And many times it can be frustrating and feel hopeless. But one thing is for certain: by going over a dataprep script, I have learned much more about coding and R functions than in any class I’ve taken.</p>
+<p>One of the most important parts of calculating the Ocean Health Index is preparing the data. First, we see if there are any updates on the data from each of the data sources. Then, if the data has been updated, we download the raw data from the pertinent source, wrangle it and organize into the necessary form to calculate scores.</p>
+<p>It is something close to magic. By running a data_prep script you go from something extremely overwhelming like this:</p>
+<br>
+<center>
+<div class="figure">
+<img src="Blog_files/camila/raw_data.png" />
+
+</div>
+</center>
+<p><br></p>
+<p>To something as tidy as this:</p>
+<br>
+<center>
+<div class="figure">
+<img src="Blog_files/camila/outcome_file.png" />
+
+</div>
+</center>
+<p><br></p>
+<p>But it is not quite magic. This whole procedure is far from being a single spell with a magic wand. Nothing is less straightforward than the process of preparing data.</p>
+<p>Here, I’ll share some insights from my experience so far:</p>
+<ul>
+<li><p>Every time I start a new script I’m optimistic. I start with the idea that this will be fairly uncomplicated. The data is not too muddled and there is already a script that takes care of the process.</p></li>
+<li><p>Here we go. We start by searching if there are any updates to the data. Data has been updated. That is good. More data means that our analysis will be more robust and up-to-date. But, obstacle #1: the data source changed the way they reported the data.</p></li>
+<li><p>This is not necessarily bad. Looking at the big picture, changes in the way data is reported can mean improvement in the data, which overall means improvement in our analysis. In many cases though, it also means that we have to revise our methods. But, methods cannot change too much because they should be as consistent as possible so that the index can be compared through time.</p></li>
+<li><p>And then, not only the method, but little things like the format of the new data, how each region is reported, and does that match with the OHI regions, and so on. All of this must be adjusted in a nuanced way.</p></li>
+<li><p>Finally you get everything to work. Yihaa!! Definitely a moment of pride. The final step is to check if the outcome you are getting with this year’s data is similar enough to the outcome of last year’s data. And then you get something like this…</p></li>
+</ul>
+<br>
+<center>
+<div class="figure">
+<img src="Blog_files/camila/gaph_TR_travelwarnings.png" />
+
+</div>
+</center>
+<p><br></p>
+<ul>
+<li>Not quite a match. And here we go again.. Check everything you have done. Revise methods, revise code, check data in every step of the wrangling process. The goal is to figure out why is the data so different from last year assessment.</li>
+</ul>
+<p><br></p>
+<p>That is in part what we do. We spend 50%, probably closer to 80%, of our time collecting and preparing data. It is challenging, but the kind of challenge that, at least for me, makes me want to spend all the necessary time to find the best solution. Maybe you spend way more time than what you anticipated. But at the end, when you reach the final outcome, there is a great satisfaction. You finally get to input the data into ohi-global which sources functions from ohi-core, an R package that calculates status, trend, pressure, resilience, and in some cases, scores. Yes finally, scores!</p>
+<p>This whole process is compared to the job of an editor, or the backstage of a show: so much hard work behind the scenes is never seen by the final audience. But without all this work the play would not play. Behind the scenes is key for putting together a successful show!<br />
+Some of us chose this role. I wanted to share a little bit of how the OHI day-to-day looks for me: long, hard hours and days of work, constantly checking if what you are doing make sense, revising methods and outcomes, comparing outcomes to what has been obtained years before. A great learning experience and overall very rewarding (even addictive).</p>
+<p><br></p>
+<hr />
+</div>
 <div id="grappling-with-graphics" class="section level2">
 <h2>Grappling with Graphics</h2>
 <p><em>by Ellie Campbell - April 30, 2018</em></p>
