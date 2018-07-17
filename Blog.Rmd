@@ -12,7 +12,7 @@ output: html_document
 *by Camila Vargas - July 16, 2018*
 
 ***
-March 6 2018. [Introduction to Open Data Science. Chapter 6: Data Wrangling - Dplyr](http://ohi-science.org/data-science-training/dplyr.html)
+On March 6 2018 we read [Introduction to Open Data Science. Chapter 6: Data Wrangling - Dplyr](http://ohi-science.org/data-science-training/dplyr.html). This chapter starts with the quote:
 
 <br>
 
@@ -20,8 +20,7 @@ March 6 2018. [Introduction to Open Data Science. Chapter 6: Data Wrangling - Dp
 
 <br>
 
-Four months ago, our training in data wrangling started with this quote. 
-Throughout these months, I’ve realized that though this quote is quite accurate -- we do spend most of our time collecting and preparing data -- I disagree in describing this labor as mundane.
+This was the beginning of our training in data wrangling, four months ago. Throughout these months, I’ve realized that though this quote is quite accurate -- we do spend most of our time collecting and preparing data -- I disagree in describing this labor as mundane.
 
 It is not easy, that’s for sure. And many times it can be frustrating and feel hopeless. But one thing is for certain: by going over a dataprep script, I have learned much more about coding and R functions than in any class I’ve taken.
 
@@ -66,7 +65,7 @@ Here, I’ll share some insights from my experience so far:
 <br>
 <center>
 
-![](./Blog_files/camila/gaph_TR_travelwarnings.png)
+![](./Blog_files/camila/tr_travelwarning_graph.png)
 
 </center>
 
