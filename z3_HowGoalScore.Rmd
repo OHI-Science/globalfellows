@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 20)
 ***
 
 
-![](images/ohi_flowchart.png)
+![](https://docs.google.com/drawings/d/e/2PACX-1vRN8pFrclhIYIPk7wBzI1TSAkycNzIK7KUKmqcMtej8KBPnsm4RbhjIsGwUPrmJ-7aRhmdlBscCMGUe/pub?w=1658&h=584)
 
 ***
 
