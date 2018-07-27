@@ -18,6 +18,8 @@ header-includes:
 
 ### Carbon Storage
 
+Measures the condition of coastal habitats that store and sequester atmospheric carbon.
+
 <br>
 \[
 \begin{aligned}

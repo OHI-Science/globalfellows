@@ -18,6 +18,8 @@ header-includes:
 
 ### Clean Waters
 
+Measures the degree to which oceans are free of chemicals contaminants, excessive nutrients, human pathogens and trash.
+
 <br>
 \[
 \begin{aligned}
