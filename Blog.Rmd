@@ -24,46 +24,53 @@ output:
 There are two ways you can upload shapefiles into RStudio. You can read it in as a normal spatial polygons file (class: SpatialPolygonsDataFrame) or as a simple features file (class: sf and dataframe). While they are both spatial data, the latter acts more like a dataframe with a column for geometry information. It is a relatively new functionality and can be done through the `sf` package, which usually allows you to upload your shapefile in a LOT faster than preserving the original file type using the `sp` package. 
 
 <br>
-<center>
-![](https://docs.google.com/drawings/d/e/2PACX-1vTDLbOmBwtKrCMdtnvUWhn21Tvh3Ivqw_0Cdl6eVzyVdnaB1EQPiDu-FShlEXAqQxBNNjMQAvZCJKk8/pub?w=960&h=720)
-</center>
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vTDLbOmBwtKrCMdtnvUWhn21Tvh3Ivqw_0Cdl6eVzyVdnaB1EQPiDu-FShlEXAqQxBNNjMQAvZCJKk8/pub?w=960&h=720" width="150px"></center>  
 <br>
 
 We’re dealing with massive datasets for OHI so every second counts!
 
 <br>
 
-Example of code to read in spatial file as a `SpatialPolygonsDataFrame`:
+Here is an example of how to read in a spatial file as a `SpatialPolygonsDataFrame`:
 ```
 wdpa_poly <- rgdal::readOGR(dsn = "/ohi/shps", 
                        layer = "wdpa_poly_shapefile",
                        stringsAsFactors = FALSE)
 ```
-Runtime: 6.7 minutes
-
-<br>
-
-Example of code to read in spatial file as an `sf` and `dataframe`:
-```
-wdpa_sf <- st_read(dsn = "ohi/shps", 
-layer = "wdpa_poly_shapefile")
-```
-Runtime: 49 seconds
-
-<br>
-
-You can try it out yourself by sandwiching this code between whatever you are trying to time to see how many seconds have elapsed. Run them altogether.
-
+To determine how much time it takes to run this process, you can sandwich your code between `proc.time()` and a time-elapsed message using `cat()`. Run all of this together.
 ```
 start <- proc.time()
 
-some_function()
+wdpa_poly <- rgdal::readOGR(dsn = "/ohi/shps", 
+                       layer = "wdpa_poly_shapefile",
+                       stringsAsFactors = FALSE)
 
 cat('elapsed: ', (proc.time() - start)[3])
 ```
-The simple features format of the spatial file is processed a lot faster than the shapefile format. While in this case the difference is only about 5 to 6 minutes, the time `sf` will save you will become more important when you read in larger shapefiles. Or if you have to finish up your task to make it to happy hour. 
+```
+elapsed: 402.000
+```
+Time elapsed is 402 seconds, or 6.7 minutes.
 
-The data is the same, it is just a different format that might be less complex and easier to process.
+<br>
+
+Alright, what if we read in the spatial file as an `sf` or `dataframe` object:
+```
+start <- proc.time()
+
+wdpa_sf <- st_read(dsn = "ohi/shps", 
+layer = "wdpa_poly_shapefile")
+
+cat('elapsed: ', (proc.time() - start)[3])
+```
+```
+elapsed:  49.000
+```
+Time elapsed is only 49 seconds!
+
+<br>
+
+The simple features format of the spatial file is processed a lot faster than the shapefile format. While in this case the difference is only about 5 to 6 minutes, the time `sf` will save you will become more important when you read in larger shapefiles. Or if you have to finish up your task to make it to happy hour. 
 
 <br>
 
@@ -71,17 +78,13 @@ The data is the same, it is just a different format that might be less complex a
 
 The strengths of dealing with spatial data in R is the geospatial processing or subsetting and manipulation of the values itself. What’s really cool about `sf` is that you can manipulate the attribute table associated with the data using your handy `dplyr` and `tidyverse` tools. This is because the simple features spatial object is essentially just a data frame or tibble with a column for the spatial coordinates information.
 
-Usually, viewing the actual attribute table is really laggy in R and can cause the program to crash, especially since spatial files are often really large. But you can do it. For example, when trying to load `View(wdpa_sf)... I got a “Page Unresponsive” message: 
+Usually, viewing the actual attribute table is really laggy in R and can cause the program to crash, especially since spatial files are often really large. Or you just have to wait several minutes. For example, when trying to view the data for the spatial file using `View(wdpa_sf)`, I received a “Page Unresponsive” message: 
 
 <br>
-<center>
-![](https://docs.google.com/drawings/d/e/2PACX-1vSeK-7AbPbOrdIIzUdWUcqZ2WMtuYNEEk9IEFbFAkeHuY3y6zXk_5UJLyp3ka5jkss0Kz1oYlVdVRTC/pub?w=480&h=360)
-</center>
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vSeK-7AbPbOrdIIzUdWUcqZ2WMtuYNEEk9IEFbFAkeHuY3y6zXk_5UJLyp3ka5jkss0Kz1oYlVdVRTC/pub?w=480&h=360" width="350px"></center>  
 <br>
 
-I’m just going to wait for RStudio to be responsive so I don’t have to reload all my packages and variables.
-
-Instead of viewing the entire data table I prefer to cheat and look at a few things in the console, such as the column names. 
+Instead of viewing the entire data table, I prefer to explore summary snippets of the spatial data in the console, such as the column names:
 
 ```
 names(wdpa_sf)
@@ -119,7 +122,7 @@ This is a lot better than waiting for it to open in the window.
 
 *Subsetting & Manipulating*
 
-However, if you want to filter out for just a few regions, you have to do this tedious process that isn’t saved. So let’s say you want to filter another thing tomorrow using the same criteria, you may have to retype everything! And then I’ll have to open up a different window to remove the columns I don’t want to look at. 
+If you want to create a subset of the spatial data in ArcGIS, you have to go through a tedious process in "Select By Attributes" with no option to save your processing method (e.g. STATUS_YR >= 2015). So let’s say you want to filter your dataset using different criteria, your previous specification will be removed. The only thing you can save is the output data, but not the code you used to create it. This makes replication and data checking difficult.
 
 <br>
 <center>
@@ -127,32 +130,19 @@ However, if you want to filter out for just a few regions, you have to do this t
 </center>
 <br>
 
-To make this a bit more manageable to plot, I’m just going to focus on MPAs designated in year 2015 onwards. I’d still recommend not using `View()` because it’ll take forever.
-
-Let’s say I’m just interested in status year 2015 onwards and only the no take area and name.
-
+Subsetting the spatial data in RStudio can make it a bit more manageable to plot. Here, I’m just going to focus on MPAs designated in year 2015 onwards, the area of any no take designation within the reserve, and the year the MPA was first designated.
 ```
 wdpa <- wdpa_sf %>% 
   filter(status_yr >= 2015) %>% 
   select(name,no_tk_area,status_yr)
 ```
-
-This preserves the original data and creates a new data frame with the truncated version. So now I have original dataset wdpa_sf and intermediate dataset called wdpa
-
-```
-wdpa_18 <- sf::st_read(dsn = file.path(dir_M, 'git-annex/globalprep/_raw_data/wdpa_mpa/d2018/WDPA_June2018-shapefile'), layer = 'WDPA_June2018-shapefile-polygons')
-
-regions_t <- st_transform(regions_int, st_crs(wdpa_18))
- 
-check_18 <- st_intersection(wdpa_18, regions_t)
-```
+As an `sf` object, I can treat the spatial data just like a data frame and use `dplyr` functions such as `filter` and `select` to "Select By Attributes". This preserves the original data and easily creates a new data frame with the truncated version. So now I have original dataset `wdpa_sf` and intermediate dataset called `wdpa`.
 
 <br>
 
 *Exploring & Plotting*
 
-
-You can plot spatial files in RStudio as well, but it’s usually a simplistic glance.
+You can plot spatial files in RStudio as well once you've read it in and filtered it as desired, but it’s usually a simplistic glance.
 
 ```
 plot(wdpa_sf[1])
@@ -164,7 +154,7 @@ plot(wdpa_sf[1])
 </center>
 <br>
 
-What are all the values? So the [1] specifies that you are taking the values in the first column, which is meaningless as it is just a WDPA id number. Let’s say I don’t want any special values:
+What are all the values? So the [1] specifies that you are taking the values in the first column, which is meaningless as it is just a WDPA id number. Let’s say I don’t want any special values. I can use `st_geometry` to just plot the shapes without values:
 
 ```
 plot(st_geometry(wdpa_sf))
@@ -176,9 +166,7 @@ plot(st_geometry(wdpa_sf))
 </center>
 <br>
 
-This will just plot the geometry or shape.
-
-You can always create annotations to take a better look at the values, but this would require an understanding of the columns or attributes first. It looks like I can categorize the values by No Take Area, Status Year (or year it was designated) or perhaps IUCN category.
+You can also add annotations to take a better look at the values, but this would require an understanding of the columns or attributes first. It looks like I can categorize the values by either the **No Take Area**, **Status Year** (the year it was designated), or **IUCN category** column.
 
 I want to plot values of no take areas for each protected area designation. I can call the name of that column, `no_tk_area` to map the values.
 
@@ -187,16 +175,44 @@ wdpa <- wdpa_sf %>%
   filter(status_yr >= 2015) %>% 
   select(name,no_tk_area,status_yr)
 
-plot(wdpa_sf[“no_tk_area”], axes = TRUE)
+library(maps)
+plot(wdpa["no_tk_area"], axes = TRUE, main="Global No Take Area in MPA Zones")
 ```
 
 <br>
-<center>
-![](https://docs.google.com/drawings/d/e/2PACX-1vTqOSaFCXoAplLd2pD-2Vwb6g_FpPeXEOaQT3lgj2Xbc62cL-FJD9miXtjdfb7bfEimqGXHC1bI2155/pub?w=705&h=575)
-</center>
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vTqOSaFCXoAplLd2pD-2Vwb6g_FpPeXEOaQT3lgj2Xbc62cL-FJD9miXtjdfb7bfEimqGXHC1bI2155/pub?w=705&h=575" width="600px"></center>  
 <br>
 
-The axes annotation brought out the latitude and longitude coordinate axes.
+The `axes` annotation added latitude and longitude coordinate axes and `main` was used to specify a title. However, I'd like to add continents onto this map as a background layer. This can be accomplished with the `maps` package.
+
+```
+library(maps)
+plot(wdpa["no_tk_area"], axes = TRUE, main="Global No Take Area in MPA Zones");maps::map('world',add=T, fill=T, col='gray')
+```
+<br>
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vRn3wYfNgzfkufy-eAGB3LrH-WbPA8TdlH6a4lLURZgArftOIptnlPg2oJnp_jYFk_GdwudCKtZR4DJ/pub?w=929&h=689" width="600px"></center>  
+<br>
+
+*Geospatial Processing*
+
+The last topic I'll only touch upon briefly. Many of the geospatial processing tools you conduct in ArcGIS, such as transforming coordinate systems or finding the intersection between two shapefiles have equivalents in the `sf` package.
+
+Here I want to transform the coordinates of my shapefile **regions** into the same coordinate system as the shapefile **wdpa_sf**. First I read the shapefiles in using the `sf` method,
+```
+regions <- sf::st_read(dsn = "some/file/path/to/folder", layer = "name-of-shapefile-without-extension")
+
+wdpa_sf <- sf::st_read(dsn = file.path(dir_M, 'git-annex/globalprep/_raw_data/wdpa_mpa/d2018/WDPA_June2018-shapefile'), layer = 'WDPA_June2018-shapefile-polygons')
+```
+then with a single line of code, I can transform the coordinates system in **regions** to match that of **wdpa_sf**.
+```
+regions_transformed <- st_transform(regions, st_crs(wdpa_sf))
+```
+Finding the intersection is as simple as running a single function: `st_intersection` and specifying the polygons of interest.
+```
+find_intersection <- st_intersection(wdpa_18, regions_t)
+```
+
+Not only are these spatial analyses and processing tools available in R, but, once again, you have the capability to document and share how you created intermediate shapefiles, step by step. See [`sf` tutorial](https://r-spatial.github.io/sf/articles/sf1.html) for a list of other common geospatial processing functions.
 
 **Conclusion**: Even though ArcMap crashes a lot and can also be quite laggy, viewing and exploring spatial data visually is often best in ArcMap OR QGIS which is free, instead of R, especially if your geographic range is large (like the GLOBAL EXTENT). However, if you don’t have a lot of money to throw or work for a spatial company, R can show you the basics and is particularly smooth when documenting and running geospatial processing. If you were only working on a smaller region like the United States or California, then it may be easier to make a quick map to email someone but not for publication necessarily, since you’re missing out on ArcMap’s nice alignment guides, titles, subtitles, adding basemaps as easily.
 
