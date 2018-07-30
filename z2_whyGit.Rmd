@@ -8,44 +8,112 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-## Why Should a Non-Coder Use GitHub?
-***
+# **"Why GitHub?" is a Great Question**
 
 ![](images/code.jpg)
 _Photo by Oscar Nord on Unsplash_
 
+## Who is using GitHub?
+
+You don’t have to be a Silicon Valley developer or a seasoned coder for GitHub to be the right platform for your project. Check out some government entities all over the world who are using GitHub [here](https://government.github.com/community/)! Below is a sneak peek of some U.S. cities that have acquired a GitHub handle.
+
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vQXJmEa4zSzPwCICkzdbeK-4hYrpFbzosCJL1Goxw244xvi1tTrn6RHADC-Okv49j1qIjO0JPrBL9lz/pub?w=1079&h=1022" width="600px"></center>
+
 <br>
+
+## Why Should a Non-Coder Use GitHub?
 
 I never intended to get into GitHub or become a coding whiz. Actually I never refer to myself as a coding whiz, but I have gotten quite proficient in R ([read more about R](http://ohi-science.org/globalfellows/z1_whyRmd.html)) and am slowly moving into the GitHub realm. Here are a few reasons I jumped on the GitHub train:
 
 1. I can record and save my complicated, multistep quantitative calculations of my raw data as easy as saving a poem in a word document without having to format as an equation every time.
 
-![](images/math.jpg)
-_Photo by Roman Mager on Unsplash_
+
+<center><img src="images/math.jpg" width="500px"><p>_Photo by Roman Mager on Unsplash_</p></center>
 
 2. I can save multiple versions of the document I am working on at different points in time (e.g. last week's copy, yesterday's copy, this morning's copy, this evening's copy) and retrieve any of them whenever I want to. There is no fear of accidentally deleting any of those versions as well or accidentally throwing them out in the trash. Oops!
 
-![](images/versioning.jpg)
-_Photo by Steve Johnson on Unsplash_
+<center><img src="images/versioning.jpg" width="500px"><p>_Photo by Steve Johnson on Unsplash_</p></center>
 
 
 3. I can easily share and work on data (CSV or Excel files) with collaborators. If I accidentally overwrite a team member's work that was actually better than my revision, I can go back revert my changes very easily. No need to stress! Let's just revert!
 
-![](images/distress.jpg)
-_Photo by Ayo Ogunseinde on Unsplash_
+<center><img src="images/distress.jpg" width="500px"><p>_Photo by Ayo Ogunseinde on Unsplash_</p></center>
+
 
 
 4. GitHub serves as a cloud version of my computer files. Say I forget my personal laptop, but have access to the internet. I can sign into GitHub and download my WeddingPictures.jpg, BestNovellaEver.docx, Codingforlyfe.Rmd, and SomeDocumentwithImportantText.txt all from a web browser.
 
-![](images/cloud.jpg)
-_Photo by Samuel Zeller on Unsplash_
+<center><img src="images/cloud.jpg" width="500px"><p>_Photo by Samuel Zeller on Unsplash_</p></center>
+
 
 5. Finally, I can create and customize my own website without having to know HTML or CSS. So:
 
-![](images/badass.jpg)
-_Photo by Kevin Grieve on Unsplash_
+<center><img src="images/badass.jpg" width="500px"><p>_Photo by Kevin Grieve on Unsplash_</p></center>
+
 
 <br> 
+
+## Key Terminology
+
+This is a developing glossary of common git terms.
+
+Terms        | Description
+------------ | -----------------------------------------------
+repository   | A project, collection of files and folders, and tracking of each change that has occurred and been submitted to this project by all collaborators
+commit       | Creating an identifier for a set of changes you have made to the project (e.g. create a new folder, or change the value in a spreadsheet) so it can be called upon and viewed later. 
+pull         | 
+push         | 
+merge        | 
+HEAD         | Current snapshot
+origin       |
+master       | Is the main branch of a project. At OHI we don’t worry too much about branches. We have a draft branch for our ohi-global and then a master one… For ohiprep we just have a single one since it’s not as worrisome if each collaborator makes direct changes to a single master/main version.
+remote       |
+branch       | Multiple branches can exist for a repository. A different version of the main project that can be used if there are many collaborators that want to try editing without affecting the main version of the project.
+forking      | Makes an entirely new copy of the project. Different from branches, because can’t just be merged????? If want to submit suggestions to project need to submit a “pull request”
+pull request |  A user-friendly interface for collaborators to discuss changes, make comments to the project before merging different people’s suggestions.
+
+## The Basic Workflow 
+
+<br>
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vSUwEmOZ5SSx56DcruVtIYzR3ciqaV3pjVGmxme5jGSi3bVV5G0yzDg7yn7FEuR3dcCFC8Rw5BN8zcY/pub?w=538&h=526" width="400px"></center>
+<br>
+
+### 1. Pull: 
+To take the copy of a project in the remote computer and pull it into your personal computer.
+
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vSsuhB5RHaOZIQCMUCX9wBBeXSIsinaFRoL8DsPqs86E_xo1EDfdqXwilhrCTQPIHMTRKx1k0PV67Qp/pub?w=345&h=343" width="400px"></center>
+<br>
+
+Now Katie and Phil both have a version of this dataset that was located in Remote.
+
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vSH1X-d9qYbX1BE_-umG18uVD2xw0PmbKxmQsMWH9ZJD7CGWeQ4vDgRtQzsK-KQtjOpcMGSuNboY9tO/pub?w=747&h=283" width="700px"></center>
+<br>
+
+### 2. Commit: 
+Katie decides she wants to make some of her own changes. She realizes that the tonnes value for New Caledonia’s Trochus shells in 2000 is actually supposed to be 86 tonnes not 96 tonnes!
+
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vSlzFTNYU5-7gnO_qT-QuHZ9mYUKmsT5wD4XU4pbagy83uPeVh9nlaOK0fTzc6YbMKeGBO2Ot3mB6Pk/pub?w=646&h=236" width="700px"></center>
+<br>
+
+After she saves that, the updated file only exists on Katie’s laptop. How does she make sure her collaborator Phil gets the updated changes? She must *commit*. This essentially places the new tonnes.csv file onto a platter ready to be served (terrible analogy?).
+
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vQHUCwl0FGpZ6mNEzAYdLRueKKX5__xhJDb1FTlg9_pSDEY9Glkvu1hhVvmhV2iIx4VX-TqDmMbh3iG/pub?w=872&h=578" width="650"></center>
+<br>
+
+### 3. Pull Again:
+
+Before Katie updates the remote computer with her changes to the New Caledonia’s tonnes data, she must pull once more in case Phil was working at the same time and has made updates to the remote!
+
+<center><img src="https://docs.google.com/drawings/d/e/2PACX-1vSwsHe9WClLe3t2ZAT2-pLk3Wx1q8xYwaXOGwqLSeI1P2okZNRnRcGaOW1BYlir6BuKU2P9Gqu64CpO/pub?w=708&h=651" width="400px"></center>
+<br>
+
+### 4. Push:
+Now Katie can finally push her New Caledonia changes to the Remote version.
+
+<br>
+<br>
+
+
 
 Thanks all for reading,
 
