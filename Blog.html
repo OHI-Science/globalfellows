@@ -333,7 +333,7 @@ wdpa_poly &lt;- rgdal::readOGR(dsn = &quot;/ohi/shps&quot;,
                        stringsAsFactors = FALSE)
 
 cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
-<pre><code>Elapsed 402.0</code></pre>
+<pre><code>elapsed: 402.000</code></pre>
 <p>Time elapsed is 402 seconds, or 6.7 minutes.</p>
 <p><br></p>
 <p>Alright, what if we read in the spatial file as an <code>sf</code> or <code>dataframe</code> object:</p>
@@ -343,7 +343,7 @@ wdpa_sf &lt;- st_read(dsn = &quot;ohi/shps&quot;,
 layer = &quot;wdpa_poly_shapefile&quot;)
 
 cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
-<pre><code>Elapsed 49.0</code></pre>
+<pre><code>elapsed:  49.000</code></pre>
 <p>Time elapsed is only 49 seconds!</p>
 <p><br></p>
 <p>The simple features format of the spatial file is processed a lot faster than the shapefile format. While in this case the difference is only about 5 to 6 minutes, the time <code>sf</code> will save you will become more important when you read in larger shapefiles. Or if you have to finish up your task to make it to happy hour.</p>
@@ -388,7 +388,7 @@ cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
 <p>If you want to create a subset of the spatial data in ArcGIS, you have to go through a tedious process in “Select By Attributes” with no option to save your processing method (e.g. STATUS_YR &gt;= 2015). So let’s say you want to filter your dataset using different criteria, your previous specification will be removed. The only thing you can save is the output data, but not the code you used to create it. This makes replication and data checking difficult.</p>
 <br>
 <center>
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vQxY-4AZF_vHD6sdVsxBWZC2WFcIZSGD78oQbNiZz-b2Rj4SOcIkY8ZDyPpZ2hQvO9DXtaeAxl9TYZ5/pub?w=705&amp;h=629" />
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQxY-4AZF_vHD6sdVsxBWZC2WFcIZSGD78oQbNiZz-b2Rj4SOcIkY8ZDyPpZ2hQvO9DXtaeAxl9TYZ5/pub?w=705&h=629" width="450px">
 </center>
 <p><br></p>
 <p>Subsetting the spatial data in RStudio can make it a bit more manageable to plot. Here, I’m just going to focus on MPAs designated in year 2015 onwards, the area of any no take designation within the reserve, and the year the MPA was first designated.</p>
@@ -402,14 +402,14 @@ cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
 <pre><code>plot(wdpa_sf[1])</code></pre>
 <br>
 <center>
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vRLilUvQc8RoAa1F7CezQhQuxMVgg5-4xLZszdYptcPN6ZtkP1_mAp7ebBGHAyJ0xGqHXE2SJROD-1i/pub?w=936&amp;h=472" />
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRLilUvQc8RoAa1F7CezQhQuxMVgg5-4xLZszdYptcPN6ZtkP1_mAp7ebBGHAyJ0xGqHXE2SJROD-1i/pub?w=936&h=472" width="600px">
 </center>
 <p><br></p>
 <p>What are all the values? So the [1] specifies that you are taking the values in the first column, which is meaningless as it is just a WDPA id number. Let’s say I don’t want any special values. I can use <code>st_geometry</code> to just plot the shapes without values:</p>
 <pre><code>plot(st_geometry(wdpa_sf))</code></pre>
 <br>
 <center>
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vQU7mZtHhqu3FZzxp1aRAJhTv9YSUTlLfLACNSuCXYCziJLiWYr7KLOBSYusjGt9ZEuDME9sDTtmaxH/pub?w=929&amp;h=447" />
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQU7mZtHhqu3FZzxp1aRAJhTv9YSUTlLfLACNSuCXYCziJLiWYr7KLOBSYusjGt9ZEuDME9sDTtmaxH/pub?w=929&h=447" width="600px">
 </center>
 <p><br></p>
 <p>You can also add annotations to take a better look at the values, but this would require an understanding of the columns or attributes first. It looks like I can categorize the values by either the <strong>No Take Area</strong>, <strong>Status Year</strong> (the year it was designated), or <strong>IUCN category</strong> column.</p>
