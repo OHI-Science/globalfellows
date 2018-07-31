@@ -43,7 +43,3 @@ bsselectR::bsselect(views, type = "img", show_tick = TRUE, height = "10")
 ```
 
 ***
-
-[![](images/goals.png)](http://ohi-science.org/ohi-global/goals.html)
-
-***
