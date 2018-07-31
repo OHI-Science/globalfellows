@@ -12,26 +12,56 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 20)
 ***
 
 
-Work in progress... Short introduction to the OHI!
+<br>
 
+> In a world with over seven billion people, nearly half of whom live near the coast, we urgently need new analytical approaches to [balance] potentially conflicting public goals and connect human development with the ocean’s capacity to sustain progress (Halpern et al., Nature 2012).
 
+<br>
+
+[![](images/erin-simmons-turtle-unsplash.jpg)](http://ohi-science.org/ohi-global/goals.html)
+_Photo by Erin Simmons on Unsplash_
+
+<br>
+
+We all benefit in some shape or form from a healthy ocean. Directly or indirectly, we all rely on the ocean’s services: food, livelihood, recreational opportunities, or regulation of the global climate. The enormity of the ocean, a sparsity of data about the detailed goings-on in its depths, and conflicting views on what constitutes responsible resource use make sustainable management of this wide range of benefits a big task.
+
+<br>
 
 ![](images/nick-karvounis-fishboat-unsplash.jpg)
 _Photo by Nick Karvounis on Unsplash_
 
+<br>
+
+Maintaining a broad range of benefits requires a method that is both comprehensive and quantitative.  
+_What gets measured, gets managed_ -- so the saying goes. 
+
+The OHI was designed to measure how well we are managing those resources that we want and need from the ocean. Optimal management means using the resources sustainably, but also to their fullest capacities within the sustainable range, as it is the _coupled human–ocean system_ we are most interested in managing.
+
+The index comprising ten diverse public goals, is a powerful tool to direct management, and also to raise public awareness, improve policy, and prioritize research [(Halpern et al., Nature 2012)](https://www.nature.com/articles/nature11397). 
+
+<br>
 
 
-![](images/fred-ohlander-fishing-unsplash.jpg)
+### Without further ado, the 10 goals of the OHI are:
 
-_Photo by Fred Ohlander on Unsplash_
+>1. Food Provision: Wildcaught Fisheries & Mariculture
+1. Artisanal Fishing Opportunities
+1. Natural Products
+1. Coastal Protection
+1. Tourism & Recreation
+1. Biodiversity: Species & Habitat
+1. Sense of Place: Lasting Special Places & Iconic Species
+1. Clean Waters
+1. Carbon Storage
+1. Coastal Livelihoods & Economies
 
-![](images/erin-simmons-turtle-unsplash.jpg)
-_Photo by Erin Simmons on Unsplash_
 
+
+<br>
+<br>
 
 ![](images/john-salvino-seaice-unsplash.jpg)
 _Photo by John Salvino on Unsplash_
-
 
 
 ***
