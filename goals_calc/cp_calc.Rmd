@@ -18,6 +18,8 @@ header-includes:
 
 ### Coastal Protection
 
+The amount of protection provided by marine and coastal habitats serving as natural buffers against incoming waves.
+
 <br>
 \[
 \begin{aligned}

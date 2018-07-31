@@ -18,6 +18,8 @@ header-includes:
 
 ### Artisanal Fishing Opportunity
 
+Measures whether people who need to fish on a small, local scale have the opportunity to do so.
+
 <br>
 \[
 \begin{aligned}

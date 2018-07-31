@@ -70,7 +70,7 @@ data <- data.frame(
 timeline_widget <- timevis(data) %>% 
   centerItem(nrow(timeline))
 
-frameWidget(timeline_widget, width = "100%", height = '600')
+frameWidget(timeline_widget, width = "100%", height = '800')
 
 ```
 </center>

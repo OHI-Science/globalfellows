@@ -18,6 +18,8 @@ header-includes:
 
 ### Natural Products
 
+Measures how sustainably people harvest non-food products from the sea.
+
 <br>
 \[
 \begin{aligned}

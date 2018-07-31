@@ -18,6 +18,8 @@ header-includes:
 
 ### Tourism & Recreation
 
+The value people have for experiencing and enjoying coastal areas and attractions.
+
 <br>
 \[
 \begin{aligned}

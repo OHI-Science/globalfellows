@@ -306,6 +306,147 @@ div.tocify {
 
 <p><br> <br></p>
 <hr />
+<div id="geospatial-processing-in-r" class="section level2">
+<h2>Geospatial processing in R</h2>
+<p><em>by Iwen Su - July 30, 2018</em></p>
+<hr />
+<p><strong>Summary</strong>: Geospatial processing in R is really nice, straightforward, replicable by yourself or a collaborator due to code documentation practices, and you can save iterative maps UNLESS your spatial files are massive. Then your RStudio will crash just as much or more than it would in ArcGIS. Regardless, the replicable code and iterative versioning is worth it.</p>
+<p><br></p>
+<p><em>Opening Up Shapefile Data</em></p>
+<p>There are two ways you can upload shapefiles into RStudio. You can read it in as a normal spatial polygons file (class: SpatialPolygonsDataFrame) or as a simple features file (class: sf and dataframe). While they are both spatial data, the latter acts more like a dataframe with a column for geometry information. It is a relatively new functionality and can be done through the <code>sf</code> package, which usually allows you to upload your shapefile in a LOT faster than preserving the original file type using the <code>sp</code> package.</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTDLbOmBwtKrCMdtnvUWhn21Tvh3Ivqw_0Cdl6eVzyVdnaB1EQPiDu-FShlEXAqQxBNNjMQAvZCJKk8/pub?w=960&h=720" width="150px">
+</center>
+<p><br></p>
+<p>We’re dealing with massive datasets for OHI so every second counts!</p>
+<p><br></p>
+<p>Here is an example of how to read in a spatial file as a <code>SpatialPolygonsDataFrame</code>:</p>
+<pre><code>wdpa_poly &lt;- rgdal::readOGR(dsn = &quot;/ohi/shps&quot;, 
+                       layer = &quot;wdpa_poly_shapefile&quot;,
+                       stringsAsFactors = FALSE)</code></pre>
+<p>To determine how much time it takes to run this process, you can sandwich your code between <code>proc.time()</code> and a time-elapsed message using <code>cat()</code>. Run all of this together.</p>
+<pre><code>start &lt;- proc.time()
+
+wdpa_poly &lt;- rgdal::readOGR(dsn = &quot;/ohi/shps&quot;, 
+                       layer = &quot;wdpa_poly_shapefile&quot;,
+                       stringsAsFactors = FALSE)
+
+cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
+<pre><code>elapsed: 402.000</code></pre>
+<p>Time elapsed is 402 seconds, or 6.7 minutes.</p>
+<p><br></p>
+<p>Alright, what if we read in the spatial file as an <code>sf</code> or <code>dataframe</code> object:</p>
+<pre><code>start &lt;- proc.time()
+
+wdpa_sf &lt;- st_read(dsn = &quot;ohi/shps&quot;, 
+layer = &quot;wdpa_poly_shapefile&quot;)
+
+cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
+<pre><code>elapsed:  49.000</code></pre>
+<p>Time elapsed is only 49 seconds!</p>
+<p><br></p>
+<p>The simple features format of the spatial file is processed a lot faster than the shapefile format. While in this case the difference is only about 5 to 6 minutes, the time <code>sf</code> will save you will become more important when you read in larger shapefiles. Or if you have to finish up your task to make it to happy hour.</p>
+<p><br></p>
+<p><em>Viewing Spatial Data</em></p>
+<p>The strengths of dealing with spatial data in R is the geospatial processing or subsetting and manipulation of the values itself. What’s really cool about <code>sf</code> is that you can manipulate the attribute table associated with the data using your handy <code>dplyr</code> and <code>tidyverse</code> tools. This is because the simple features spatial object is essentially just a data frame or tibble with a column for the spatial coordinates information.</p>
+<p>Usually, viewing the actual attribute table is really laggy in R and can cause the program to crash, especially since spatial files are often really large. Or you just have to wait several minutes. For example, when trying to view the data for the spatial file using <code>View(wdpa_sf)</code>, I received a “Page Unresponsive” message:</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSeK-7AbPbOrdIIzUdWUcqZ2WMtuYNEEk9IEFbFAkeHuY3y6zXk_5UJLyp3ka5jkss0Kz1oYlVdVRTC/pub?w=480&h=360" width="350px">
+</center>
+<p><br></p>
+<p>Instead of viewing the entire data table, I prefer to explore summary snippets of the spatial data in the console, such as the column names:</p>
+<pre><code>names(wdpa_sf)
+ [1] &quot;wdpaid&quot;     &quot;name&quot;       &quot;orig_name&quot;  &quot;desig&quot;     
+ [5] &quot;desig_eng&quot;  &quot;desig_type&quot; &quot;iucn_cat&quot;   &quot;marine&quot;    
+ [9] &quot;no_take&quot;    &quot;no_tk_area&quot; &quot;status&quot;     &quot;status_yr&quot; 
+[13] &quot;mang_auth&quot;  &quot;mang_plan&quot;  &quot;verif&quot;      &quot;sub_loc&quot;   
+[17] &quot;parent_iso&quot; &quot;iso3&quot;       &quot;geometry&quot; </code></pre>
+<p>I can look at a summary of the different columns:</p>
+<pre><code>summary(wdpa_sf)
+     wdpaid                                            name       
+ Min.   :        1   Mangroove                           :   172  
+ 1st Qu.:   187232   Ek                                  :   143  
+ Median :   392042   Local Land Trust Preserve           :    53  
+ Mean   :232758618   Not Reported                        :    53  
+ 3rd Qu.:555551680   Kiimingin Letot (luonnonsuojelualue):    51  
+ Max.   :555636685   Wetlands                            :    29  
+                     (Other)                             :215268 
+          no_take         no_tk_area               status      
+ All           :   663   Min.   :      0.0   Designated:215769  
+ None          :   328   1st Qu.:      0.0                      
+ Not Applicable:201539   Median :      0.0                      
+ Not Reported  : 12724   Mean   :     39.7                      
+ Part          :   515   3rd Qu.:      0.0                      
+                         Max.   :1555851.0                      
+                                                               
+</code></pre>
+<p>This is a lot better than waiting for it to open in the window.</p>
+<p><br></p>
+<p><em>Subsetting &amp; Manipulating</em></p>
+<p>If you want to create a subset of the spatial data in ArcGIS, you have to go through a tedious process in “Select By Attributes” with no option to save your processing method (e.g. STATUS_YR &gt;= 2015). So let’s say you want to filter your dataset using different criteria, your previous specification will be removed. The only thing you can save is the output data, but not the code you used to create it. This makes replication and data checking difficult.</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQxY-4AZF_vHD6sdVsxBWZC2WFcIZSGD78oQbNiZz-b2Rj4SOcIkY8ZDyPpZ2hQvO9DXtaeAxl9TYZ5/pub?w=705&h=629" width="450px">
+</center>
+<p><br></p>
+<p>Subsetting the spatial data in RStudio can make it a bit more manageable to plot. Here, I’m just going to focus on MPAs designated in year 2015 onwards, the area of any no take designation within the reserve, and the year the MPA was first designated.</p>
+<pre><code>wdpa &lt;- wdpa_sf %&gt;% 
+  filter(status_yr &gt;= 2015) %&gt;% 
+  select(name,no_tk_area,status_yr)</code></pre>
+<p>As an <code>sf</code> object, I can treat the spatial data just like a data frame and use <code>dplyr</code> functions such as <code>filter</code> and <code>select</code> to “Select By Attributes”. This preserves the original data and easily creates a new data frame with the truncated version. So now I have original dataset <code>wdpa_sf</code> and intermediate dataset called <code>wdpa</code>.</p>
+<p><br></p>
+<p><em>Exploring &amp; Plotting</em></p>
+<p>You can plot spatial files in RStudio as well once you’ve read it in and filtered it as desired, but it’s usually a simplistic glance.</p>
+<pre><code>plot(wdpa_sf[1])</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRLilUvQc8RoAa1F7CezQhQuxMVgg5-4xLZszdYptcPN6ZtkP1_mAp7ebBGHAyJ0xGqHXE2SJROD-1i/pub?w=936&h=472" width="600px">
+</center>
+<p><br></p>
+<p>What are all the values? So the [1] specifies that you are taking the values in the first column, which is meaningless as it is just a WDPA id number. Let’s say I don’t want any special values. I can use <code>st_geometry</code> to just plot the shapes without values:</p>
+<pre><code>plot(st_geometry(wdpa_sf))</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQU7mZtHhqu3FZzxp1aRAJhTv9YSUTlLfLACNSuCXYCziJLiWYr7KLOBSYusjGt9ZEuDME9sDTtmaxH/pub?w=929&h=447" width="600px">
+</center>
+<p><br></p>
+<p>You can also add annotations to take a better look at the values, but this would require an understanding of the columns or attributes first. It looks like I can categorize the values by either the <strong>No Take Area</strong>, <strong>Status Year</strong> (the year it was designated), or <strong>IUCN category</strong> column.</p>
+<p>I want to plot values of no take areas for each protected area designation. I can call the name of that column, <code>no_tk_area</code> to map the values.</p>
+<pre><code>wdpa &lt;- wdpa_sf %&gt;% 
+  filter(status_yr &gt;= 2015) %&gt;% 
+  select(name,no_tk_area,status_yr)
+
+library(maps)
+plot(wdpa[&quot;no_tk_area&quot;], axes = TRUE, main=&quot;Global No Take Area in MPA Zones&quot;)</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTqOSaFCXoAplLd2pD-2Vwb6g_FpPeXEOaQT3lgj2Xbc62cL-FJD9miXtjdfb7bfEimqGXHC1bI2155/pub?w=705&h=575" width="600px">
+</center>
+<p><br></p>
+<p>The <code>axes</code> annotation added latitude and longitude coordinate axes and <code>main</code> was used to specify a title. However, I’d like to add continents onto this map as a background layer. This can be accomplished with the <code>maps</code> package.</p>
+<pre><code>library(maps)
+plot(wdpa[&quot;no_tk_area&quot;], axes = TRUE, main=&quot;Global No Take Area in MPA Zones&quot;);maps::map(&#39;world&#39;,add=T, fill=T, col=&#39;gray&#39;)</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRn3wYfNgzfkufy-eAGB3LrH-WbPA8TdlH6a4lLURZgArftOIptnlPg2oJnp_jYFk_GdwudCKtZR4DJ/pub?w=929&h=689" width="600px">
+</center>
+<p><br></p>
+<p><em>Geospatial Processing</em></p>
+<p>The last topic I’ll only touch upon briefly. Many of the geospatial processing tools you conduct in ArcGIS, such as transforming coordinate systems or finding the intersection between two shapefiles have equivalents in the <code>sf</code> package.</p>
+<p>Here I want to transform the coordinates of my shapefile <strong>regions</strong> into the same coordinate system as the shapefile <strong>wdpa_sf</strong>. First I read the shapefiles in using the <code>sf</code> method,</p>
+<pre><code>regions &lt;- sf::st_read(dsn = &quot;some/file/path/to/folder&quot;, layer = &quot;name-of-shapefile-without-extension&quot;)
+
+wdpa_sf &lt;- sf::st_read(dsn = file.path(dir_M, &#39;git-annex/globalprep/_raw_data/wdpa_mpa/d2018/WDPA_June2018-shapefile&#39;), layer = &#39;WDPA_June2018-shapefile-polygons&#39;)</code></pre>
+<p>then with a single line of code, I can transform the coordinates system in <strong>regions</strong> to match that of <strong>wdpa_sf</strong>.</p>
+<pre><code>regions_transformed &lt;- st_transform(regions, st_crs(wdpa_sf))</code></pre>
+<p>Finding the intersection is as simple as running a single function: <code>st_intersection</code> and specifying the polygons of interest.</p>
+<pre><code>find_intersection &lt;- st_intersection(wdpa_18, regions_t)</code></pre>
+<p>Not only are these spatial analyses and processing tools available in R, but, once again, you have the capability to document and share how you created intermediate shapefiles, step by step. See <a href="https://r-spatial.github.io/sf/articles/sf1.html"><code>sf</code> tutorial</a> for a list of other common geospatial processing functions.</p>
+<p><strong>Conclusion</strong>: Even though ArcMap crashes a lot and can also be quite laggy, viewing and exploring spatial data visually is often best in ArcMap OR QGIS which is free, instead of R, especially if your geographic range is large (like the GLOBAL EXTENT). However, if you don’t have a lot of money to throw or work for a spatial company, R can show you the basics and is particularly smooth when documenting and running geospatial processing. If you were only working on a smaller region like the United States or California, then it may be easier to make a quick map to email someone but not for publication necessarily, since you’re missing out on ArcMap’s nice alignment guides, titles, subtitles, adding basemaps as easily.</p>
+<hr />
+</div>
 <div id="behind-the-scenes-data_prep" class="section level2">
 <h2>Behind the scenes: Data_prep</h2>
 <p><em>by Camila Vargas - July 16, 2018</em></p>
