@@ -37,28 +37,57 @@ _What gets measured, gets managed_ -- so the saying goes.
 
 The OHI was designed to measure how well we are managing those resources that we want and need from the ocean. Optimal management means using the resources sustainably, but also to their fullest capacities within the sustainable range, as it is the _coupled human–ocean system_ we are most interested in managing.
 
-The index comprising ten diverse public goals, is a powerful tool to direct management, and also to raise public awareness, improve policy, and prioritize research [(Halpern et al., Nature 2012)](https://www.nature.com/articles/nature11397). 
+The index comprising ten diverse public goals, is a powerful tool to direct management, and also to raise public awareness, improve policy, and prioritize research ([Halpern et al., Nature 2012](https://www.nature.com/articles/nature11397)). Without further ado, the 10 goals of the OHI are:
 
 <br>
 
+<div style="float: left; width: 10.4%;"> 
+![](https://docs.google.com/drawings/d/e/2PACX-1vRYVn2_vYVsN-05Ofpn53ULoG2dVvu91ZhOusxeACW9ilw8Aa0bBayaOdao89DsRmNraGTFvDlP9e6K/pub?w=114&h=688)
 
-### Without further ado, the 10 goals of the OHI are:
+</div> 
 
->1. Food Provision: Wildcaught Fisheries & Mariculture
-1. Artisanal Fishing Opportunities
-1. Natural Products
-1. Coastal Protection
-1. Tourism & Recreation
-1. Biodiversity: Species & Habitat
-1. Sense of Place: Lasting Special Places & Iconic Species
-1. Clean Waters
-1. Carbon Storage
-1. Coastal Livelihoods & Economies
+<div style="float: left; width: 89.6%;"> 
+### 1. [Food Provision: Wildcaught Fisheries & Mariculture](http://ohi-science.org/goals/#food-provision)
+<br>
+
+### 2. [Artisanal Fishing Opportunities](http://ohi-science.org/goals/#artisanal-fishing-opportunities)
+<br>
+
+### 3. [Natural Products](http://ohi-science.org/goals/#natural-products)
+<br>
+
+### 4. [Carbon Storage](http://ohi-science.org/goals/#carbon-storage)
+<br>
+
+### 5. [Coastal Protection](http://ohi-science.org/goals/#coastal-protection)
+<br>
+
+### 6. [Sense of Place: Lasting Special Places & Iconic Species](http://ohi-science.org/goals/#sense-of-place)
+<br>
+
+### 7. [Livelihoods & Economies](http://ohi-science.org/goals/#livelihoods-and-economies)
+<br>
+
+### 8. [Tourism & Recreation](http://ohi-science.org/goals/#tourism-and-recreation)
+<br>
+
+### 9. [Clean Waters](http://ohi-science.org/goals/#clean-waters) 
+<br>
+
+### 10. [Biodiversity: Species & Habitat](http://ohi-science.org/goals/#biodiversity)
+<br>
+<br>
+
+</div> 
 
 
 
 <br>
 <br>
+<br>
+
+***
+***
 
 ![](images/john-salvino-seaice-unsplash.jpg)
 _Photo by John Salvino on Unsplash_
