@@ -34,6 +34,7 @@ names(views) <- c("Artisanal Fishing Opportunity", "Biodiversity: Habitat", "Bio
                   "Coastal Protection", "Carbon Storage", "Clean Waters", "Food Provision: Fisheries", "Food Provision: Mariculture",
                   "Livelihoods and Economies: Economies", "Livelihoods and Economies: Livelihoods", 
                   "Natural Products", "Sense of Place: Iconic Species", "Sense of Place: Lasting Special Places", "Tourism and Recreation")
+
 bsselectR::bsselect(views, type = "img", show_tick = TRUE, height = "10")
 ```
 

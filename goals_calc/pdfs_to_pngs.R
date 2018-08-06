@@ -7,7 +7,7 @@ goal_calc_pdfs <- list.files(".", pattern = ".pdf$", full.names = FALSE)
 
 for(i in goal_calc_pdfs){
   name <- substr(i, 1, str_length(i) - 4)
-  render <- pdf_render_page(i, page = 1, dpi = 300)
+  render <- pdf_render_page(i, page = 1, dpi = 85)
   png::writePNG(render, paste0(name, ".png"))
 }
 
