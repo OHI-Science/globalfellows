@@ -1,26 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-  - \usepackage{placeins}
-  - \usepackage{fancyhdr}
-  - \usepackage{setspace}
-  - \usepackage{chngcntr}
-  - \onehalfspacing
-  - \counterwithin{figure}{section}
-  - \counterwithin{table}{section}
-  - \usepackage{amsmath}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: margin=1in
 ---
 
 \pagenumbering{gobble}
 
-### Food Provision: Fisheries
+The sustainable harvest of seafood from wild-caught fisheries.
 
-<br>
-\[
-\begin{aligned}
+\vspace{0.5in}
+
+\noindent
+$\begin{aligned}
 & x_{fis} \text{   is the status of the wild-caught fisheries, fisheries food provision sub-goal}\\
 \\
 & x_{fis} = \prod^n_{i=1} SS_i^{\big(\frac{C_i}{\Sigma C_i} \big)} \\
@@ -40,7 +36,6 @@ header-includes:
 \\
 & i \text{   is an individual taxon}\\
 & n \text{   is the total number of taxa in the reported catch for each region throughout the time-series}\\
-& \alpha \text{ is set to be 0.5, status decline rate, to endure penalty for under-harvested stocks is half of that for over-harvested stocks}\\
+& \alpha \text{ set to be 0.5, status decline rate; under-harvest penalty is half of that for over-harvest of stocks}\\
 & \beta \text{ is the minimum score a stock can get, set to 0.25}
-\end{aligned}
-\]
+\end{aligned}$

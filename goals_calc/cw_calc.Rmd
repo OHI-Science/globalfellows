@@ -1,28 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: margin=1in
 ---
 
 \pagenumbering{gobble}
 
+The degree to which ocean regions are free of contaminants such as chemicals, eutrophication, harmful algal blooms, disease pathogens, and trash.
 
-### Clean Waters
+\vspace{0.5in}
 
-Measures the degree to which oceans are free of chemicals contaminants, excessive nutrients, human pathogens and trash.
-
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{cw} \text{    the status of the clean waters goal, calculated only for the first 3 nm of ocean for a region's EEZ}\\
 \\
 & x_{cw} = \sqrt[4]{a * u * l * d}\\
@@ -31,6 +25,4 @@ Measures the degree to which oceans are free of chemicals contaminants, excessiv
 & u := 1 - \text{nutrient input, rescaled at the raster level by the 99.99th quantile value}\\
 & l := 1 - \text{chemical input, rescaled at the raster level by the 99.99th quantile value}\\
 & d := 1 - \text{marine debris, rescaled at the raster level by the 99.99th quantile value}
-\end{aligned}
-\]
-<br>
+\end{aligned}$

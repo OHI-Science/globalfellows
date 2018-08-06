@@ -1,28 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: margin=1in
 ---
 
 \pagenumbering{gobble}
 
+The natural resources that are sustainably extracted from living marine resources.
 
-### Natural Products
+\vspace{0.5in}
 
-Measures how sustainably people harvest non-food products from the sea.
-
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{np} \text{   is the status of the natural products goal}\\
 \\
 & x_{np} = \left(\frac{1}{N}\right) \sum^N_{c=1} P_c \times w_c \\
@@ -31,12 +25,10 @@ Measures how sustainably people harvest non-food products from the sea.
 & S_c = 1 - \text{average}(E_c + R_c)\\
 \\
 & S_c \text{    is the sustainability of the commodity $c$}\\
-& E_c \text{    is ln-transformed harvest intensity: tonnes harvested per km$^2$ of coral and/or rocky reef, relative to global max}\\
-& R_c \text{    risk term based on whether commodity has unsustainable harvest practice, per listings in CITES appendices II and III}\\
+& E_c \text{    is ln-transformed harvest intensity: tonnes harvested/km$^2$ of coral and/or rocky reef, relative to global max}\\
+& R_c \text{    risk term based on whether commodity has unsustainable harvest practice, per CITES appendices II \& III}\\
 & P_c \text{    is the status of natural product category $c$}\\
 & H_c \text{   is the harvest level for a category relative to its own (buffered) peak reference point}\\
-& w_c \text{   ratio of max USD value for product across all years, relative to sum of max values for all products harvested in the country}\\
+& w_c \text{   ratio of max value for product across years, to sum of max values for all products harvested in country}\\
 & N \text{   the number of product categories $c$ harvested}
-\end{aligned}
-\]
-<br>
+\end{aligned}$
