@@ -6,7 +6,7 @@ header-includes:
 - \usepackage[fontsize=16pt]{scrextend}
 - \usepackage{fontspec}
 classoption: landscape
-geometry: margin=1in
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
