@@ -37,11 +37,11 @@ There are also [12 principles](https://www.agilealliance.org/agile101/12-princip
 
 __Twelve Agile Principles in the context of the OHI and OHI Global Fellowship:__  
 
-<div style="float: left; width: 11%;">
+<div style="float: left; width: 11.01%;">
 ![](https://docs.google.com/drawings/d/e/2PACX-1vRnFgH9hJOz-XVN-gLgsi-UMj6RB2bMbeoJPyGqzCX9HXrYWmxtMsHMXRL8DSxifrvWwplJ6zrzI2nB/pub?w=170&h=1856)
 </div>
 
-<div style="float: right; width: 89%;">
+<div style="float: right; width: 88.99%;">
 <span style="color:#528498"> Our highest priority is to support policy and decision makers through early and continuous delivery of valuable software for assessing ocean health, and of the global ocean health scores themselves.</span> &nbsp; <span style="color:#D6DBDF"> Our highest priority is to satisfy the customer through early and continuous delivery of valuable software. </span>
 
 <span style="color:#528498"> We welcome diverse and evolving requirements. We designed the OHI+ software to be flexible and adaptable for regional assessments, where priorities differ or additional region-specific data is available. </span> &nbsp; <span style="color:#D6DBDF"> Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage. </span>
