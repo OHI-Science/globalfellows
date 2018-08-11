@@ -20,7 +20,7 @@ output:
 
 I recently was reading about [Agile software development](https://www.infoworld.com/article/3237508/agile-development/what-is-agile-methodology-modern-software-development-explained.html), a methodology of software development many organizations today practice in some form, which emphasizes flexibility, speed, and collaboration. Features typically associated with an [Agile approach](https://www.youtube.com/watch?v=1iccpf2eN1Q) include: inherent adaptability; continuous planning and evolution; iterative work flow and integration of continuous feedback; automated testing; and a focus on empowering people to collaborate. The methodology was formalized in 2001 in Agile Manifesto:
 
-<div style="margin-left: 90px">
+<div style="margin-left: 5%">
 <span style="color:#528498; font-size: 10pt"> 
 We are uncovering better ways of developing software by doing it and helping others do it.  
 Through this we have come to value:  
