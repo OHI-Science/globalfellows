@@ -3,11 +3,11 @@ navbar:
   title: "OHI Global Fellows"
   left:
     - text: "Blog"
-      href: Blog.html
+      href: blog.html
     - text: "The Tools We Use"
-      href: tools_we_use.html
+      href: tools.html
     - text: "OHI Theory"
-      href: ohiTheory.html
+      href: ohi_theory.html
     - text: "Who Are We?"
       href: fellows.html
 output_dir: "."

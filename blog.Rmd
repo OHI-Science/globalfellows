@@ -506,7 +506,7 @@ Automatic merge failed; fix conflicts and then commit the result
 
 <br>
 
-Often times the error messages are intimidating, because there is coding lingo thrown into it. However, the messages usually give us a good hint as to what is causing the error. Nevertheless, there are many barriers to entry to learning GitHub and learning to want to use GitHub. One of those is the jargony vocabulary of key terms only used in the Git and GitHub world: commit, branches, merge conflicts, pull, push, master branch, repository, and projects. Check out our cheatsheet on Git terminology [here](z2_gitTerminology.html).
+Often times the error messages are intimidating, because there is coding lingo thrown into it. However, the messages usually give us a good hint as to what is causing the error. Nevertheless, there are many barriers to entry to learning GitHub and learning to want to use GitHub. One of those is the jargony vocabulary of key terms only used in the Git and GitHub world: commit, branches, merge conflicts, pull, push, master branch, repository, and projects. Check out our cheatsheet on Git terminology [here](git_terminology.html).
 
 <br>
 <br>

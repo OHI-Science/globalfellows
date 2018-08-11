@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">OHI Global Fellows</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="Blog.html">Blog</a>
+</li>
+<li>
+  <a href="tools_we_use.html">The Tools We Use</a>
+</li>
+<li>
+  <a href="ohiTheory.html">OHI Theory</a>
+</li>
+<li>
+  <a href="fellows.html">Who Are We?</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br> <br></p>
+<hr />
+<div id="agile-ohi" class="section level2">
+<h2>Agile OHI</h2>
+<p><em>by Ellie Campbell - August 9, 2018</em></p>
+<hr />
+<p>I recently was reading about <a href="https://www.infoworld.com/article/3237508/agile-development/what-is-agile-methodology-modern-software-development-explained.html">Agile software development</a>, a methodology of software development many organizations today practice in some form, which emphasizes flexibility, speed, and collaboration. Features typically associated with an <a href="https://www.youtube.com/watch?v=1iccpf2eN1Q">Agile approach</a> include: inherent adaptability; continuous planning and evolution; iterative work flow and integration of continuous feedback; automated testing; and a focus on empowering people to collaborate. The methodology was formalized in 2001 in Agile Manifesto:</p>
+<div style="margin-left: 90px">
+<p><span style="color:#528498; font-size: 10pt"> We are uncovering better ways of developing software by doing it and helping others do it.<br />
+Through this we have come to value:<br />
+<strong>Individuals and interactions</strong> over processes and tools<br />
+<strong>Working software</strong> over comprehensive documentation<br />
+<strong>Customer collaboration</strong> over contract negotiation<br />
+<strong>Responding to change</strong> over following a plan<br />
+That is, while there is value in the items on the right, we value the items on the left more.</span></p>
+</div>
+<p><br></p>
+<p>There are also <a href="https://www.agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/">12 principles</a> that expand on the values of the Agile Manifesto. As I was reading, I recognized many parallels between the Agile principles and our philosophy for developing and using OHI software, or what we refer to as the <a href="http://ohi-science.org/toolbox-training/toolbox.html">OHI Toolbox</a>. The OHI is unique and progressive in the way it adapts software development tools to a scientific-research context, to do <a href="https://www.nature.com/articles/s41559-017-0160">better science in less time</a>. Similar to how the <a href="https://toggl.com/developer-methods-infographic/">waterfall</a> development methodology (a precursor to Agile) was borrowed from Henry Ford’s assembly-line manufacturing method, we have adopted many of the tools and methods used by the software development community to use for reproducible and collaborative science. I thought it would be an interesting exercise to describe how the principles map onto our workflows, and where they diverge. This is what I came up with.</p>
+<p><br></p>
+<p><strong>Twelve Agile Principles in the context of the OHI and OHI Global Fellowship:</strong></p>
+<div style="float: left; width: 11.023%;">
+<div class="figure">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRnFgH9hJOz-XVN-gLgsi-UMj6RB2bMbeoJPyGqzCX9HXrYWmxtMsHMXRL8DSxifrvWwplJ6zrzI2nB/pub?w=170&amp;h=1856" />
+
+</div>
+</div>
+<div style="float: right; width: 88.977%;">
+<p><span style="color:#528498"> Our highest priority is to support policy and decision makers through early and continuous delivery of valuable software for assessing ocean health, and of the annual global ocean health scores themselves.</span>   <span style="color:#D6DBDF"> Our highest priority is to satisfy the customer through early and continuous delivery of valuable software. </span></p>
+<p><span style="color:#528498"> We welcome diverse and evolving requirements for a healthy ocean. We designed the OHI software to be flexible and adaptable for regional assessments, where priorities differ or additional region-specific data is available. </span>   <span style="color:#D6DBDF"> Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage. </span></p>
+<p><span style="color:#27598e"> Deliver working software frequently, with incremental improvements made during each annual OHI global assessment. </span>   <span style="color:#D6DBDF"> Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter time scale. </span></p>
+<p><span style="color:#528498"> Stakeholders, regional planners, and marine data scientists work together throughout OHI+ assessments to create regionally relevant and, ideally, politically useful ocean health models, metrics, reports and visualizations. </span>   <span style="color:#D6DBDF"> Business people and developers must work together daily throughout the project. </span></p>
+<p><span style="color:#528498"> Motivated individuals and agencies are encouraged to take on their own OHI projects (OHI+ assessments) and the OHI team will strive to provide the support and tools they need. Another example is the OHI Global Fellowship and our individual projects! </span>   <span style="color:#D6DBDF"> Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done. </span></p>
+<p><span style="color:#528498"> The most efficient and effective method of conveying information to and within a team is face-to-face conversation. Other modes such as GitHub issues, or Slack channels are useful for keeping track of ongoing discussions, especially for future reference. </span>   <span style="color:#D6DBDF"> The most efficient and effective method of conveying information to and within a development team is face-to-face conversation. </span></p>
+<p><span style="color:#528498"> The most important thing is that our software is functional, as its use is the primary measure of its value and impact. However, since we try to make it usable by others who may have less programming experience, another important measure of progress is the accessibility or transparency in what the code is doing, and the documentation which allows others to adapt and/or reproduce ocean health assessments. Here we may diverge slightly from the Agile principles, as we see documentation and communication as a critical piece of what we do. </span>   <span style="color:#D6DBDF"> Working software is the primary measure of progress. </span></p>
+<p><span style="color:#528498"> Sustained development and recurrent assessments are the ultimate goal. Sponsors, developers, and users should be able to maintain a constant pace going into the future. OHI was conceived of as an ongoing project, so ocean health could be evaluated consistently over time and space. </span>   <span style="color:#D6DBDF"> Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely. </span></p>
+<p><span style="color:#528498"> Continuous attention to technical excellence and good design enhances agility. We aim to improve the design of our software each iteration, in order to increase the ease and efficiency of future assessments. </span>   <span style="color:#D6DBDF"> Continuous attention to technical excellence and good design enhances agility. </span></p>
+<p><span style="color:#528498"> Simplicity–the art of maximizing the amount of work not done–is essential. With limited time, decisions must be made about how to prioritize adjustments and updates. Our approach in this arena is fairly ad hoc; we could perhaps reflect on whether there is a more deliberate way we could do this. </span>   <span style="color:#D6DBDF"> Simplicity–the art of maximizing the amount of work not done–is essential. </span></p>
+<p><span style="color:#528498"> The best architectures, requirements, and designs emerge from self-organizing teams. On the OHI team, modes of organization, communication mediums, and work processes are suggested by team members and leaders. These evolve organically over time based on how the team uses them collectively. </span>   <span style="color:#D6DBDF"> The best architectures, requirements, and designs emerge from self-organizing teams. </span></p>
+<p><span style="color:#528498"> At bi-weekly meetings we refer to as “sea-side chats,” we reflect on tasks accomplished and discuss tools and approaches for becoming more effective, and we adjust accordingly. </span>   <span style="color:#D6DBDF"> At regular intervals, the team reflects on how to become more effective, then adjusts its behavior accordingly. </span></p>
+</div>
+<div style="clear:both;">
+
+</div>
+<p><br></p>
+<p>After completing this exercise, one question I have is this: are our divergences from the Agile principles and philosophy irreconcilable because the nature of our work is fundamentally different or could we possibly improve our workflows by matching them more closely?</p>
+<p>While I would say that we do not abide by the first statement of the Agile Manifesto – we value our interactions and tools equally, and it is often our processes and tools that allow the individuals to thrive and our exchanges to elevate the work of our entire team – we hold true to the rest. Enough, I think, to claim OHI is in essence Agile.</p>
+<p><br></p>
+<hr />
+</div>
+<div id="geospatial-processing-in-r" class="section level2">
+<h2>Geospatial processing in R</h2>
+<p><em>by Iwen Su - July 30, 2018</em></p>
+<hr />
+<p><strong>Summary</strong>: Geospatial processing in R is really nice, straightforward, replicable by yourself or a collaborator due to code documentation practices, and you can save iterative maps UNLESS your spatial files are massive. Then your RStudio will crash just as much or more than it would in ArcGIS. Regardless, the replicable code and iterative versioning is worth it.</p>
+<p><br></p>
+<p><em>Opening Up Shapefile Data</em></p>
+<p>There are two ways you can upload shapefiles into RStudio. You can read it in as a normal spatial polygons file (class: SpatialPolygonsDataFrame) or as a simple features file (class: sf and dataframe). While they are both spatial data, the latter acts more like a dataframe with a column for geometry information. It is a relatively new functionality and can be done through the <code>sf</code> package, which usually allows you to upload your shapefile in a LOT faster than preserving the original file type using the <code>sp</code> package.</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTDLbOmBwtKrCMdtnvUWhn21Tvh3Ivqw_0Cdl6eVzyVdnaB1EQPiDu-FShlEXAqQxBNNjMQAvZCJKk8/pub?w=960&h=720" width="150px">
+</center>
+<p><br></p>
+<p>We’re dealing with massive datasets for OHI so every second counts!</p>
+<p><br></p>
+<p>Here is an example of how to read in a spatial file as a <code>SpatialPolygonsDataFrame</code>:</p>
+<pre><code>wdpa_poly &lt;- rgdal::readOGR(dsn = &quot;/ohi/shps&quot;, 
+                       layer = &quot;wdpa_poly_shapefile&quot;,
+                       stringsAsFactors = FALSE)</code></pre>
+<p>To determine how much time it takes to run this process, you can sandwich your code between <code>proc.time()</code> and a time-elapsed message using <code>cat()</code>. Run all of this together.</p>
+<pre><code>start &lt;- proc.time()
+
+wdpa_poly &lt;- rgdal::readOGR(dsn = &quot;/ohi/shps&quot;, 
+                       layer = &quot;wdpa_poly_shapefile&quot;,
+                       stringsAsFactors = FALSE)
+
+cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
+<pre><code>elapsed: 402.000</code></pre>
+<p>Time elapsed is 402 seconds, or 6.7 minutes.</p>
+<p><br></p>
+<p>Alright, what if we read in the spatial file as an <code>sf</code> or <code>dataframe</code> object:</p>
+<pre><code>start &lt;- proc.time()
+
+wdpa_sf &lt;- st_read(dsn = &quot;ohi/shps&quot;, 
+layer = &quot;wdpa_poly_shapefile&quot;)
+
+cat(&#39;elapsed: &#39;, (proc.time() - start)[3])</code></pre>
+<pre><code>elapsed:  49.000</code></pre>
+<p>Time elapsed is only 49 seconds!</p>
+<p><br></p>
+<p>The simple features format of the spatial file is processed a lot faster than the shapefile format. While in this case the difference is only about 5 to 6 minutes, the time <code>sf</code> will save you will become more important when you read in larger shapefiles. Or if you have to finish up your task to make it to happy hour.</p>
+<p><br></p>
+<p><em>Viewing Spatial Data</em></p>
+<p>The strengths of dealing with spatial data in R is the geospatial processing or subsetting and manipulation of the values itself. What’s really cool about <code>sf</code> is that you can manipulate the attribute table associated with the data using your handy <code>dplyr</code> and <code>tidyverse</code> tools. This is because the simple features spatial object is essentially just a data frame or tibble with a column for the spatial coordinates information.</p>
+<p>Usually, viewing the actual attribute table is really laggy in R and can cause the program to crash, especially since spatial files are often really large. Or you just have to wait several minutes. For example, when trying to view the data for the spatial file using <code>View(wdpa_sf)</code>, I received a “Page Unresponsive” message:</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSeK-7AbPbOrdIIzUdWUcqZ2WMtuYNEEk9IEFbFAkeHuY3y6zXk_5UJLyp3ka5jkss0Kz1oYlVdVRTC/pub?w=480&h=360" width="350px">
+</center>
+<p><br></p>
+<p>Instead of viewing the entire data table, I prefer to explore summary snippets of the spatial data in the console, such as the column names:</p>
+<pre><code>names(wdpa_sf)
+ [1] &quot;wdpaid&quot;     &quot;name&quot;       &quot;orig_name&quot;  &quot;desig&quot;     
+ [5] &quot;desig_eng&quot;  &quot;desig_type&quot; &quot;iucn_cat&quot;   &quot;marine&quot;    
+ [9] &quot;no_take&quot;    &quot;no_tk_area&quot; &quot;status&quot;     &quot;status_yr&quot; 
+[13] &quot;mang_auth&quot;  &quot;mang_plan&quot;  &quot;verif&quot;      &quot;sub_loc&quot;   
+[17] &quot;parent_iso&quot; &quot;iso3&quot;       &quot;geometry&quot; </code></pre>
+<p>I can look at a summary of the different columns:</p>
+<pre><code>summary(wdpa_sf)
+     wdpaid                                            name       
+ Min.   :        1   Mangroove                           :   172  
+ 1st Qu.:   187232   Ek                                  :   143  
+ Median :   392042   Local Land Trust Preserve           :    53  
+ Mean   :232758618   Not Reported                        :    53  
+ 3rd Qu.:555551680   Kiimingin Letot (luonnonsuojelualue):    51  
+ Max.   :555636685   Wetlands                            :    29  
+                     (Other)                             :215268 
+          no_take         no_tk_area               status      
+ All           :   663   Min.   :      0.0   Designated:215769  
+ None          :   328   1st Qu.:      0.0                      
+ Not Applicable:201539   Median :      0.0                      
+ Not Reported  : 12724   Mean   :     39.7                      
+ Part          :   515   3rd Qu.:      0.0                      
+                         Max.   :1555851.0                      
+                                                               
+</code></pre>
+<p>This is a lot better than waiting for it to open in the window.</p>
+<p><br></p>
+<p><em>Subsetting &amp; Manipulating</em></p>
+<p>If you want to create a subset of the spatial data in ArcGIS, you have to go through a tedious process in “Select By Attributes” with no option to save your processing method (e.g. STATUS_YR &gt;= 2015). So let’s say you want to filter your dataset using different criteria, your previous specification will be removed. The only thing you can save is the output data, but not the code you used to create it. This makes replication and data checking difficult.</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQxY-4AZF_vHD6sdVsxBWZC2WFcIZSGD78oQbNiZz-b2Rj4SOcIkY8ZDyPpZ2hQvO9DXtaeAxl9TYZ5/pub?w=705&h=629" width="450px">
+</center>
+<p><br></p>
+<p>Subsetting the spatial data in RStudio can make it a bit more manageable to plot. Here, I’m just going to focus on MPAs designated in year 2015 onwards, the area of any no take designation within the reserve, and the year the MPA was first designated.</p>
+<pre><code>wdpa &lt;- wdpa_sf %&gt;% 
+  filter(status_yr &gt;= 2015) %&gt;% 
+  select(name,no_tk_area,status_yr)</code></pre>
+<p>As an <code>sf</code> object, I can treat the spatial data just like a data frame and use <code>dplyr</code> functions such as <code>filter</code> and <code>select</code> to “Select By Attributes”. This preserves the original data and easily creates a new data frame with the truncated version. So now I have original dataset <code>wdpa_sf</code> and intermediate dataset called <code>wdpa</code>.</p>
+<p><br></p>
+<p><em>Exploring &amp; Plotting</em></p>
+<p>You can plot spatial files in RStudio as well once you’ve read it in and filtered it as desired, but it’s usually a simplistic glance.</p>
+<pre><code>plot(wdpa_sf[1])</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRLilUvQc8RoAa1F7CezQhQuxMVgg5-4xLZszdYptcPN6ZtkP1_mAp7ebBGHAyJ0xGqHXE2SJROD-1i/pub?w=936&h=472" width="600px">
+</center>
+<p><br></p>
+<p>What are all the values? So the [1] specifies that you are taking the values in the first column, which is meaningless as it is just a WDPA id number. Let’s say I don’t want any special values. I can use <code>st_geometry</code> to just plot the shapes without values:</p>
+<pre><code>plot(st_geometry(wdpa_sf))</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQU7mZtHhqu3FZzxp1aRAJhTv9YSUTlLfLACNSuCXYCziJLiWYr7KLOBSYusjGt9ZEuDME9sDTtmaxH/pub?w=929&h=447" width="600px">
+</center>
+<p><br></p>
+<p>You can also add annotations to take a better look at the values, but this would require an understanding of the columns or attributes first. It looks like I can categorize the values by either the <strong>No Take Area</strong>, <strong>Status Year</strong> (the year it was designated), or <strong>IUCN category</strong> column.</p>
+<p>I want to plot values of no take areas for each protected area designation. I can call the name of that column, <code>no_tk_area</code> to map the values.</p>
+<pre><code>wdpa &lt;- wdpa_sf %&gt;% 
+  filter(status_yr &gt;= 2015) %&gt;% 
+  select(name,no_tk_area,status_yr)
+
+library(maps)
+plot(wdpa[&quot;no_tk_area&quot;], axes = TRUE, main=&quot;Global No Take Area in MPA Zones&quot;)</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTqOSaFCXoAplLd2pD-2Vwb6g_FpPeXEOaQT3lgj2Xbc62cL-FJD9miXtjdfb7bfEimqGXHC1bI2155/pub?w=705&h=575" width="600px">
+</center>
+<p><br></p>
+<p>The <code>axes</code> annotation added latitude and longitude coordinate axes and <code>main</code> was used to specify a title. However, I’d like to add continents onto this map as a background layer. This can be accomplished with the <code>maps</code> package.</p>
+<pre><code>library(maps)
+plot(wdpa[&quot;no_tk_area&quot;], axes = TRUE, main=&quot;Global No Take Area in MPA Zones&quot;);maps::map(&#39;world&#39;,add=T, fill=T, col=&#39;gray&#39;)</code></pre>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRn3wYfNgzfkufy-eAGB3LrH-WbPA8TdlH6a4lLURZgArftOIptnlPg2oJnp_jYFk_GdwudCKtZR4DJ/pub?w=929&h=689" width="600px">
+</center>
+<p><br></p>
+<p><em>Geospatial Processing</em></p>
+<p>The last topic I’ll only touch upon briefly. Many of the geospatial processing tools you conduct in ArcGIS, such as transforming coordinate systems or finding the intersection between two shapefiles have equivalents in the <code>sf</code> package.</p>
+<p>Here I want to transform the coordinates of my shapefile <strong>regions</strong> into the same coordinate system as the shapefile <strong>wdpa_sf</strong>. First I read the shapefiles in using the <code>sf</code> method,</p>
+<pre><code>regions &lt;- sf::st_read(dsn = &quot;some/file/path/to/folder&quot;, layer = &quot;name-of-shapefile-without-extension&quot;)
+
+wdpa_sf &lt;- sf::st_read(dsn = file.path(dir_M, &#39;git-annex/globalprep/_raw_data/wdpa_mpa/d2018/WDPA_June2018-shapefile&#39;), layer = &#39;WDPA_June2018-shapefile-polygons&#39;)</code></pre>
+<p>then with a single line of code, I can transform the coordinates system in <strong>regions</strong> to match that of <strong>wdpa_sf</strong>.</p>
+<pre><code>regions_transformed &lt;- st_transform(regions, st_crs(wdpa_sf))</code></pre>
+<p>Finding the intersection is as simple as running a single function: <code>st_intersection</code> and specifying the polygons of interest.</p>
+<pre><code>find_intersection &lt;- st_intersection(wdpa_18, regions_t)</code></pre>
+<p>Not only are these spatial analyses and processing tools available in R, but, once again, you have the capability to document and share how you created intermediate shapefiles, step by step. See <a href="https://r-spatial.github.io/sf/articles/sf1.html"><code>sf</code> tutorial</a> for a list of other common geospatial processing functions.</p>
+<p><strong>Conclusion</strong>: Even though ArcMap crashes a lot and can also be quite laggy, viewing and exploring spatial data visually is often best in ArcMap OR QGIS which is free, instead of R, especially if your geographic range is large (like the GLOBAL EXTENT). However, if you don’t have a lot of money to throw or work for a spatial company, R can show you the basics and is particularly smooth when documenting and running geospatial processing. If you were only working on a smaller region like the United States or California, then it may be easier to make a quick map to email someone but not for publication necessarily, since you’re missing out on ArcMap’s nice alignment guides, titles, subtitles, adding basemaps as easily.</p>
+<hr />
+</div>
+<div id="behind-the-scenes-data_prep" class="section level2">
+<h2>Behind the scenes: Data_prep</h2>
+<p><em>by Camila Vargas - July 16, 2018</em></p>
+<hr />
+<p>On March 6 2018 we read <a href="http://ohi-science.org/data-science-training/dplyr.html">Introduction to Open Data Science. Chapter 6: Data Wrangling - Dplyr</a>. This chapter starts with the quote:</p>
+<p><br></p>
+<blockquote>
+<p>“Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in the mundane labor of collecting and preparing data, before it can be explored for useful information. -<a href="https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">NYTimes (2014)</a>”</p>
+</blockquote>
+<p><br></p>
+<p>This was the beginning of our training in data wrangling, four months ago. Throughout these months, I’ve realized that though this quote is quite accurate – we do spend most of our time collecting and preparing data – I disagree in describing this labor as mundane.</p>
+<p>It is not easy, that’s for sure. And many times it can be frustrating and feel hopeless. But one thing is for certain: by going over a dataprep script, I have learned much more about coding and R functions than in any class I’ve taken.</p>
+<p>One of the most important parts of calculating the Ocean Health Index is preparing the data. First, we see if there are any updates on the data from each of the data sources. Then, if the data has been updated, we download the raw data from the pertinent source, wrangle it and organize into the necessary form to calculate scores.</p>
+<p>It is something close to magic. By running a data_prep script you go from something extremely overwhelming like this:</p>
+<br>
+<center>
+<div class="figure">
+<img src="Blog_files/camila/raw_data.png" />
+
+</div>
+</center>
+<p><br></p>
+<p>To something as tidy as this:</p>
+<br>
+<center>
+<div class="figure">
+<img src="Blog_files/camila/outcome_file.png" />
+
+</div>
+</center>
+<p><br></p>
+<p>But it is not quite magic. This whole procedure is far from being a single spell with a magic wand. Nothing is less straightforward than the process of preparing data.</p>
+<p>Here, I’ll share some insights from my experience so far:</p>
+<ul>
+<li><p>Every time I start a new script I’m optimistic. I start with the idea that this will be fairly uncomplicated. The data is not too muddled and there is already a script that takes care of the process.</p></li>
+<li><p>Here we go. We start by searching if there are any updates to the data. Data has been updated. That is good. More data means that our analysis will be more robust and up-to-date. But, obstacle #1: the data source changed the way they reported the data.</p></li>
+<li><p>This is not necessarily bad. Looking at the big picture, changes in the way data is reported can mean improvement in the data, which overall means improvement in our analysis. In many cases though, it also means that we have to revise our methods. But, methods cannot change too much because they should be as consistent as possible so that the index can be compared through time.</p></li>
+<li><p>And then, not only the method, but little things like the format of the new data, how each region is reported, and does that match with the OHI regions, and so on. All of this must be adjusted in a nuanced way.</p></li>
+<li><p>Finally you get everything to work. Yihaa!! Definitely a moment of pride. The final step is to check if the outcome you are getting with this year’s data is similar enough to the outcome of last year’s data. And then you get something like this…</p></li>
+</ul>
+<br>
+<center>
+<div class="figure">
+<img src="Blog_files/camila/tr_travelwarning_graph.png" />
+
+</div>
+</center>
+<p><br></p>
+<ul>
+<li>Not quite a match. And here we go again.. Check everything you have done. Revise methods, revise code, check data in every step of the wrangling process. The goal is to figure out why is the data so different from last year assessment.</li>
+</ul>
+<p><br></p>
+<p>That is in part what we do. We spend 50%, probably closer to 80%, of our time collecting and preparing data. It is challenging, but the kind of challenge that, at least for me, makes me want to spend all the necessary time to find the best solution. Maybe you spend way more time than what you anticipated. But at the end, when you reach the final outcome, there is a great satisfaction. You finally get to input the data into ohi-global which sources functions from ohi-core, an R package that calculates status, trend, pressure, resilience, and in some cases, scores. Yes finally, scores!</p>
+<p>This whole process is compared to the job of an editor, or the backstage of a show: so much hard work behind the scenes is never seen by the final audience. But without all this work the play would not play. Behind the scenes is key for putting together a successful show!<br />
+Some of us chose this role. I wanted to share a little bit of how the OHI day-to-day looks for me: long, hard hours and days of work, constantly checking if what you are doing make sense, revising methods and outcomes, comparing outcomes to what has been obtained years before. A great learning experience and overall very rewarding (even addictive).</p>
+<p><br></p>
+<hr />
+</div>
+<div id="grappling-with-graphics" class="section level2">
+<h2>Grappling with Graphics</h2>
+<p><em>by Ellie Campbell - April 30, 2018</em></p>
+<hr />
+<p>The plotting capabilities in base plot in R are good, but for more flexibility and control, <a href="http://ggplot2.tidyverse.org/">ggplot</a> is the gold standard. In ggplot, the first line creates a plot object and points to whatever data you will be plotting. Then, one can dictate the form of the plot using any number of “geoms,” designing individual components separately and adding them to the plot, along with formatting elements like labels, title, and themes.</p>
+<p>My first introduction to ggplot, and to R as a whole, was through the lab component of a statistics course I took my first year at the Bren School. That first time around, ggplot was introduced in lecture with a few associated in-class exercises and then over the course of the semester I spent hours tinkering with and refining presentation – palettes, graph types, fonts and features – for various assignments, a process that involved lots of google searches and scrounging through <a href="https://stackoverflow.com/questions/tagged/ggplot2?sort=frequent&amp;pageSize=50">stack overflow</a> for fragments of code to get things like outlines, or legends, or offsets in bar graphs just precisely right.</p>
+<p>A few weeks ago, we went over the use of ggplot as part of our training in preparation for calculating the 2018 OHI. We began with a <a href="http://ohi-science.org/data-science-training/ggplot2.html">structured tutorial</a> also, and dove deeper into the meaning and syntax of the arguments, walking step-by-step through some of the nitty-gritty details and more advanced capabilities. One thing in particular that became more clear to me, was the functionality of aes() or the “aesthetics,” which was something I’d found particularly confusing in my first encounters with ggplot. For example, it was not completely clear to me why you would put some arguments within aes() and some outside aes(), or define x and y in aes() in the first line versus individual geoms; e.g. these give the same plot:</p>
+<pre class="r"><code>ggplot(data = tips, aes(x = total_bill, y = tip/total_bill, color = day)) + 
+  geom_point(size = 0.25)
+
+ggplot(data = tips, aes(color = day)) +
+  geom_point(aes(x = total_bill, y = tip/total_bill), size = 0.25)
+
+ggplot(data = tips) +
+  geom_point(aes(x = total_bill, y = tip/total_bill, color = day), size = 0.25)</code></pre>
+<p><br></p>
+<p><img src="blog_files/figure-html/plot-1.png" width="768" /></p>
+<p><br></p>
+<p>Other takeaways for me were (1) modularity of ggplot means it is good for more complicated graphics, but perhaps unnecessarily verbose for simple plots (2) <a href="http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/">facetting</a> is a very helpful feature for looking at multifaceted data (3) there are many <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">theme options</a> for making pretty plots, some of which can be found in the <a href="https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html">ggthemes</a> package, and (4) ggplot is especially powerful for data visualization when combined with other packages in <a href="https://www.tidyverse.org/">tidyverse</a>! For example, using some data from the gapminder dataset:</p>
+<pre class="r"><code>gap &lt;- gapminder %&gt;% 
+  filter(continent == &quot;Europe&quot;) %&gt;% 
+  mutate(cummean_gdpPercap = cummean(gdpPercap)) %&gt;% 
+  group_by(country) %&gt;% 
+  filter(max(cummean_gdpPercap)-min(cummean_gdpPercap) &gt; 2000) %&gt;% 
+  ungroup()
+
+ggplot(data = gap) +
+  geom_line(aes(x = year, y = cummean_gdpPercap), color = &quot;lightsteelblue&quot;) + 
+  geom_line(aes(x = year, y = gdpPercap), color = &quot;coral&quot;) +
+  facet_wrap(~ country) +
+  theme_bw() + 
+  labs(x = &quot;Year&quot;, y = &quot;Cumulative Mean per Cap. GDP \n&quot;) </code></pre>
+<p><br></p>
+<p><img src="blog_files/figure-html/plot%20with%20facetting-1.png" width="672" /></p>
+<p>The details of ggplot stuck with me somewhat better this time around, and it is hard to say how much of that was because of previous hours spent tinkering with ggplot, and how much was because we walked through the details step-by-step and as a group. I wonder, when developing proficiency with some computer language or software, what is the relative return from hours spent on collaborative learning, structured tutorials, or individual tinkering? What about an optimal combination of these?</p>
+<p>There’s certainly an huge advantage to learning with others – you can bounce ideas off each other, and ask for help. And it is more fun! Having a mentor is likewise invaluable. Despite the vast online help available and the magic that is Google, sometimes asking another human is a shorter, easier path to answers we are seeking.</p>
+<p><br> <br></p>
+<hr />
+</div>
+<div id="githubbing-through-life" class="section level2">
+<h2>GitHubbing through Life</h2>
+<p><em>by Iwen Su - April 6, 2018</em></p>
+<hr />
+<p>My first experience with GitHub was fairly painless, except that I hadn’t differentiated it from just another server where you could store your files and folders. “Pull, push, and commit” was written on the whiteboard so we could remember the order of operations to update files. For the most part, I didn’t run into any errors. However, many of the capabilities that GitHub wielded were unknown to me. I didn’t know that you could essentially rearrange folders and files on your local computer and update the version online with the new configuration.</p>
+<p>It wasn’t until I watched Julie Lowndes’s video on <a href="http://seawater.stanford.edu/Lowndes.mp4">being a marine data scientist</a>, which did a section on using GitHub, that I got a glimpse into why you would use it, the array of things you can do with it, and what all these new terms such as “branches” and “committing” meant. In the talk, Julie quotes a <a href="https://www.nature.com/news/democratic-databases-science-on-github-1.20719">2016 Nature article</a> that describes GitHub functionality:</p>
+<p><br></p>
+<blockquote>
+<p>“For scientist coders, [Git] works like a laboratory notebook for scientific computing …it keeps a lasting record of events”</p>
+</blockquote>
+<p><br></p>
+<p>Wait, what is “Git”? Is it just shorthand for “GitHub”? Actually, Git is the version control system that is responsible for keeping the lasting record of events. GitHub is a space, like a library, that can hold numerous laboratory notebooks, or data science projects. Andrew McWilliams does a good job at explaining the technical and functional differences between the two in a <a href="https://jahya.net/blog/git-vs-github/">blog post</a>.</p>
+<p>For my master’s group project, we decided to use GitHub as our versioning library for our data analysis. The nature of the project required more than one person to work on the same document or code simultaneously. Immediately we ran into issues collaborating on the same document. These are also known as “merge conflicts” in the Git world. None of us had gotten proper training or guidance about what to expect when a merge conflict arises. Sometimes we wouldn’t notice until several days later that, to our surprise, the excel file we had been working in now had two copies of the data table, one on top of the other, accompanied with strange symbols and headers, such as:</p>
+<p><br></p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code></pre>
+<p>or</p>
+<pre><code>=======</code></pre>
+<p><br></p>
+<p>Through the OHI training, I learned that this was a separator partitioning my version of the data table from my peers’ updates to the data table. We experienced several headaches from rewriting each other’s work before we realized that Git was trying to tell us something in error messages like:</p>
+<p><br></p>
+<pre><code>CONFLICT : Merge conflict in urchindata.csv 
+Automatic merge failed; fix conflicts and then commit the result</code></pre>
+<p><br></p>
+<p>Often times the error messages are intimidating, because there is coding lingo thrown into it. However, the messages usually give us a good hint as to what is causing the error. Nevertheless, there are many barriers to entry to learning GitHub and learning to want to use GitHub. One of those is the jargony vocabulary of key terms only used in the Git and GitHub world: commit, branches, merge conflicts, pull, push, master branch, repository, and projects. Check out our cheatsheet on Git terminology <a href="z2_gitTerminology.html">here</a>.</p>
+<p><br> <br></p>
+<hr />
+</div>
+<div id="first-impressions" class="section level2">
+<h2>First Impressions</h2>
+<p><em>by Camila Vargas - February 23, 2018</em></p>
+<hr />
+<p>New year, new challenges. We joined the OHI team in late January this year. I was excited to find out what our day-to-day “office” would look like. Before starting this job, I had a basic understanding of the OHI project, but to be honest, I had pretty limited experience with R (not a whole lot) and that was it. I’m a curious learner, but I would definitely not define myself as a computer programming person. Yet, here I was.</p>
+<p>Our first “homework” was to read through the <a href="https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html">OHI 2017 Methods</a>. While, we didn’t need to read the whole thing in detail, it was important for us to get a glimpse of how the OHI is actually calculated.</p>
+<p>At a first glance, it was OK. I thought it was interesting to dig into the actual math within this index. But of course you don’t get the whole picture just by reading some of the method document. One of the biggest challenges (my fellow fellows agreed with me on this) was to relate the entire workflow outlined in Figure 1.1 with what is actually going on in the math – and with this I mean the formulas. Challenges inspire! We started creating an expanded version of this figure to help us connect the dots faster (not yet finalized but will soon be displayed in the OHI theory tab!).</p>
+<p>While we were introduced to the theory behind OHI, we also walked through how everything is organized, where the actual information is, and how to get to it. All I can say about this is that it’s all about links and more links. Too many links. I’m not sure if my brain is stuck in the mindset of organizing things into respective folders or if it’s just because everything is new, but it was overwhelming to learn that there are html links for everything. For example, from the OHI 2017 Methods, there are links to GitHub and links to other websites that explain certain topics in more detail.</p>
+<blockquote>
+<p>My initial reaction was: WHAT IS WHAT AND WHERE IS EVERYTHING?</p>
+</blockquote>
+<p>By the end of the day, I realized it was just panic from exposure to something new. Just breath. I’m sure at some point we are going to figure out how the information is organized (because I’m pretty sure it is already well organized). Nevertheless, the OHI fellows are working on a visual explanation of this link chaos.</p>
+<p>And links were not the only chaotic thing. We were also introduced to Github and R Markdown. Amazing tools! But you have to break the ice before you can feel comfortable and actually know what you are doing. It seemed overwhelming at the beginning, but after only four sessions of working with all this new information and I already feel more comfortable.</p>
+<p>I am enjoying the challenge. Learning a whole lot. And looking forward to communicating to you all about our progress and experience!</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

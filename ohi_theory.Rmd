@@ -1,0 +1,12 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+<br>
+
+[![](./images/ohi_intro.png){width=250px}](ohi_intro.html) [![](./images/ohi_calculate.png){width=250px}](how_goals_score.html) [![](./images/ohi_theory_resources.png){width=250px}](ohi_resources.html)

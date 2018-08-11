@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="site_libs/bootstrap-select-1.12.1/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-select-1.12.1/dist/js/bootstrap-select.min.js"></script>
+<script src="site_libs/bsselect-binding-0.1.0/bsselect.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">OHI Global Fellows</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="Blog.html">Blog</a>
+</li>
+<li>
+  <a href="tools_we_use.html">The Tools We Use</a>
+</li>
+<li>
+  <a href="ohiTheory.html">OHI Theory</a>
+</li>
+<li>
+  <a href="fellows.html">Who Are We?</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="how-to-calculate-a-goal-score" class="section level2">
+<h2>How to Calculate a Goal Score</h2>
+<hr />
+<div class="figure">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRN8pFrclhIYIPk7wBzI1TSAkycNzIK7KUKmqcMtej8KBPnsm4RbhjIsGwUPrmJ-7aRhmdlBscCMGUe/pub?w=1658&amp;h=584" />
+
+</div>
+<hr />
+<p>Each of the <a href="https://www.nature.com/articles/nature11397">ten goals</a> have their own unique methodology. <a href="https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html#5_goal_models_and_data">Methodologies</a> are built around the types of available data, appropriate for the analysis – consistently quantified across the spatial scale of the assessment and quality-controlled – and based on the best scientific understanding of the subject per expert input and peer review. Each <a href="https://github.com/OHI-Science/ohi-global/blob/draft/eez/conf/functions.R">goal score calculation</a> takes a few different <a href="http://ohi-science.org/ohi-global/layers_table.html">data layers</a> that inform present status and likely near-term future status, which is calculated from trend, pressure, and resilience information. For</p>
+<hr />
+
+<html>
+<select id="SnfnTWydGt" class="selectpicker" data-dropdown-align-right="false" data-dropup-auto="true" data-header="false" data-live-search="false" data-live-search-style="contains" data-show-tick="true" data-width="false" data-size="auto"><option value="goals_calc/ao_calc.png">Artisanal Fishing Opportunity</option>
+<option value="goals_calc/hab_calc.png">Biodiversity: Habitat</option>
+<option value="goals_calc/spp_calc.png">Biodiversity: Species</option>
+<option value="goals_calc/cp_calc.png">Coastal Protection</option>
+<option value="goals_calc/cs_calc.png">Carbon Storage</option>
+<option value="goals_calc/cw_calc.png">Clean Waters</option>
+<option value="goals_calc/fis_calc.png">Food Provision: Fisheries</option>
+<option value="goals_calc/mar_calc.png">Food Provision: Mariculture</option>
+<option value="goals_calc/eco_calc.png">Livelihoods and Economies: Economies</option>
+<option value="goals_calc/liv_calc.png">Livelihoods and Economies: Livelihoods</option>
+<option value="goals_calc/np_calc.png">Natural Products</option>
+<option value="goals_calc/ico_calc.png">Sense of Place: Iconic Species</option>
+<option value="goals_calc/lsp_calc.png">Sense of Place: Lasting Special Places</option>
+<option value="goals_calc/tr_calc.png">Tourism and Recreation</option></select>
+<img src="goals_calc/ao_calc.png" name="zi3GLNbWrF" height="500" width="100%"/>
+<script>$(document).ready(function(){
+                 $("#SnfnTWydGt").change(function(){
+                 $("img[name=zi3GLNbWrF]").attr("src",$(this).val());
+
+                 });
+
+  });</script>
+</html>
+<div id="htmlwidget-10f60deb16b0953a0217" style="width:1920px;height:10px;" class="bsselect html-widget" width="1920" height="10"></div>
+<script type="application/json" data-for="htmlwidget-10f60deb16b0953a0217">{"x":[],"evals":[],"jsHooks":[]}</script>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
