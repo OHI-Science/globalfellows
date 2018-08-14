@@ -1,28 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry:  "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
 
+The opportunity for small-scale fishers to supply catch for their families, members of their local communities, or sell in local markets.
 
-### Artisanal Fishing Opportunity
+\vspace{0.5in}
 
-Measures whether people who need to fish on a small, local scale have the opportunity to do so.
-
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{ao} \text{   is the status of the artisinal fishing goal}\\
 \\
 & x_{ao} = (1 - D_u) * S_{ao}\\
@@ -32,6 +26,4 @@ Measures whether people who need to fish on a small, local scale have the opport
 & S_{ao} \text{   sustainability weighting; 1 if no data or perfectly sustainable}\\
 & O_{ao} \text{   is the access to artisinal-scal fishing, defined by Mora et al. (2009)}\\
 & PPPpcGDP \text{   is ln-transformed rescaled purchasing power parity adjusted per capita GDP}
-\end{aligned}
-\]
-<br>
+\end{aligned}$

@@ -1,25 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-  - \usepackage{fancyhdr}
-  - \usepackage{setspace}
-  - \usepackage{chngcntr}
-  - \onehalfspacing
-  - \counterwithin{figure}{section}
-  - \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
 
+Coastal and ocean-dependent livelihoods (job quantity and quality) produced by marine sectors.
 
-### Livelihoods & Economies: Livelihoods
+\vspace{0.5in}
 
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{liv} \text{   is the status of the livelihoods sub-goal}\\
 \\
 & x_{liv} = \left(\frac{1}{2}\right) \left(\frac{\sum ^k_1 j_{c,k} }{\sum ^k_1 j_{r,k} } + \frac{\sum ^k_1 w_{m,k} }{\sum ^k_1 w_{r,k} } \right)\\
@@ -32,5 +29,4 @@ header-includes:
 \\
 & k \text{   sectors include tourism, commercial fishing, marine mammal watching, aquarium fishing, }\\
 & \text{  wave \& renewable energy, mariculture, transport. \& shipping, ports \& harbors, ship \& boat-building}
-\end{aligned}
-\]
+\end{aligned}$

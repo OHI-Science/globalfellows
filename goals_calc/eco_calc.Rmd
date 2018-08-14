@@ -1,26 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
 
+Coastal and ocean-dependent economies (revenues) produced by marine sectors.
 
-### Livelihoods & Economies: Economies
+\vspace{0.5in}
 
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{eco} \text{   is the status of the economies sub-goal}\\
 \\
 & x_{eco} = \left(\sum^N_{k=1} e_{c,\text{ } k} \right) \left(\sum^N_{k=1} e_{r,\text{ } k} \right)^{-1} \\
@@ -30,6 +26,4 @@ header-includes:
 \\
 & k \text{   sectors: tourism, commercial fishing, marine mammal watching, aquarium fishing, }\\
 & \text{  wave \& renewable energy, mariculture, transport. \& shipping, ports \& harbors, ship \& boat-building}
-\end{aligned}
-\]
-<br>
+\end{aligned}$

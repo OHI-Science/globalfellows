@@ -280,13 +280,13 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="Blog.html">Blog</a>
+  <a href="blog.html">Blog</a>
 </li>
 <li>
-  <a href="tools_we_use.html">The Tools We Use</a>
+  <a href="tools.html">The Tools We Use</a>
 </li>
 <li>
-  <a href="ohiTheory.html">OHI Theory</a>
+  <a href="ohi_theory.html">OHI Theory</a>
 </li>
 <li>
   <a href="fellows.html">Who Are We?</a>
@@ -314,7 +314,7 @@ div.tocify {
 <p><em>by Ellie Campbell - August 9, 2018</em></p>
 <hr />
 <p>I recently was reading about <a href="https://www.infoworld.com/article/3237508/agile-development/what-is-agile-methodology-modern-software-development-explained.html">Agile software development</a>, a methodology of software development many organizations today practice in some form, which emphasizes flexibility, speed, and collaboration. Features typically associated with an <a href="https://www.youtube.com/watch?v=1iccpf2eN1Q">Agile approach</a> include: inherent adaptability; continuous planning and evolution; iterative work flow and integration of continuous feedback; automated testing; and a focus on empowering people to collaborate. The methodology was formalized in 2001 in Agile Manifesto:</p>
-<div style="margin-left: 90px">
+<div style="margin-left: 5%">
 <p><span style="color:#528498; font-size: 10pt"> We are uncovering better ways of developing software by doing it and helping others do it.<br />
 Through this we have come to value:<br />
 <strong>Individuals and interactions</strong> over processes and tools<br />
@@ -324,7 +324,7 @@ Through this we have come to value:<br />
 That is, while there is value in the items on the right, we value the items on the left more.</span></p>
 </div>
 <p><br></p>
-<p>There are also <a href="https://www.agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/">12 principles</a> that expand on the values of the Agile Manifesto. As I was reading, I recognized many parallels between the Agile principles and our philosophy for developing and using OHI software, or what we refer to as the <a href="http://ohi-science.org/toolbox-training/toolbox.html">OHI Toolbox</a>. The OHI is unique and progressive in the way it adapts software development tools to a scientific-research context, to do <a href="https://www.nature.com/articles/s41559-017-0160">better science in less time</a>. Similar to how the <a href="https://toggl.com/developer-methods-infographic/">waterfall</a> development methodology (a precursor to Agile) was borrowed from Henry Ford’s assembly-line manufacturing method, we have adopted many of the tools and methods used by the software development community to use for reproducible and collaborative science. I thought it would be an interesting exercise to describe how the principles map onto our workflows, and where they diverge. This is what I came up with.</p>
+<p>There are also <a href="https://www.agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/">12 principles</a> that expand on the values of the Agile Manifesto. As I was reading, I recognized many parallels between the Agile principles and our philosophy for developing and using OHI software, or what we refer to as the <a href="http://ohi-science.org/toolbox-training/toolbox.html">OHI Toolbox</a>. The OHI is unique and progressive in the way it adapts software development tools to a scientific-research context, to do <a href="https://www.nature.com/articles/s41559-017-0160">better science in less time</a>. Similar to how the <a href="https://toggl.com/developer-methods-infographic/">waterfall</a> development methodology (a precursor to Agile) was borrowed from Henry Ford’s assembly-line manufacturing method,<a href="https://www.infoworld.com/article/3237508/agile-development/what-is-agile-methodology-modern-software-development-explained.html">*</a> we have adopted many of the tools and methods used by the software development community, to use for reproducible and collaborative science. I thought it would be an interesting exercise to describe how the principles map onto our workflows, and where they diverge. This is what I came up with.</p>
 <p><br></p>
 <p><strong>Twelve Agile Principles in the context of the OHI and OHI Global Fellowship:</strong></p>
 <div style="float: left; width: 11.023%;">
@@ -571,7 +571,7 @@ ggplot(data = tips, aes(color = day)) +
 ggplot(data = tips) +
   geom_point(aes(x = total_bill, y = tip/total_bill, color = day), size = 0.25)</code></pre>
 <p><br></p>
-<p><img src="Blog_files/figure-html/plot-1.png" width="768" /></p>
+<p><img src="blog_files/figure-html/plot-1.png" width="768" /></p>
 <p><br></p>
 <p>Other takeaways for me were (1) modularity of ggplot means it is good for more complicated graphics, but perhaps unnecessarily verbose for simple plots (2) <a href="http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/">facetting</a> is a very helpful feature for looking at multifaceted data (3) there are many <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">theme options</a> for making pretty plots, some of which can be found in the <a href="https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html">ggthemes</a> package, and (4) ggplot is especially powerful for data visualization when combined with other packages in <a href="https://www.tidyverse.org/">tidyverse</a>! For example, using some data from the gapminder dataset:</p>
 <pre class="r"><code>gap &lt;- gapminder %&gt;% 
@@ -588,7 +588,7 @@ ggplot(data = gap) +
   theme_bw() + 
   labs(x = &quot;Year&quot;, y = &quot;Cumulative Mean per Cap. GDP \n&quot;) </code></pre>
 <p><br></p>
-<p><img src="Blog_files/figure-html/plot%20with%20facetting-1.png" width="672" /></p>
+<p><img src="blog_files/figure-html/plot%20with%20facetting-1.png" width="672" /></p>
 <p>The details of ggplot stuck with me somewhat better this time around, and it is hard to say how much of that was because of previous hours spent tinkering with ggplot, and how much was because we walked through the details step-by-step and as a group. I wonder, when developing proficiency with some computer language or software, what is the relative return from hours spent on collaborative learning, structured tutorials, or individual tinkering? What about an optimal combination of these?</p>
 <p>There’s certainly an huge advantage to learning with others – you can bounce ideas off each other, and ask for help. And it is more fun! Having a mentor is likewise invaluable. Despite the vast online help available and the magic that is Google, sometimes asking another human is a shorter, easier path to answers we are seeking.</p>
 <p><br> <br></p>
@@ -617,7 +617,7 @@ ggplot(data = gap) +
 <pre><code>CONFLICT : Merge conflict in urchindata.csv 
 Automatic merge failed; fix conflicts and then commit the result</code></pre>
 <p><br></p>
-<p>Often times the error messages are intimidating, because there is coding lingo thrown into it. However, the messages usually give us a good hint as to what is causing the error. Nevertheless, there are many barriers to entry to learning GitHub and learning to want to use GitHub. One of those is the jargony vocabulary of key terms only used in the Git and GitHub world: commit, branches, merge conflicts, pull, push, master branch, repository, and projects. Check out our cheatsheet on Git terminology <a href="z2_gitTerminology.html">here</a>.</p>
+<p>Often times the error messages are intimidating, because there is coding lingo thrown into it. However, the messages usually give us a good hint as to what is causing the error. Nevertheless, there are many barriers to entry to learning GitHub and learning to want to use GitHub. One of those is the jargony vocabulary of key terms only used in the Git and GitHub world: commit, branches, merge conflicts, pull, push, master branch, repository, and projects. Check out our cheatsheet on Git terminology <a href="git_terminology.html">here</a>.</p>
 <p><br> <br></p>
 <hr />
 </div>
