@@ -6,17 +6,6 @@ output: html_document
 <br>
 <br>
 
-### OHI Global Assessment
-
-**Commonly Referenced**
-
-* [OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html) --- Comprehensive documentation of methods to calculate each goal and sub-goal
-* [OHI Global Data Layers](http://ohi-science.org/ohi-global/layers.html) --- Documents layer preparation methods and location of layer on GitHub
-* [OHI Region ID Lookup](https://github.com/OHI-Science/ohi-global/blob/draft/eez/spatial/regions_list.csv)
-* [OHI Goal Descriptions](http://ohi-science.org/goals/)
-
-<br>
-
 ### Introduction to R & GitHub
 
 **Comprehensive R Resources**
