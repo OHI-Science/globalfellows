@@ -6,6 +6,14 @@ output: html_document
 <br>
 <br>
 
+### OHI Global Assessment
+
+**Commonly Referenced**
+* [OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html) --- Comprehensive documentation of methods to calculate each goal and sub-goal
+* [OHI Global Data Layers](http://ohi-science.org/ohi-global/layers.html) --- Documents layer preparation methods and location of layer on GitHub
+* [OHI Region ID Lookup](https://github.com/OHI-Science/ohi-global/blob/draft/eez/spatial/regions_list.csv)
+* [OHI Goal Descriptions](http://ohi-science.org/goals/)
+
 ### Introduction to R & GitHub
 
 **Comprehensive R Resources**
@@ -28,3 +36,23 @@ output: html_document
 * [Parallel Computing in 5 Minutes](http://blog.aicry.com/r-parallel-computing-in-5-minutes/index.html)
 * [Using Multiple Cores with `doParallel`](http://michael.hahsler.net/SMU/LearnROnYourOwn/code/doMC.html)
 * [CRAN documentation](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
+
+### Website Customization
+
+**GitHub Pages**
+
+* [Example 1: OHI Baltic Health Index](https://github.com/OHI-Science/ohi-webapps_gh-pages2)
+* [Example 2: RMarkdown-Rstudio Webpage](https://github.com/rstudio/rmarkdown/tree/gh-pages)
+
+** Custom Formats**
+
+* [Example 2: Tufte](http://rstudio.github.io/tufte/)
+* [RMarkdown Custom Formats](https://blog.rstudio.com/2016/03/21/r-markdown-custom-formats/)
+* 
+
+**Text-Image Wrapping**
+
+* [Example 1](https://github.com/OHI-Science/ohi-webapps_gh-pages2/blob/gh-pages/about.Rmd)
+* [Example 2](http://www.rci.rutgers.edu/~ag978/litdata/figs/)
+* [Background Image in RMarkdown](https://robertmyles.github.io/2017/01/02/tips-and-tricks-for-r-markdown-html/)
+
