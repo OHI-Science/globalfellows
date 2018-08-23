@@ -9,10 +9,13 @@ output: html_document
 ### OHI Global Assessment
 
 **Commonly Referenced**
+
 * [OHI Methods Documentation](https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html) --- Comprehensive documentation of methods to calculate each goal and sub-goal
 * [OHI Global Data Layers](http://ohi-science.org/ohi-global/layers.html) --- Documents layer preparation methods and location of layer on GitHub
 * [OHI Region ID Lookup](https://github.com/OHI-Science/ohi-global/blob/draft/eez/spatial/regions_list.csv)
 * [OHI Goal Descriptions](http://ohi-science.org/goals/)
+
+<br>
 
 ### Introduction to R & GitHub
 
@@ -29,6 +32,8 @@ output: html_document
 * [Why GitHub?](http://ohi-science.org/globalfellows/why_git.html) --- OHI fellow article
 * [Happy Git and GitHub for the useR](http://happygitwithr.com/)  ---  classic book for integrating Git + GitHub with your R workflows
 
+<br>
+
 ### Scientific Computing
 
 **Parallel Processing** --- useful resources that go over `foreach` and `doParallel`, both used frequently in OHI workflow 
@@ -37,6 +42,8 @@ output: html_document
 * [Using Multiple Cores with `doParallel`](http://michael.hahsler.net/SMU/LearnROnYourOwn/code/doMC.html)
 * [CRAN documentation](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
 
+<br>
+
 ### Shiny Dashboard
 
 * [Setting It Up](http://docs.rstudio.com/shinyapps.io/index.html)
@@ -44,9 +51,11 @@ output: html_document
 * [Shiny RStudio Gallery](https://shiny.rstudio.com/gallery/)
 
 **Example**
+
 * [Example 1: New Zealand Tourism](https://mbienz.shinyapps.io/tourism_dashboard_prod/)
 * [Example 1 Code](https://github.com/nz-mbie/tourism-dashboard-public)
 
+<br>
 
 ### Website Customization
 
@@ -55,11 +64,10 @@ output: html_document
 * [Example 1: OHI Baltic Health Index](https://github.com/OHI-Science/ohi-webapps_gh-pages2)
 * [Example 2: RMarkdown-Rstudio Webpage](https://github.com/rstudio/rmarkdown/tree/gh-pages)
 
-** Custom Formats**
+**Custom Formats**
 
 * [Example 2: Tufte](http://rstudio.github.io/tufte/)
 * [RMarkdown Custom Formats](https://blog.rstudio.com/2016/03/21/r-markdown-custom-formats/)
-* 
 
 **Text-Image Wrapping**
 
