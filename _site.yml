@@ -2,12 +2,12 @@ name: "ohi-globalfellows-website"
 navbar:
   title: "OHI Global Fellows"
   left:
-    - text: "Blog"
-      href: Blog.html
-    - text: "The Tools We Use"
-      href: tools_we_use.html
     - text: "OHI Theory"
-      href: ohiTheory.html
+      href: ohi_theory.html
+    - text: "The Tools We Use"
+      href: tools.html
+    - text: "Blog"
+      href: blog.html
     - text: "Who Are We?"
       href: fellows.html
 output_dir: "."

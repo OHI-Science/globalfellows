@@ -1,28 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
 
+The amount of protection provided by marine and coastal habitats serving as natural buffers against incoming waves. Shoreline-protecting habitats include mangrove, saltmarsh, coastal sea ice, coral reefs, and seagrass.
 
-### Coastal Protection
+\vspace{0.5in}
 
-The amount of protection provided by marine and coastal habitats serving as natural buffers against incoming waves.
-
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{cp} \text{   is the status of the coastal protection goal}\\
 \\
 & x_{cp} = \left(\sum^N_{k=1} (h_k \times w_k \times A_k) \right) \left(\sum^N_{k=w} (w_k \times A_k) \right)^{-1} \\
@@ -30,10 +24,8 @@ The amount of protection provided by marine and coastal habitats serving as natu
 & h = \frac{C_c}{C_r}\\
 \\
 & h \text{   is a measure of the habitat's condition with respect to its reference condition}\\
-& C_c \text{  is the current health of shoreline-protecting habitat $k$ in a region (mangrove, saltmarsh, coastal sea ice, coral reefs, seagrass)}\\
+& C_c \text{  current health of shoreline-protecting habitat $k$ in a region}\\
 & C_r \text{  is the reference condition of habitat $k$}\\
 & w \text{  is the rank weight of the habitat's protective ability}\\
 & A \text{   is the area within a region for each $k$ habitat type}
-\end{aligned}
-\]
-<br>
+\end{aligned}$

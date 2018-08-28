@@ -1,28 +1,26 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
+
 \pagenumbering{gobble}
 
-### Biodiversity: Species
+The conservation status of native marine species.
 
-<br>
+\vspace{0.5in}
 
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{spp} \text{   is the status of the species biodiversity sub-goal}\\
 \\
 & x_{spp} = max \left(\frac{\bar{R}_{spp} - 0.25}{0.75}, 0 \right)\\
+\\
 & \bar{R}_{spp} = \left(\sum^M_{c=1} \left( \sum^{N_c}_{i=1} w_i \right) \times A_c \right) \left(\sum^M_{c=1} A_c \times N_c \right)^{-1}\\
 \\
 & \bar{R}_{spp} \text{  region's area-weighted mean of species risk, with floor at 25\% representing catastrophic loss of biodiversity}\\
@@ -34,5 +32,4 @@ header-includes:
 & c \text{  a 0.5 degree grid cell within a region}\\
 & w_i \text{  the risk status for each species $i$, assigned based on IUCN threat category}\\
 & A_c \text{  area of cell $c$}
-\end{aligned}
-\]
+\end{aligned}$

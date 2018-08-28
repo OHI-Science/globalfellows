@@ -91,6 +91,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -179,13 +182,13 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="Blog.html">Blog</a>
+  <a href="ohi_theory.html">OHI Theory</a>
 </li>
 <li>
-  <a href="tools_we_use.html">The Tools We Use</a>
+  <a href="tools.html">The Tools We Use</a>
 </li>
 <li>
-  <a href="ohiTheory.html">OHI Theory</a>
+  <a href="blog.html">Blog</a>
 </li>
 <li>
   <a href="fellows.html">Who Are We?</a>
@@ -208,11 +211,66 @@ $(document).ready(function () {
 
 
 <p><br> <br></p>
-<p><a href="http://ohi-science.org/data-science-training/index.html">OHI Data Science Training</a> — an online book written by The Ocean Health Index Team as an introduction to data science with R, with a focus on the tools used for calculating the OHI.</p>
-<p><a href="https://www.rstudio.com/resources/cheatsheets/">R Cheatsheets</a> — a collection of 8x11 pages (double-sided) each crammed with all-you-need-to-know information about a given package</p>
-<p><a href="http://r4ds.had.co.nz/">R for Data Science (R4DS)</a> — classic book for learning to do data science with R</p>
-<p><a href="http://stat545.com/topics.html">Stat545</a> — a well-organized and comprehensive website for a statistics course at UBC, which teaches R/RStudio as well as Git/GitHub</p>
-<p><a href="http://happygitwithr.com/">Happy Git and GitHub for the useR</a> — classic book for integrating Git + GitHub with your R workflows</p>
+<div id="introduction-to-r-github" class="section level3">
+<h3>Introduction to R &amp; GitHub</h3>
+<p><strong>Comprehensive R Resources</strong></p>
+<ul>
+<li><a href="http://ohi-science.org/data-science-training/index.html">OHI Data Science Training</a> — an online book written by The Ocean Health Index Team as an introduction to data science with R, with a focus on the tools used for calculating the OHI.</li>
+<li><a href="https://www.rstudio.com/resources/cheatsheets/">R Cheatsheets</a> — a collection of 8x11 pages (double-sided) each crammed with all-you-need-to-know information about a given package</li>
+<li><a href="http://r4ds.had.co.nz/">R for Data Science (R4DS)</a> — classic book for learning to do data science with R</li>
+<li><a href="http://ohi-science.org/globalfellows/why_rmarkdown.html">Why RMarkdown?</a> — OHI fellow article</li>
+<li><a href="http://stat545.com/topics.html">Stat545</a> — a well-organized and comprehensive website for a statistics course at UBC, which teaches R/RStudio as well as Git/GitHub</li>
+</ul>
+<p><strong>Overview of GitHub</strong></p>
+<ul>
+<li><a href="http://ohi-science.org/globalfellows/why_git.html">Why GitHub?</a> — OHI fellow article</li>
+<li><a href="http://happygitwithr.com/">Happy Git and GitHub for the useR</a> — classic book for integrating Git + GitHub with your R workflows</li>
+</ul>
+<p><br></p>
+</div>
+<div id="scientific-computing" class="section level3">
+<h3>Scientific Computing</h3>
+<p><strong>Parallel Processing</strong> — useful resources that go over <code>foreach</code> and <code>doParallel</code>, both used frequently in OHI workflow</p>
+<ul>
+<li><a href="http://blog.aicry.com/r-parallel-computing-in-5-minutes/index.html">Parallel Computing in 5 Minutes</a></li>
+<li><a href="http://michael.hahsler.net/SMU/LearnROnYourOwn/code/doMC.html">Using Multiple Cores with <code>doParallel</code></a></li>
+<li><a href="https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf">CRAN documentation</a></li>
+</ul>
+<p><br></p>
+</div>
+<div id="shiny-dashboard" class="section level3">
+<h3>Shiny Dashboard</h3>
+<ul>
+<li><a href="http://docs.rstudio.com/shinyapps.io/index.html">Setting It Up</a></li>
+<li><a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">Shiny User Showcase</a></li>
+<li><a href="https://shiny.rstudio.com/gallery/">Shiny RStudio Gallery</a></li>
+</ul>
+<p><strong>Example</strong></p>
+<ul>
+<li><a href="https://mbienz.shinyapps.io/tourism_dashboard_prod/">Example 1: New Zealand Tourism</a></li>
+<li><a href="https://github.com/nz-mbie/tourism-dashboard-public">Example 1 Code</a></li>
+</ul>
+<p><br></p>
+</div>
+<div id="website-customization" class="section level3">
+<h3>Website Customization</h3>
+<p><strong>GitHub Pages</strong></p>
+<ul>
+<li><a href="https://github.com/OHI-Science/ohi-webapps_gh-pages2">Example 1: OHI Baltic Health Index</a></li>
+<li><a href="https://github.com/rstudio/rmarkdown/tree/gh-pages">Example 2: RMarkdown-Rstudio Webpage</a></li>
+</ul>
+<p><strong>Custom Formats</strong></p>
+<ul>
+<li><a href="http://rstudio.github.io/tufte/">Example 2: Tufte</a></li>
+<li><a href="https://blog.rstudio.com/2016/03/21/r-markdown-custom-formats/">RMarkdown Custom Formats</a></li>
+</ul>
+<p><strong>Text-Image Wrapping</strong></p>
+<ul>
+<li><a href="https://github.com/OHI-Science/ohi-webapps_gh-pages2/blob/gh-pages/about.Rmd">Example 1</a></li>
+<li><a href="http://www.rci.rutgers.edu/~ag978/litdata/figs/">Example 2</a></li>
+<li><a href="https://robertmyles.github.io/2017/01/02/tips-and-tricks-for-r-markdown-html/">Background Image in RMarkdown</a></li>
+</ul>
+</div>
 
 
 

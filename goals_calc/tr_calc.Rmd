@@ -1,28 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
 
+The value people have for experiencing and enjoying coastal areas through activities such as sailing, recreational fishing, beach-going, and bird watching.
 
-### Tourism & Recreation
+\vspace{0.5in}
 
-The value people have for experiencing and enjoying coastal areas and attractions.
-
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{tr} \text{   is the status of  tourism and recreation goal}\\
 \\
 & x_{tr} = \frac{T_r}{T_{90th}}\\
@@ -32,6 +26,4 @@ The value people have for experiencing and enjoying coastal areas and attraction
 & E \text{   is the proportion of employees directly involved in the travel and tourim industry}\\
 & S \text{   is the sustainability} (\text{ TTCI: Crotti \& Misrahi, } 2015)\\
 & W \text{   is a penalty based on travel warnings issued by the US State Department}
-\end{aligned}
-\]
-<br>
+\end{aligned}$

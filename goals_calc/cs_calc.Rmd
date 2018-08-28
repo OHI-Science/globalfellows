@@ -1,28 +1,22 @@
 ---
-output: pdf_document
-classoption: landscape
-fontsize: 14pt
-geometry: margin=1in
+output:
+  pdf_document: 
+    latex_engine: xelatex
 header-includes:
-- \usepackage{placeins}
-- \usepackage{fancyhdr}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
+- \usepackage[fontsize=16pt]{scrextend}
+- \usepackage{fontspec}
+classoption: landscape
+geometry: "left=0.1cm,right=0.1cm,top=2cm,bottom=1cm"
 ---
 
 \pagenumbering{gobble}
 
+The condition of coastal habitats that store and sequester atmospheric carbon.
 
-### Carbon Storage
+\vspace{0.5in}
 
-Measures the condition of coastal habitats that store and sequester atmospheric carbon.
-
-<br>
-\[
-\begin{aligned}
+\noindent
+$\begin{aligned}
 & x_{cs} \text{   is the status of the carbon storage goal}\\
 \\
 & x_{cs} = \left(\sum^N_{k=1} (h_k \times w_k \times A_k) \right) \left(\sum^N_{k=w} (w_k \times A_k) \right)^{-1} \\
@@ -35,6 +29,4 @@ Measures the condition of coastal habitats that store and sequester atmospheric 
 & C_r \text{  is the reference condition of habitat $k$}\\
 & w \text{  is the rank weight of the habitat's contribution to total carbon storage (Laffoley \& Grimsditch)}\\
 & A \text{   is the area within a region for each $k$ habitat type}
-\end{aligned}
-\]
-<br>
+\end{aligned}$
