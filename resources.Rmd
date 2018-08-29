@@ -89,6 +89,7 @@ output: html_document
 **ggrepel**
 
 * [Examples](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)
+* [Custom label colors](https://github.com/slowkow/ggrepel/issues/82)
 
 
 
