@@ -64,3 +64,34 @@ output: html_document
 * [Example 2](http://www.rci.rutgers.edu/~ag978/litdata/figs/)
 * [Background Image in RMarkdown](https://robertmyles.github.io/2017/01/02/tips-and-tricks-for-r-markdown-html/)
 
+<br>
+
+### Data Visualization
+
+**R colors and palettes**
+
+* [R color cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf)
+* [Customizing colors in R](https://mgimond.github.io/ES218/Week04d.html)
+* [Color palettes](http://www.di.fc.ul.pt/~jpn/r/GraphicalTools/colorPalette.html)
+
+**ggplot2**
+
+* [Complete tutorial](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html#6.%20How%20to%20Change%20the%20X%20Axis%20Texts%20and%20Ticks%20Location)
+* [Customizing axis tick marks and labels](http://www.sthda.com/english/wiki/ggplot2-axis-ticks-a-guide-to-customize-tick-marks-and-labels)
+* [Changing colors automatically and manually](http://www.sthda.com/english/wiki/ggplot2-colors-how-to-change-colors-automatically-and-manually)
+* [Exploring some themes](http://t-redactyl.io/blog/2015/12/creating-plots-in-r-using-ggplot2-part-1-line-plots.html)
+
+**cowplot**
+
+* [Introduction](https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html)
+
+
+**ggrepel**
+
+* [Examples](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)
+
+
+
+
+
+
