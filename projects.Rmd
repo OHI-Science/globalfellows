@@ -1,0 +1,32 @@
+---
+title: "Projects"
+output: html_document
+---  
+
+<br>
+<br>
+
+***
+
+### OHI Country Score Cards
+
+<br>
+
+***
+
+### OHI Global Data Explorer
+
+
+<br>
+
+
+***
+
+### Demystifying `ohicore`
+
+<br>
+
+***
+
+<br>
+<br>
