@@ -1,6 +1,9 @@
 ---
-title: "Projects"
-output: html_document
+title: "Independent Projects"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---  
 
 <br>
@@ -8,21 +11,26 @@ output: html_document
 
 ***
 
-### OHI Country Score Cards
+## 2018 Global Fellows
+
+**OHI COUNTRY SCORE CARDS**
 
 <br>
 
 ***
 
-### OHI Global Data Explorer
+**OHI GLOBAL DATA EXPLORER**
 
+_Created by @[iwensu0313](https://github.com/iwensu0313)_
+
+[![](images/global-shiny.jpg)](https://iwensu.shinyapps.io/global-dashboard/)
 
 <br>
 
 
 ***
 
-### Demystifying `ohicore`
+**Demystifying `ohicore`**
 
 <br>
 
