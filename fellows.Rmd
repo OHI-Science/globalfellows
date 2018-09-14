@@ -62,7 +62,7 @@ She is now pursuing a specialization in Coastal and Marine Resources Management 
 <p>
 Ellie graduated from the Bren School of Environmental Science & Management, where she pursued a Masters of Environmental Science and Management with a specialization in Energy and Climate. Originally from Anchorage, Alaska, Ellie graduated from Colorado College in 2016 with a B.A. in Mathematics. For her masters project, she collaborated with four peers to synthesize an ecological monitoring framework for the Tejon Ranch Conservancy, incorporating drones and other remote sensing technologies. She previously worked with Conservation Science Partners on GLUED (Global Land Use/Cover Emergent Database), a platform to collect and share data on land use and land cover. She gained additional technical training in remote sensing methodology through an interdisciplinary research experience for undergraduates at the University of Northern Iowa. In her free time, she enjoys spending time outdoors skiing, running, and playing ultimate frisbee.
 </p>
-
+<br>
 <img src = "https://docs.google.com/drawings/d/e/2PACX-1vTq4-mE3u-NngtJn46YFxN-BwMilVVatfcF-dfT6PrsX1wZqgxcgfyhYiZfCdXL8yUBwvFzU158N-Oh/pub?w=578&h=150" style="float: right; width: 15%; margin: 0px 6px;" />
 
 </div>
