@@ -44,7 +44,7 @@ Data science can be a difficult, confusing, quagmire but is such a crucial piece
 <br>
 
 ### Our Progress
-This site documents our experience learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here. The timeline measures our progress and records milemarkers on our OHI adventure (scroll over the timeline to zoom in on completed tasks). We began learning the necessary tools on January 2018, and will finish calculating the global OHI scores for this calender year sometime late September.
+This site documents our experience learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here. The timeline measures our progress and records milemarkers on our OHI adventure (**zoom in on completed tasks by scrolling over the timeline or using the top right buttons**). We began learning the necessary tools on January 2018, and will finish calculating the global OHI scores for this calender year sometime late September.
 
 <br>
 
