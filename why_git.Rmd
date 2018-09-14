@@ -61,15 +61,14 @@ Terms        | Description
 ------------ | -----------------------------------------------
 repository   | A project, collection of files and folders, and tracking of each change that has occurred and been submitted to this project by all collaborators
 commit       | Creating an identifier for a set of changes you have made to the project (e.g. create a new folder, or change the value in a spreadsheet) so it can be called upon and viewed later. 
-pull         | 
-push         | 
-merge        | 
+pull         | Merge the most recent remote version with your local version if the repository.
+push         | Merge your local changes to the remote version of the repository.
+merge        | Combine changes in more than one version of a repository (either git does this automatically or you may have to do this manually if there are merge conflicts).
 HEAD         | Current snapshot
-origin       |
 master       | Is the main branch of a project. At OHI we don’t worry too much about branches. We have a draft branch for our ohi-global and then a master one… For ohiprep we just have a single one since it’s not as worrisome if each collaborator makes direct changes to a single master/main version.
-remote       |
+remote       | The remote repository on GitHub that every other non-draft version can pull and push from.
 branch       | Multiple branches can exist for a repository. A different version of the main project that can be used if there are many collaborators that want to try editing without affecting the main version of the project.
-forking      | Makes an entirely new copy of the project. Different from branches, because can’t just be merged????? If want to submit suggestions to project need to submit a “pull request”
+forking      | Makes an entirely new copy of the project. Different from branches, because can’t just be merged. If want to submit suggestions to project need to submit a “pull request”
 pull request |  A user-friendly interface for collaborators to discuss changes, make comments to the project before merging different people’s suggestions.
 
 ## The Basic Workflow 
