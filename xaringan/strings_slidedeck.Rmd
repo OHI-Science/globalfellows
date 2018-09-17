@@ -25,8 +25,8 @@ name: toc
 
 # Table of Contents
 
-1. [Extracting date or number](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#date)
-2. [Extract using start and end pattern](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#start_end)
+1. [Extract using start and end pattern](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#start_end) 
+2. [Extracting date or number](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#date)
 3. [Extract string with `grep`](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#grep)
 4. [Select string in a file path based on position](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#posit)
 5. [Select files in a list of files matching a given year](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#year)
@@ -36,30 +36,6 @@ name: toc
 9. [Conditional Selection Based on String in File Name](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#condition)
 10. [Removing weird symbols in species names](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#symbols)
 
----
-name: date
-
-## Extracting date or number
-Function: `str_extract`, RegEx: `(\\d)+`
-
-Note: `basename( )` takes the base file name of a file path. In this case, it's 'annual_catch_2003.tif'
-Context: Extract year from a file path (Catch raster) to find the corresponding year in another file path (NPP raster)
-
-```{r, eval=FALSE}
-file <- "/home/shares/ohi/git-annex/globalprep/prs_fish/v2018/int/comm_landings/
-annual_catch_2003.tif"
-
-> basename(file)
-[1] "annual_catch_2003.tif"
-
-year <- str_extract(basename(file),"(\\d)+") # extracts any digits
-
-npp_files_gf[str_detect(npp_files_gf, yr)]
-[1] "/home/shares/ohi/git-annex/globalprep/prs_fish/v2018/VGPM_primary_productivity
-/int/annual_npp/annual_mean_npp_moll_2003_gf.tif"
-```
-
-.footnote[Back to [Table of Contents](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#2)]
 ---
 name: start_end
 
@@ -80,6 +56,84 @@ RAM <- read.csv("https://rawgit.com/OHI-Science/ohiprep_v2018/master/globalprep/
      rgn_id fao_id                              assessid RAM_area_m2   stockid                              stocklong
 3553     NA     NA FAFRFJ-APOLLPJPN-1975-2013-JPNIMP2016          NA APOLLPJPN Walleye pollock Pacific Coast of Japan
 ```
+.footnote[Back to [Table of Contents](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#2)]
+
+---
+name: date
+
+## Extracting date or number
+Function: `str_extract`, RegEx: `(\\d)+`
+
+Note: The `+` sign indicates one or more digits. Without the `+`, you would extract just the first digit in the string. `basename( )` takes the base file name of a file path. In this case, it's 'annual_catch_2003.tif'
+Context: Extract year from a file path (Catch raster) to find the corresponding year in another file path (NPP raster)
+
+```{r, eval=FALSE}
+file <- "/home/shares/ohi/git-annex/globalprep/prs_fish/v2018/int/comm_landings/
+annual_catch_2003.tif"
+
+> basename(file)
+[1] "annual_catch_2003.tif"
+
+year <- str_extract(basename(file),"(\\d)+") # extracts any digits
+
+npp_files_gf[str_detect(npp_files_gf, yr)]
+[1] "/home/shares/ohi/git-annex/globalprep/prs_fish/v2018/VGPM_primary_productivity
+/int/annual_npp/annual_mean_npp_moll_2003_gf.tif"
+```
+
+.footnote[Back to [Table of Contents](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#2)]
+---
+
+## Extract end number string
+Function: `str_extract`, RegEx: `(\\d)+$`
+
+Combining the date regex with the `$` sign.
+
+Example fish taxon data
+```{r, eval=FALSE}
+> head(mean_catch$stock_id_taxonkey[1:10])
+[1] Marine_fishes_not_identified-57_100039    
+[2] Miscellaneous_marine_crustaceans-57_100047
+[3] Miscellaneous_marine_molluscs-57_100058   
+[4] Marine_fishes_not_identified-57_100139    
+[5] Cephalopoda-57_290002                     
+[6] Rajiformes-57_300014  
+```
+
+I want to extract the 6-digit taxon key appended at the end of each value, not the FAO id, the two-digit number that precedes it.
+
+Applying `str_extract` and regex `(\\d)+$`
+```{r, eval=FALSE}
+> mean_catch$stock_id_taxonkey[1]
+[1] Marine_fishes_not_identified-57_100039
+> str_extract(mean_catch$stock_id_taxonkey[1], "(\\d)+$")
+[1] "100039"
+
+> mean_catch$stock_id_taxonkey[560467]
+[1] Serranidae-31_NA
+> str_extract(mean_catch$stock_id_taxonkey[560467], "(\\d)+$")
+[1] NA
+
+```
+
+
+.footnote[Back to [Table of Contents](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#2)]
+---
+
+## Extract string with words and digits
+Function: `str_extract`, RegEx: `"^(\\w+).(\\d){2}"`
+
+Extract string that starts with one or more word characters, followed by some characters indicated by `.`, and ending with the first two digits that come up. To specify 1 or 2 digits, can adjust to `^(\\w+).(\\d{1,2}`.
+
+```{r, eval=FALSE}
+> mean_catch$stock_id_taxonkey[1]
+[1] Marine_fishes_not_identified-57_100039
+
+> str_extract(mean_catch$stock_id_taxonkey[1], "^(\\w+).(\\d){1,2}")
+[1] "Marine_fishes_not_identified-57"
+
+```
+
 .footnote[Back to [Table of Contents](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#2)]
 ---
 name: grep

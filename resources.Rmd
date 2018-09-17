@@ -15,7 +15,7 @@ output: html_document
 * [R for Data Science (R4DS)](http://r4ds.had.co.nz/)  ---  classic book for learning to do data science with R
 * [Why RMarkdown?](http://ohi-science.org/globalfellows/why_rmarkdown.html) --- OHI fellow article
 * [Stat545](http://stat545.com/topics.html)  ---  a well-organized and comprehensive website for a statistics course at UBC, which teaches R/RStudio as well as Git/GitHub
-* [OHI String Manipulation Examples](https://rawgit.com/iwensu0313/ohi-training/master/strings_slidedeck.html#1) --- Slide deck of OHI examples manipulating strings using `stringr`, `grep`, and `dplyr`
+* [OHI String Manipulation Examples](https://rawgit.com/OHI-Science/globalfellows/gh-pages/xaringan/strings_slidedeck.html#1) --- Slide deck of OHI examples manipulating strings using `stringr`, `grep`, and `dplyr`
 
 **Overview of GitHub**
 

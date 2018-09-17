@@ -579,9 +579,9 @@ ggplot(data = tips) +
   mutate(cummean_gdpPercap = cummean(gdpPercap)) %&gt;% 
   group_by(country) %&gt;% 
   filter(max(cummean_gdpPercap)-min(cummean_gdpPercap) &gt; 2000) %&gt;% 
-  ungroup()
-
-ggplot(data = gap) +
+  ungroup()</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
+<pre class="r"><code>ggplot(data = gap) +
   geom_line(aes(x = year, y = cummean_gdpPercap), color = &quot;lightsteelblue&quot;) + 
   geom_line(aes(x = year, y = gdpPercap), color = &quot;coral&quot;) +
   facet_wrap(~ country) +
