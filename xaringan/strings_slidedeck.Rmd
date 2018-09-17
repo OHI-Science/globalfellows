@@ -147,6 +147,7 @@ Search for the string "NY.GDP.PCAP.PP.KD" in data frame `indicators` which has a
 names(indicators)
 [1] "indicator"          "name"               "description"        "sourceDatabase"     "sourceOrganization"
 ```
+
 ```{r, eval=FALSE}
 > indicators[grep("NY.GDP.PCAP.PP.KD", indicators$indicator), ] 
                 indicator                                                name
