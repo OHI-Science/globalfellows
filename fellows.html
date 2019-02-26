@@ -97,6 +97,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +114,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -131,6 +133,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,18 +191,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -212,6 +310,40 @@ $(document).ready(function () {
 
 <p><br> <br></p>
 <hr />
+<div id="fellows" class="section level2">
+<h2><strong>2019 Fellows</strong></h2>
+<p><br></p>
+<div id="gage-clawson" class="section level3">
+<h3>Gage Clawson</h3>
+<div id="gclawson1" class="section level4">
+<h4>@<a href="http://github.com/gclawson1">gclawson1</a></h4>
+<p>
+Gage grew up in Manteo, North Carolina, a town located on a small island in the Outer Banks. He graduated from the University of North Carolina at Chapel Hill in 2018 with a B.S. in Statistics and Analytics and a B.A. in Music. Throughout college Gage performed in many of UNC’s ensembles, including the Jazz, Trumpet, and Wind Ensembles. Although he has a passion for music, his passion for statistics and the environment is stronger. Seeing firsthand the effects of environmental degradation on his hometown inspired his interest in environmental science.
+</p>
+<p>
+He is now a first-year student at the Bren School, pursuing a specialization in Coastal Marine Resources Management with a focus in Environmental Data Science. He hopes to pursue a career in which he can apply his analytical skills to solve environmental issues and preserve the livelihoods of those living in coastal communities. In his free time, Gage is an avid trumpet player, hiker, and general outdoorsy person.
+</p>
+<hr />
+</div>
+</div>
+<div id="molly-williams" class="section level3">
+<h3>Molly Williams</h3>
+<div id="molly-williams-1" class="section level4">
+<h4>@<a href="http://github.com/molly-williams">molly-williams</a></h4>
+<p>
+Molly is originally from Seattle, WA and grew up in and around the Pacific Ocean. She received her undergraduate degree in Environmental Studies on the other coast at Mount Holyoke College. During this time, she spent a semester abroad studying in the Turks and Caicos Islands where she was captivated by the marine life as well as the challenge of managing human-environment relationships.
+</p>
+<p>
+After spending a few years teaching math in Hawaii and then wrangling microbes at an algae biofuel startup in Florida, Molly is now a second-year master’s student at the UCSB Bren School of Environmental Science &amp; Management. She came full circle back to the marine world, and is specializing in coastal and marine resources management and environmental data science. Her graduate work is focused on developing data management strategies for a local citizen science project run by the Channel Islands National Marine Sanctuary that monitors whale presence in the Santa Barbara Channel. As an OHI fellow and soon-to-be Bren graduate, she hopes to leverage her data science skills towards the preservation of both cultural and ecological systems.
+</p>
+<hr />
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="fellows-1" class="section level2">
+<h2><strong>2018 Fellows</strong></h2>
+<p><br></p>
 <div id="camila-vargas" class="section level3">
 <h3>Camila Vargas</h3>
 <div style="width: 100%;">
@@ -265,6 +397,7 @@ Ellie graduated from the Bren School of Environmental Science &amp; Management, 
 <p><br></p>
 <hr />
 <p><br> <br></p>
+</div>
 </div>
 
 

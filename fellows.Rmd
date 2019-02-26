@@ -7,18 +7,35 @@ output: html_document
 <br>
 
 ***
-## 2019 Fellows
-
-### Gage Clawson
-
-
-### Molly Williams
-
-
-
-## 2018 Fellows
+## **2019 Fellows**
 
 <br>
+
+
+### Gage Clawson
+#### @[gclawson1](http://github.com/gclawson1)
+<p>
+Gage grew up in Manteo, North Carolina, a town located on a small island in the Outer Banks. He graduated from the University of North Carolina at Chapel Hill in 2018 with a B.S. in Statistics and Analytics and a B.A. in Music. Throughout college Gage performed in many of UNC’s ensembles, including the Jazz, Trumpet, and Wind Ensembles. Although he has a passion for music, his passion for statistics and the environment is stronger. Seeing firsthand the effects of environmental degradation on his hometown inspired his interest in environmental science.
+</p>
+<p>
+He is now a first-year student at the Bren School, pursuing a specialization in Coastal Marine Resources Management with a focus in Environmental Data Science. He hopes to pursue a career in which he can apply his analytical skills to solve environmental issues and preserve the livelihoods of those living in coastal communities.  In his free time, Gage is an avid trumpet player, hiker, and general outdoorsy person. 
+</p>
+***
+
+### Molly Williams
+#### @[molly-williams](http://github.com/molly-williams)
+<p>
+Molly is originally from Seattle, WA and grew up in and around the Pacific Ocean. She received her undergraduate degree in Environmental Studies on the other coast at Mount Holyoke College. During this time, she spent a semester abroad studying in the Turks and Caicos Islands where she was captivated by the marine life as well as the challenge of managing human-environment relationships.
+</p>
+<p>
+After spending a few years teaching math in Hawaii and then wrangling microbes at an algae biofuel startup in Florida, Molly is now a second-year master’s student at the UCSB Bren School of Environmental Science & Management. She came full circle back to the marine world, and is specializing in coastal and marine resources management and environmental data science. Her graduate work is focused on developing data management strategies for a local citizen science project run by the Channel Islands National Marine Sanctuary that monitors whale presence in the Santa Barbara Channel. As an OHI fellow and soon-to-be Bren graduate, she hopes to leverage her data science skills towards the preservation of both cultural and ecological systems. 
+</p>
+***
+
+<br>
+
+## **2018 Fellows**
+
 <br>
 
 ### Camila Vargas
