@@ -7,6 +7,19 @@ output: html_document
 <br>
 
 ***
+## 2019 Fellows
+
+### Gage Clawson
+
+
+### Molly Williams
+
+
+
+## 2018 Fellows
+
+<br>
+<br>
 
 ### Camila Vargas
 
