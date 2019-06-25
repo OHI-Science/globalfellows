@@ -39,12 +39,12 @@ Photo by John Schnobrich on Unsplash
 
 <br>
 
-Data science can be a difficult, confusing, quagmire but is such a crucial piece of being a modern environmental scientist, comprising many invaluable tools. How to make these tools understandable and accessible to people in the best position to leverage them for good, is a vital pedagogical question for modern era. The OHI is one of many such tools. As global fellows for the OHI, our mission should we choose to accept it is to help smooth the way for future users of OHI tools, while calculating the global health index for 2018. We are building this website as a resource, framed to provide future fellows a sense of the experience and what they will learn, and for anyone who is interested to see what we spend our days doing and how we work.
+Data science can be a difficult, confusing, quagmire but is such a crucial piece of being a modern environmental scientist, comprising many invaluable tools. How to make these tools understandable and accessible to people in the best position to leverage them for good, is a vital pedagogical question for modern era. The OHI is one of many such tools. As global fellows for the OHI, our mission should we choose to accept it is to help smooth the way for future users of OHI tools, while calculating the global health index for 2019. We are building this website as a resource, framed to provide future fellows a sense of the experience and what they will learn, and for anyone who is interested to see what we spend our days doing and how we work.
 
 <br>
 
 ### Our Progress
-This site documents our experience learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here. The timeline measures our progress and records milemarkers on our OHI adventure (**zoom in on completed tasks by scrolling over the timeline or using the top right buttons**). We began learning the necessary tools on January 2018, and will finish calculating the global OHI scores for this calender year sometime late September.
+This site documents our experience learning about the Ocean Health Index (OHI) and the open data science practices used in calculating it. Our achievements, issues, problems, thoughts and comments throughout the process are chronicled here. The timeline measures our progress and records milemarkers on our OHI adventure (**zoom in on completed tasks by scrolling over the timeline or using the top right buttons**). We began learning the necessary tools on January 2019, and will finish calculating the global OHI scores for this calender year sometime late September.
 
 <br>
 
@@ -57,18 +57,37 @@ library(dplyr)
 library(widgetframe)
 ```
 
+### 2019 Fellows Timeline
 ```{r echo = FALSE}
-timeline <- read.csv("timeline.csv") # add tasks to csv as we go
+timeline_2019 <- read.csv("timeline_2019.csv") # add tasks to csv as we go
 
 data <- data.frame(
-  id      = 1:nrow(timeline),
-  content = timeline$Task,
-  start   = timeline$Start,
-  end     = timeline$End
+  id      = 1:nrow(timeline_2019),
+  content = timeline_2019$Task,
+  start   = timeline_2019$Start,
+  end     = timeline_2019$End
 )
 
 timeline_widget <- timevis(data) %>% 
-  centerItem(nrow(timeline))
+  centerItem(nrow(timeline_2019))
+
+frameWidget(timeline_widget, width = "100%", height = '800')
+
+```
+
+### 2018 Fellows Timeline
+```{r echo = FALSE}
+timeline_2018 <- read.csv("timeline_2018.csv") # add tasks to csv as we go
+
+data <- data.frame(
+  id      = 1:nrow(timeline_2018),
+  content = timeline_2018$Task,
+  start   = timeline_2018$Start,
+  end     = timeline_2018$End
+)
+
+timeline_widget <- timevis(data) %>% 
+  centerItem(nrow(timeline_2018))
 
 frameWidget(timeline_widget, width = "100%", height = '800')
 
