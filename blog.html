@@ -410,6 +410,57 @@ div.tocify {
 
 
 <p><br> <br></p>
+<div id="fellows" class="section level1">
+<h1>2019 Fellows</h1>
+<hr />
+<div id="what-weve-done-so-far" class="section level2">
+<h2>What we’ve done so far!</h2>
+<p><em>by Gage Clawson and Molly Williams - June 25, 2019</em></p>
+<hr />
+<p>Since joining the OHI team in January, we’ve begun to help lay the foundation for the 2019 Global Assessment. Over the past couple of months we’ve fit in coding whenever we can amongst the chaos of being graduate students. Now that one of us is graduated and the other is sprung free for the summer, we’re free to focus on OHI full time!</p>
+<p>Our training came in the form of learning by doing, and we developed our skills by diving right into preparing data for different goals and subgoals. But first, we learned the importance of [open data science] (<a href="https://www.nature.com/articles/s41559-017-0160" class="uri">https://www.nature.com/articles/s41559-017-0160</a>), which is the underlying principle guiding the work we do. From there, we collaborated on our initial projects and then moved into working independently to update the assessment. The OHI team also puts a strong emphasis on continued development, so each week we have a <a href="https://www.openscapes.org/blog/2019/03/10/seaside-chats/">“seaside chat”</a> to discuss workflows or share a new tool we’ve learned about. (So far, they’ve all been remote over Zoom, but we hope that one day we will actually chat by the sea here in beautiful SB!)</p>
+<p>Through the process, we’ve learned the importance of and practiced good documentation, and keep track of our progress via GitHub issues. Part of practicing open data science is meticulously describing problems or anomalies you encounter in painstaking detail, in the hopes that one of your colleagues will understand what you’re trying to say and can help. Communication is key! This also led us to start the <a href="http://ohi-science.org/ohi-global-guide/">first guide to the OHI Global Assessment</a> in a very cool feature of RStudio, called <a href="https://bookdown.org/yihui/bookdown/">Bookdown</a> to be used by future practitioners of OHI Global.</p>
+<br>
+<center>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRlQhOLJdv4yJM2j6M4DJxpbNKnBe-94ZYSv0GmK_fCpZEmGL1yhkkGCneFCbYCZvAaYKCOrKdiZmmh/pub?w=648&h=689" width="300px">
+</center>
+<p><br></p>
+<p>Thus far we have completed, or are in the process of completing data prep for 8 goals/subgoals for the 2019 OHI assessment. Below is an outline of each of these goals/subgoals, with descriptions of what may have changed in the 2019 assessment:</p>
+<p><br></p>
+<p><strong>Artisanal Fishing Opportunity</strong></p>
+<p>This goal represents the opportunity for small-scale fishers to supply catch for their families, members of their local communities, or sell in local markets.</p>
+<p>In the past this goal has penalized regions with low or no population, giving a score of 0. However, we decided to change this to give a score of NA to those low population regions (regions with a population less than 300), as those regions likely do not have much opportunity to capitalize on fishing in the area as regions with larger populations.</p>
+<p><br></p>
+<p><strong>Sense of Place: Lasting Special Places</strong></p>
+<p>The lasting special places subgoal represents the conservation status of geographic locations that contribute to cultural identity.</p>
+<p>Nothing has changed for this years assessment, other than downloading the most current data. We did conduct some research to find alternate data that might better reflect the quality of protect areas, but determined that the current data is the best available.</p>
+<p><br></p>
+<p><strong>Biodiversity: Species</strong></p>
+<p>This subgoal is calculated to show the conservation status of native marine species.</p>
+<p>This year we updated the IUCN red list of threatened species and birdlife international data. We decided to use a slightly different approach for the data prep this year. We followed the same process as <a href="http://www.oharascience.com/">Casey O’Hara</a> (an OHI project scientist) in his newly published <a href="https://www.news.ucsb.edu/2019/019476/mapping-biodiversity-risk">paper</a>, “Mapping status and conservation of global at-risk marine biodiversity”, to determine the status of at-risk marine species on the IUCN red list of threatened species.</p>
+<p><br></p>
+<p><strong>Food Provision: Mariculture</strong> - <em>in progress</em></p>
+<p>The mariculture subgoal is used to assess the sustainable harvest of seafood from mariculture.</p>
+<p>In the future it would be ideal to update our sustainability data to be more current. However, from some sleuthing, it was determined there is nothing available that is better than our current data, which is from 2008.</p>
+<p>We are researching ways to change the reference point for this subgoal. Currently, the reference point is based on a country’s performance relative to other countries. We divide the tons of mariculture harvested by the number of people along the coast, and divide this by the value from one of the high performing countries. This doesn’t consider the mariculture capacity of each country (how much they could be harvesting). Now we have data showing how much each country should be able to produce via aquaculture for finfish and bivalves, seen in a <a href="https://www.nature.org/content/dam/tnc/nature/en/documents/Mapping_the_global_potential_for_marine_aquaculture.pdf">research paper</a> entitled “Mapping the global potential for marine aquaculture”. We believe we can use these estimates to better represent a reference level and conduct a more informed analysis.</p>
+<p><br></p>
+<p><strong>Sense of Place: Iconic Species</strong></p>
+<p>Upon starting this goal, we ran into a missing data problem. This was quickly solved! Read_csv only looks at the first 1000 lines of data to guess the column type, and read a numeric column as logical, which made the region IDs go missing from an intermediate data set. Solved by hard-coding in col-types on import.</p>
+<p>After completion of the data prep script, some outliers appeared. A few regions with few numbers of iconic species saw jumps in status due IUCN status changes in one or two of these species (a source data issue).</p>
+<p><br></p>
+<p><strong>Coastal population layer for determining mariculture pressure</strong> - <em>in progress</em></p>
+<p><br></p>
+<p><strong>Natural products</strong> - <em>in progress</em></p>
+<p><br></p>
+<p><strong>Pressure Calculation Update: World Governance</strong></p>
+<p>This is one of the three indicators to assess social pressure and resilience (we saw small changes to pressure and resilience based on WB source data). We identified some areas for improvement, and utilized data management SOP.</p>
+<p><br></p>
+<p><strong>Pressure Calculation Update: Targeted Species</strong> - <em>in progress</em></p>
+<p><br> <br></p>
+</div>
+</div>
+<div id="fellows-1" class="section level1">
+<h1>2018 Fellows</h1>
 <hr />
 <div id="agile-ohi" class="section level2">
 <h2>Agile OHI</h2>
@@ -725,6 +776,7 @@ Automatic merge failed; fix conflicts and then commit the result</code></pre>
 <p>By the end of the day, I realized it was just panic from exposure to something new. Just breath. I’m sure at some point we are going to figure out how the information is organized (because I’m pretty sure it is already well organized). Nevertheless, the OHI fellows are working on a visual explanation of this link chaos.</p>
 <p>And links were not the only chaotic thing. We were also introduced to Github and R Markdown. Amazing tools! But you have to break the ice before you can feel comfortable and actually know what you are doing. It seemed overwhelming at the beginning, but after only four sessions of working with all this new information and I already feel more comfortable.</p>
 <p>I am enjoying the challenge. Learning a whole lot. And looking forward to communicating to you all about our progress and experience!</p>
+</div>
 </div>
 
 
