@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>how_goals_score.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
 <link href="site_libs/bootstrap-select-1.12.1/dist/css/bootstrap-select.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-select-1.12.1/dist/js/bootstrap-select.min.js"></script>
 <script src="site_libs/bsselect-binding-0.1.0/bsselect.js"></script>
@@ -74,9 +74,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -101,6 +99,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -115,7 +116,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -135,6 +135,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -156,19 +193,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -217,16 +320,13 @@ $(document).ready(function () {
 <div id="how-to-calculate-a-goal-score" class="section level2">
 <h2>How to Calculate a Goal Score</h2>
 <hr />
-<div class="figure">
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vRN8pFrclhIYIPk7wBzI1TSAkycNzIK7KUKmqcMtej8KBPnsm4RbhjIsGwUPrmJ-7aRhmdlBscCMGUe/pub?w=1658&amp;h=584" />
-
-</div>
+<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vRN8pFrclhIYIPk7wBzI1TSAkycNzIK7KUKmqcMtej8KBPnsm4RbhjIsGwUPrmJ-7aRhmdlBscCMGUe/pub?w=1658&amp;h=584" /></p>
 <hr />
 <p>Each of the <a href="https://www.nature.com/articles/nature11397">ten goals</a> have their own unique methodology. <a href="https://rawgit.com/OHI-Science/ohi-global/draft/global_supplement/Supplement.html#5_goal_models_and_data">Methodologies</a> are built around the types of available data, appropriate for the analysis – consistently quantified across the spatial scale of the assessment and quality-controlled – and based on the best scientific understanding of the subject per expert input and peer review. Each <a href="https://github.com/OHI-Science/ohi-global/blob/draft/eez/conf/functions.R">goal score calculation</a> takes a few different <a href="http://ohi-science.org/ohi-global/layers_table.html">data layers</a> that inform present status and likely near-term future status, which is calculated from trend, pressure, and resilience information. To learn about how each goal is calculated click below. For more information about each goal visit <a href="http://ohi-science.org/goals/">ohi-science.org</a>.</p>
 <hr />
 
 <html>
-<select id="v99grQ05IA" class="selectpicker" data-dropdown-align-right="false" data-dropup-auto="true" data-header="false" data-live-search="false" data-live-search-style="contains" data-show-tick="true" data-width="false" data-size="auto"><option value="goals_calc/ao_calc.png">Artisanal Fishing Opportunity</option>
+<select id="PaSciTG9ae" class="selectpicker" data-dropdown-align-right="false" data-dropup-auto="true" data-header="false" data-live-search="false" data-live-search-style="contains" data-show-tick="true" data-width="false" data-size="auto"><option value="goals_calc/ao_calc.png">Artisanal Fishing Opportunity</option>
 <option value="goals_calc/hab_calc.png">Biodiversity: Habitat</option>
 <option value="goals_calc/spp_calc.png">Biodiversity: Species</option>
 <option value="goals_calc/cp_calc.png">Coastal Protection</option>
@@ -240,17 +340,17 @@ $(document).ready(function () {
 <option value="goals_calc/ico_calc.png">Sense of Place: Iconic Species</option>
 <option value="goals_calc/lsp_calc.png">Sense of Place: Lasting Special Places</option>
 <option value="goals_calc/tr_calc.png">Tourism and Recreation</option></select>
-<img src="goals_calc/ao_calc.png" name="xg2sgX8Kdv" height="500" width="100%"/>
+<img src="goals_calc/ao_calc.png" name="NxCt1BnN2x" height="500" width="100%"/>
 <script>$(document).ready(function(){
-                 $("#v99grQ05IA").change(function(){
-                 $("img[name=xg2sgX8Kdv]").attr("src",$(this).val());
+                 $("#PaSciTG9ae").change(function(){
+                 $("img[name=NxCt1BnN2x]").attr("src",$(this).val());
 
                  });
 
   });</script>
 </html>
-<div id="htmlwidget-02d427f8e529d1f5ad18" style="width:1920px;height:10px;" class="bsselect html-widget" width="1920" height="10"></div>
-<script type="application/json" data-for="htmlwidget-02d427f8e529d1f5ad18">{"x":[],"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fbf057364016b1cba06b" style="width:1920px;height:10px;" class="bsselect html-widget" width="1920" height="10"></div>
+<script type="application/json" data-for="htmlwidget-fbf057364016b1cba06b">{"x":[],"evals":[],"jsHooks":[]}</script>
 <hr />
 </div>
 

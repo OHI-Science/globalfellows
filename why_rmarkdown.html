@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>why_rmarkdown.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,6 +95,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +112,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -131,6 +131,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -213,10 +316,7 @@ $(document).ready(function () {
 <div id="r-markdown-r-rstudio" class="section level2">
 <h2>R Markdown + R + RStudio</h2>
 <hr />
-<div class="figure">
-<img src="images/rmd_img.png" />
-
-</div>
+<p><img src="images/rmd_img.png" /></p>
 <p><br></p>
 <p><a href="https://rmarkdown.rstudio.com/lesson-1.html">Rmarkdown</a> is a file format that allows you to create dynamic documents with text and embedded chunks of R code. The embedded code will run and display output, as well as nicely formatted graphics, equations, tables, and the like. Using Rmarkdown streamlines and integrates analysis and report generation. If underlying data or methods of analysis change, the report and embedded plots, graphics and numbers will be automatically updated. This saves time, and reduces potential for error. Since the files can be converted to HTML, Rmarkdown is also great for creating documents to share online. In fact, this website was created using Rmarkdown and GitHub (see <a href="https://jules32.github.io/rmarkdown-website-tutorial/">this tutorial</a> by Julie Lowndes to learn more)! Creating these types of documents is a key part of our collaborative, transparent workflow.</p>
 <p><img src="images/helloquence-61189-unsplash.jpg" /> <em>Photo by Helloquence on Unsplash</em></p>
@@ -226,10 +326,7 @@ $(document).ready(function () {
 <p><br></p>
 <p>Many different R packages exist for different types of calculations and analysis. The figure below illustrates a general workflow with some associated packages commonly used for each stage. These stages are articulated in <em>R for Data Science</em> by Garrett Grolemund and Hadley Wickham, one example of the many valuable but freely available, online resources for R.</p>
 <p><br></p>
-<div class="figure">
-<img src="images/flowchart1.png" />
-
-</div>
+<p><img src="images/flowchart1.png" /></p>
 <p><br> <br></p>
 <p>With R and Rmarkdown, we use the integrated development environment (IDE) <a href="https://www.rstudio.com/products/rstudio/">RStudio</a>. RStudio, or any IDE, makes programming, testing, troubleshooting, and visualizing more convenient and manageable. Whether writing functions, scripts, markdown documents, or creating shiny apps or packages, RStudio helps one manage projects that keep objects organized and environments tidy, and allows one to fluidly alternate between writing, testing, and troubleshooting. For information on how to get started with R, Rmarkdown, or RStudio, see our “<a href="resources.html">Helpful Resources</a>” page.</p>
 <p><br></p>
