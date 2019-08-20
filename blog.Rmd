@@ -11,6 +11,47 @@ output:
 # 2019 Fellows 
 
 ***
+## Roadblocks to Synthesis
+*by Gage Clawson and Molly Williams - August 20, 2019*
+
+***
+
+**OHI and Open Data Science**
+
+The global Ocean Health Index (OHI) is a collaborative, ongoing project that measures the ocean health of all coastal countries and territories. The OHI global assessment is a unique endeavour that is reproduced each year using large, diverse, and evolving datasets. The OHI assessment is possible because scientists, governments, and research groups freely share their data. Beginning in 2012, OHI researchers have used data science tools and practices to enable open science, and built a strong foundation for consistency and efficiency in the global assessment. During our time as global fellows, we’ve followed in the footsteps of previous OHI practitioners. However, as we have gathered and prepared data for the 2019 assessment, we have encountered frequent challenges that slow have slowed us down.  These challenges have prompted us to identify areas of improvement to streamline future assessments and do [better science in less time](https://www.nature.com/articles/s41559-017-0160). 
+
+<br>
+
+
+**Metadata and the importance of thorough documentation**
+
+One of the foremost issues we have encountered is a lack of consistent and complete documentation of data, which serves as a major roadblock to conducting synthesis science. An important aspect of good data management is providing thorough documentation of the data. Metadata describes the data source, such as where, when, and how data was collected, along with what variables are included in the dataset and any assumptions necessary to understand the data. 
+
+As Global Fellows, one of our main tasks is to see whether new data are available from each of our sources used for the annual assessment. The OHI team produces detailed metadata for each source, which we revisit each year and update to reflect changes in data and methods (if necessary). Creating detailed metadata takes time, and can quickly become outdated. This is a problem we contend with across many of the sources used to calculate the OHI, which sometimes have missing, incomplete, or confusing metadata. This is especially problematic when updating or finding new data to improve OHI assessments, as this information is necessary to determine how we can use it for our purposes. 
+
+For example, one dataset we scrutinized for the 2019 assessment had inconsistencies with column names between the raw downloaded data and the metadata provided. We use R and RStudio for all of our data prep, which has zero tolerance for inconsistencies and will generate an error. When R flags these errors, we have to investigate whether the difference is due to something simple like a small column name change, or a larger alteration to the data. Issues such as these may slow down our data preparation, but allow us to maintain the scientific rigor of the OHI despite inevitable changes to the available data. 
+
+<br>
+
+**Challenges to updating data and methods**
+
+One of the biggest challenges to updating the OHI scores is ensuring that we are obtaining the correct, and most recent, source data. We document the process for locating and downloading the data in our data prep scripts, or in our internal documentation for that particular dataset ( [GitHub issues is a fantastic tool for project management and process development!](https://openscapes.github.io/series/github-issues.html) ). Most of the time this information is clear and easily accessible, but in some cases it’s not obvious where the data are sourced from or how to access it. This is when clear communication and thorough documentation becomes especially important for streamlining and improving the global assessment.
+
+Once we locate the source of the data, we often discover that the source has retroactively updated their previous years’ of data. Overall, these changes are good and we welcome them because they indicate that data are being optimized over time through the correction of errors or improvements to underlying models. But this does present challenges on our end, and again slows the data preparation process. This type of change to source data requires us to back-calculate all previous years of OHI scores every year so we can accurately compare changes across time.
+
+<br>
+
+**Improving the process on our end**
+
+As global fellows, we are tasked with identifying areas for improvement in the global assessment, and this often means revamping our own documentation. Much of what we have learned about good data management comes from addressing failures of documentation on our end. For example, one of the layers that has required a large overhaul is the [habitat data](https://raw.githack.com/OHI-Science/ohi-global/published/global_supplement/Supplement.html#52_biodiversity). Habitat data for seagrass, saltmarsh, mangrove, and coral habitats have not been updated since the original 2012 assessment because of the unavailability of new data. The location where we stored the original raw data for these habitats is largely unclear. Furthermore, the methods used to prepare these data have been lost over time because these data were not prepared using  R scripts. This presents a problem, because now that updated data are available, it has not been entirely clear how to replicate the original methods to calculate  scores. However, it has presented an opportunity to write thorough methods for goals such as these, which is why we are here!
+
+After encountering issues with documentation both internally and externally, we want to help future OHI practitioners navigate them in the future. As mentioned in our previous post, we are writing the first iteration of the OHI Global Guide, which will outline step by step how to conduct the assessment. In this guide, we will include clearly defined methods for updated layers and steps to documenting metadata to ensure that the process is clear for future assessments.
+
+
+<br>
+<br>
+
+***
 
 ## What we've done so far! 
 *by Gage Clawson and Molly Williams - June 25, 2019*
