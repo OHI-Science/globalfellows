@@ -71,7 +71,7 @@ data <- data.frame(
 timeline_widget <- timevis(data) %>% 
   centerItem(nrow(timeline_2019))
 
-frameWidget(timeline_widget, width = "100%", height = '350')
+frameWidget(timeline_widget, width = "100%", height = '800')
 
 ```
 
