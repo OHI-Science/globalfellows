@@ -13,12 +13,15 @@ output: html_document
 
 ### Madeline Berger
 <div style="width: 100%;">
-<img src="images/sara.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
+<img src="images/maddie.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
 <p>
-Paragraph 1  
+A San Francisco Bay Area native, Madeline learned to scuba dive in the Monterrey Bay at age 15 sparking a passion for coastal and ocean ecosystems. Madeline holds a B.A. in Economics from the University of California Los Angeles, where she also minored in Environmental Systems. After working in the private sector and as a Research Intern at the Natural Capital Project at Stanford, she is now a 2nd year Master’s at the Bren School, specializing in Conservation Planning and focusing on Environmental Data Science.
 </p>
 <p>
-Paragraph 2
+At Bren, she has had the chance to work on a variety of projects at the intersection of conserving ecosystems and sustainable livelihoods, focusing primarily on tropical regions. As an intern at Conservation International, she helped collect and visualize data on indigenous land rights in the Amazon, and more recently has been helping to evaluate a pilot project turning artisanal fishery waste into fertilizer in the Galapagos. As an OHI fellow, she is excited to leverage her interdisciplinary background and strong data analysis skills to assess ocean health on Tetiaroa Island.
+</p>
+<p>
+Maddie was a competitive swimmer for many years and still takes any chance possible to get in the pool or ocean in her free time. She also loves to hike, explore the beautiful Santa Barbara area, and experiment in her kitchen. 
 </p>
 
 </div>
@@ -50,7 +53,7 @@ Paragraph 2
 <div style="width: 100%;">
 <img src="images/sara.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
 <p>
-Sara grew up in Placerville, California a town in the Northern Sierras mostly known for being near where gold was first discovered. She graduated in 2014 from Oregon State University with a B.S. in Zoology. After college, she spent four years bouncing around from California to Southeast Asia and the Bahamas leading scuba diving tours, teaching marine science courses, and communicating scientific research to broad public audiences.   
+Sara grew up in Placerville, California a town in the Northern Sierras. She graduated in 2014 from Oregon State University with a B.S. in Zoology. After college, she spent four years bouncing around from California to Southeast Asia and the Bahamas leading scuba diving tours, teaching marine science courses, and communicating scientific research to broad public audiences.   
 </p>
 <p>
 Now a second-year masters student at the Bren School of Environmental Science & Management, she is specializing in Coastal Marine Resource Management and building her data science capabilities through the Environmental Data Science focus. Her two graduate research areas are focused on evaluating strategies for better managing data-poor fisheries in the face of climate change and studying factors that make communities more resilient to natural disasters. As an OHI fellow and soon-to-be graduate, she hopes to use data science to inform management solutions protecting threatened coastal resources and the communities that rely on them.  
