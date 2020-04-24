@@ -33,14 +33,19 @@ Maddie was a competitive swimmer for many years and still takes any chance possi
 
 ### Laura Ingulsrud
 <div style="width: 100%;">
-<img src="images/LauraIngulsrud.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
+<img src="images/laura.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
 <p>
-Laura grew up in Sacramento, CA and Tokyo, Japan, but has lived in Santa Barbara for the past 10 years. She moved here to get an Environmental Studies degree at UCSB and quickly fell in love with the central coast. After graduating, Laura worked as a sailing instructor, mountain guide on Mt. Fuji, and environmental consultant before going back to grad school.  
+Laura grew up in Sacramento, CA and Tokyo, Japan, but has lived in Santa Barbara for the past 10 years. She moved here to get an Environmental Studies degree at UCSB and quickly fell in love with the central coast. After graduating, Laura worked as a sailing instructor, guide on Mt. Fuji, and environmental consultant before going back to grad school.  
 </p>
 <p>
-She is now a 2nd year master’s student at the Bren School of Environmental Science & Management specializing in Coastal Marine Resources Management and Conservation Planning with a focus in Environmental Data Science. Her graduate project is focused on creating a marine spatial plan for Dominica to reduce ship strike impacts to the resident sperm whale community. As a global OHI fellow, Laura is excited to combine data science with marine science and policy to help inform sustainable ocean management. Laura spends her free time playing in the ocean, obsessing over whales, and enjoying good food with friends.
+She is now a 2nd year master’s student at the Bren School of Environmental Science & Management specializing in Coastal Marine Resources Management and Conservation Planning with a focus in Environmental Data Science. Her graduate project is focused on creating a marine spatial plan for Dominica to reduce ship strike threats to the resident sperm whale community. As a global OHI fellow, Laura is excited to combine data science with marine science and policy to help inform sustainable ocean management. Laura spends her free time playing in the ocean, obsessing over whales, and enjoying good food with friends.
 </p>
 
+<br>
+<br>
+
+<a href = "http://github.com/lauraing" target = "_blank">
+<img src = "https://docs.google.com/drawings/d/e/2PACX-1vQ_0SFvcSoWQZyjn33jtxQxfIUjzm5boGjOdWXHQ-WVxm1I3G9P6PT5Em04m3MBFvbDWy9TBifFhDlr/pub?w=598&h=151" style="float: right; width: 15%; margin: 0px 6px;" /></a>
 
 </div>
 
@@ -75,7 +80,7 @@ Now a second-year masters student at the Bren School of Environmental Science & 
 
 ***
 
-< br>
+<br>
 
 ## **2019 Fellows**
 
