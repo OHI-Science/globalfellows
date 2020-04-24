@@ -1,5 +1,5 @@
 ---
-title: "OHI Global Fellows"
+title: "OHI Fellows"
 output: html_document
 ---  
 
@@ -7,6 +7,64 @@ output: html_document
 <br>
 
 ***
+## **2020 Fellows**
+
+<br>
+
+### Madeline Berger
+<div style="width: 100%;">
+<img src="images/sara.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
+<p>
+Paragraph 1  
+</p>
+<p>
+Paragraph 2
+</p>
+
+</div>
+
+<div style="clear:both;"></div>
+<br>
+
+***
+
+### Laura Ingulsrud
+<div style="width: 100%;">
+<img src="images/sara.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
+<p>
+Paragraph 1  
+</p>
+<p>
+Paragraph 2
+</p>
+
+
+</div>
+
+<div style="clear:both;"></div>
+<br>
+
+***
+
+### Sara Orofino
+<div style="width: 100%;">
+<img src="images/sara.jpg" style="float: right; width: 34%; margin: 0px 6px;" />
+<p>
+Sara grew up in Placerville, California a town in the Northern Sierras mostly known for being near where gold was first discovered. She graduated in 2014 from Oregon State University with a B.S. in Zoology. After college, she spent four years bouncing around from California to Southeast Asia and the Bahamas leading scuba diving tours, teaching marine science courses, and communicating scientific research to broad public audiences.   
+</p>
+<p>
+Now a second-year masters student at the Bren School of Environmental Science & Management, she is specializing in Coastal Marine Resource Management and building her data science capabilities through the Environmental Data Science focus. Her two graduate research areas are focused on evaluating strategies for better managing data-poor fisheries in the face of climate change and studying factors that make communities more resilient to natural disasters. As an OHI fellow and soon-to-be graduate, she hopes to use data science to inform management solutions protecting threatened coastal resources and the communities that rely on them.  
+</p>
+
+</div>
+
+<div style="clear:both;"></div>
+<br>
+
+***
+
+< br>
+
 ## **2019 Fellows**
 
 <br>
