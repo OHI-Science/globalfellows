@@ -24,6 +24,12 @@ At Bren, she has had the chance to work on a variety of projects at the intersec
 Maddie was a competitive swimmer for many years and still takes any chance possible to get in the pool or ocean in her free time. She also loves to hike, explore the beautiful Santa Barbara area, and experiment in her kitchen. 
 </p>
 
+<br>
+<br>
+
+<a href = "http://github.com/lauraing" target = "_blank">
+<img src = "https://docs.google.com/drawings/d/e/2PACX-1vQ_0SFvcSoWQZyjn33jtxQxfIUjzm5boGjOdWXHQ-WVxm1I3G9P6PT5Em04m3MBFvbDWy9TBifFhDlr/pub?w=598&h=151" style="float: right; width: 15%; margin: 0px 6px;" /></a>
+
 </div>
 
 <div style="clear:both;"></div>
